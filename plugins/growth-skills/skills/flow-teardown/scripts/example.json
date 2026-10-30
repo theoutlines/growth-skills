@@ -1,0 +1,116 @@
+{
+  "_note": "Illustrative data showing the format; not a real teardown.",
+  "kicker": "FLOW TEARDOWN",
+  "subtitle": "Education · books · quiz funnel",
+  "verdict": "A clean quiz and a model trial timeline, but the paywall forgets the goals and titles the quiz just collected, and closing it leads nowhere.",
+  "parts": [
+    {
+      "label": "Onboarding",
+      "score": 74
+    },
+    {
+      "label": "Paywall",
+      "score": 66,
+      "lite": true
+    },
+    {
+      "label": "Seam",
+      "score": 55
+    }
+  ],
+  "held_back": 0,
+  "bars_title": "Seam",
+  "score": {
+    "dimensions": [
+      {
+        "label": "Placement",
+        "score": 20,
+        "max": 25
+      },
+      {
+        "label": "Continuity",
+        "score": 11,
+        "max": 25
+      },
+      {
+        "label": "Trial clarity",
+        "score": 14,
+        "max": 20
+      },
+      {
+        "label": "After close",
+        "score": 4,
+        "max": 20
+      },
+      {
+        "label": "Sign-flips",
+        "score": 6,
+        "max": 10
+      }
+    ]
+  },
+  "flow": {
+    "screens": 17,
+    "paywall_at": 13,
+    "value_at": 9
+  },
+  "screens": [],
+  "items": [
+    {
+      "n": 1,
+      "priority": "Medium",
+      "part": "Seam",
+      "pattern": "Paywall echoes the onboarding",
+      "test": "Headline the paywall with the chosen goals and the number of titles the user liked.",
+      "evidence": "Flirt AI, answer-routed paywalls: +20% trial-to-paid (#22, directional, confounded)",
+      "pin": {
+        "screen": 13,
+        "x": 0.5,
+        "y": 0.15,
+        "type": "change"
+      }
+    },
+    {
+      "n": 2,
+      "priority": "High",
+      "part": "Seam",
+      "pattern": "A deliberate post-close step",
+      "test": "Show one monthly-plan offer once when the onboarding paywall is closed.",
+      "evidence": "Second chance after the onboarding paywall: premium conversion +25–30% (E2, directional)",
+      "pin": {
+        "screen": 14,
+        "x": 0.5,
+        "y": 0.5,
+        "type": "add"
+      }
+    },
+    {
+      "n": 3,
+      "priority": "Medium",
+      "part": "Paywall",
+      "pattern": "Social proof at decision point",
+      "test": "Add a rating with volume above the trial timeline.",
+      "evidence": "Runtastic, real review on the paywall: +44% paid subscriptions (#60, directional)",
+      "pin": {
+        "screen": 13,
+        "x": 0.5,
+        "y": 0.45,
+        "type": "add"
+      }
+    },
+    {
+      "n": 4,
+      "priority": "Medium",
+      "part": "Onboarding",
+      "pattern": "First result before the paywall",
+      "test": "Let the user read one summary chapter after the taste test, before the paywall.",
+      "evidence": "Survey + trial lesson: +25% trial starts, +78% ARPU (#12, directional)",
+      "pin": {
+        "screen": 9,
+        "x": 0.5,
+        "y": 0.8,
+        "type": "add"
+      }
+    }
+  ]
+}

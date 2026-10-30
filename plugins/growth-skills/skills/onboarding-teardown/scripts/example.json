@@ -1,0 +1,139 @@
+{
+  "subtitle": "Health & Fitness · diet · AI tag",
+  "verdict": "A compact quiz funnel with an editable, sourced plan; the paywall ignores that plan and the reminder promise sits away from the price.",
+  "previous_total": null,
+  "held_back": 0,
+  "score": {
+    "dimensions": [
+      {
+        "key": "value",
+        "label": "Value",
+        "score": 18,
+        "max": 25
+      },
+      {
+        "key": "personalisation",
+        "label": "Personalisation",
+        "score": 17,
+        "max": 20
+      },
+      {
+        "key": "friction",
+        "label": "Friction",
+        "score": 20,
+        "max": 20
+      },
+      {
+        "key": "trust",
+        "label": "Trust",
+        "score": 15,
+        "max": 15
+      },
+      {
+        "key": "seam",
+        "label": "Seam",
+        "score": 13,
+        "max": 20
+      }
+    ]
+  },
+  "flow": {
+    "screens": 17,
+    "paywall_at": 14
+  },
+  "screens": [
+    {
+      "n": 2,
+      "image": "shots/02.jpg",
+      "label": "Workouts question"
+    },
+    {
+      "n": 3,
+      "image": "shots/03.jpg",
+      "label": "Attribution"
+    },
+    {
+      "n": 4,
+      "image": "shots/04.jpg",
+      "label": "Projection chart"
+    },
+    {
+      "n": 10,
+      "image": "shots/10.jpg",
+      "label": "Daily goals"
+    }
+  ],
+  "items": [
+    {
+      "n": 1,
+      "priority": "High",
+      "pattern": "Trial timeline and reminder promise",
+      "test": "Put a dated Today / day 2 reminder / day 3 charge timeline under the annual price, and ask for notifications behind a sample reminder.",
+      "evidence": "Blinkist, +23% trial sign-ups, −55% complaints (#1, strong)",
+      "duration": "~8 wk (paid)",
+      "pin": {
+        "screen": 14,
+        "x": 0.5,
+        "y": 0.6,
+        "type": "add"
+      }
+    },
+    {
+      "n": 2,
+      "priority": "Medium",
+      "pattern": "First result before the paywall",
+      "test": "Let the user scan one meal (sample plate as fallback) and see it counted against the new target before the paywall.",
+      "evidence": "Survey + trial lesson: +25% trial starts, +78% ARPU (#12, directional). Hypothesis here",
+      "duration": "~3 wk (trials)",
+      "pin": {
+        "screen": 12,
+        "x": 0.5,
+        "y": 0.5,
+        "type": "add"
+      }
+    },
+    {
+      "n": 3,
+      "priority": "Medium",
+      "pattern": "Paywall echoes the onboarding",
+      "test": "Put the goal, target weight and daily calorie target in the paywall headline.",
+      "evidence": "Flirt AI, answer-based paywalls: +20% trial-to-paid (#22, directional, confounded)",
+      "duration": "~8 wk (paid)",
+      "pin": {
+        "screen": 14,
+        "x": 0.5,
+        "y": 0.15,
+        "type": "change"
+      }
+    },
+    {
+      "n": 4,
+      "priority": "Medium",
+      "pattern": "Value promise on screen 1",
+      "test": "Open with one outcome screen (your plan from a photo in 2 minutes) before the workouts question.",
+      "evidence": "Travel app, value proposition up front: +30% purchase conversion (#17, strong, bundled)",
+      "duration": "~3 wk (trials)",
+      "pin": {
+        "screen": 2,
+        "x": 0.92,
+        "y": 0.2,
+        "type": "change"
+      }
+    },
+    {
+      "n": 5,
+      "priority": "Medium",
+      "pattern": "Goal or intent question early",
+      "test": "Ask lose / maintain / gain first and reuse it in the projection chart headline.",
+      "evidence": "Headspace, quiz before the course: +7.6 pp course starts (#3, strong)",
+      "duration": "~3 wk (trials)",
+      "pin": {
+        "screen": 4,
+        "x": 0.92,
+        "y": 0.15,
+        "type": "change"
+      }
+    }
+  ],
+  "duration_note": "Durations assume 2,000 installs a day, 8% install → trial and 3% install → paid, for a 10% relative change. Illustrative inputs."
+}

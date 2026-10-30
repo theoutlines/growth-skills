@@ -1,0 +1,108 @@
+{
+  "_note": "Illustrative example: an anonymised Health & Fitness quiz funnel, US + Germany, no link-out. Scores follow references/scoring.md; evidence comes from references/evidence.md.",
+  "kicker": "WEB2APP TEARDOWN",
+  "subtitle": "Health & Fitness · web funnel · US + DE",
+  "verdict": "A tight quiz with a real plan screen, but the per-day price outshouts the 3-month charge, the card form sits above Apple Pay, and buyers get no path into the app.",
+  "previous_total": null,
+  "held_back": 6,
+  "score": {
+    "dimensions": [
+      {
+        "key": "landing",
+        "label": "Landing & quiz",
+        "score": 19,
+        "max": 25
+      },
+      {
+        "key": "paywall",
+        "label": "Paywall",
+        "score": 13,
+        "max": 25
+      },
+      {
+        "key": "checkout",
+        "label": "Checkout",
+        "score": 15,
+        "max": 25
+      },
+      {
+        "key": "after",
+        "label": "After payment",
+        "score": 14,
+        "max": 25
+      }
+    ]
+  },
+  "flow": {
+    "screens": 28,
+    "paywall_at": 26,
+    "marker_label": "paywall",
+    "value_at": 21,
+    "value_label": "plan",
+    "extra": [
+      "A1",
+      "A2"
+    ],
+    "extra_label": "after"
+  },
+  "screens": [],
+  "items": [
+    {
+      "n": 1,
+      "priority": "Fix first",
+      "pattern": "The charge first, per-day second",
+      "test": "Make '$38.99 every 3 months' the largest price; move '$0.43/day' under it.",
+      "evidence": "ROSCA material terms; Apple pulled Cal AI partly for this in-app (case)",
+      "duration": "",
+      "pin": {
+        "screen": 26,
+        "x": 0.5,
+        "y": 0.4,
+        "type": "change"
+      }
+    },
+    {
+      "n": 2,
+      "priority": "Fix first",
+      "pattern": "Consent at the button, by market",
+      "test": "German checkout: key terms right above a 'zahlungspflichtig bestellen'-type button.",
+      "evidence": "§312j BGB: otherwise no contract (rule)",
+      "duration": "",
+      "pin": {
+        "screen": 27,
+        "x": 0.5,
+        "y": 0.85,
+        "type": "change"
+      }
+    },
+    {
+      "n": 3,
+      "priority": "High",
+      "pattern": "Wallets first",
+      "test": "Apple Pay at the top on iPhone Safari, PayPal first in Germany, card form below.",
+      "evidence": "Stripe holdback: Apple Pay +22.3% conversion (#W19, strong, many businesses)",
+      "duration": "~2 wk",
+      "pin": {
+        "screen": 27,
+        "x": 0.5,
+        "y": 0.3,
+        "type": "change"
+      }
+    },
+    {
+      "n": 4,
+      "priority": "Medium",
+      "pattern": "Into the app without a password",
+      "test": "Thank-you page: 'Get the app' step with a deep link that opens it signed in.",
+      "evidence": "Deep-link magic sign-in, Day-0 logins 2x (#W34, directional)",
+      "duration": "",
+      "pin": {
+        "screen": "A2",
+        "x": 0.5,
+        "y": 0.5,
+        "type": "add"
+      }
+    }
+  ],
+  "duration_note": "Durations assume 2,000 checkout starts a day and 30% checkout -> payment, for a 10% relative change. Illustrative inputs."
+}

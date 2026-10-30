@@ -1,0 +1,66 @@
+{
+  "_note": "Illustrative example: an anonymised App Store-billed AI photo editor with a free tier. Scores follow references/scoring.md; evidence comes from references/evidence.md.",
+  "kicker": "UPSELL TEARDOWN",
+  "subtitle": "Photo & Video · AI tag · freemium · App Store",
+  "verdict": "Gates sit on the right features, but every lock opens one generic paywall, credits are sold next to the subscription, and payers see the subscribe screen again.",
+  "previous_total": null,
+  "held_back": 3,
+  "score": {
+    "dimensions": [
+      {"key": "triggers", "label": "Triggers", "score": 13, "max": 20},
+      {"key": "gate", "label": "Gate", "score": 15, "max": 20},
+      {"key": "screen", "label": "Upsell screen", "score": 17, "max": 25},
+      {"key": "ladder", "label": "Payer ladder", "score": 6, "max": 20},
+      {"key": "surfaces", "label": "Surfaces", "score": 10, "max": 15}
+    ]
+  },
+  "flow": {
+    "order": ["G1", "G2", "L1", "U1", "S1"],
+    "paywall_at": "U1",
+    "marker_label": "upsell",
+    "value_at": "G1",
+    "value_label": "trigger",
+    "extra": ["P1"],
+    "extra_label": "payers"
+  },
+  "screens": [],
+  "items": [
+    {
+      "n": 1,
+      "priority": "Fix first",
+      "pattern": "Upgrade screen, never the subscribe paywall",
+      "test": "Show subscribers their current plan and what the top tier adds instead of the subscribe paywall.",
+      "evidence": "Apple HIG: don't encourage a new subscription for current subscribers (rule)",
+      "duration": "",
+      "pin": {"screen": "P1", "x": 0.5, "y": 0.3, "type": "change"}
+    },
+    {
+      "n": 2,
+      "priority": "High",
+      "pattern": "Allowance in the plan, credits as a top-up",
+      "test": "Take credit packs off the first paywall; offer them only to subscribers who run out.",
+      "evidence": "Mojo: +14% new subscription revenue, no rise in AI cost (#U32, strong)",
+      "duration": "~5 wk",
+      "pin": {"screen": "U1", "x": 0.5, "y": 0.7, "type": "change"}
+    },
+    {
+      "n": 3,
+      "priority": "High",
+      "pattern": "Name the blocked task in the headline",
+      "test": "Each lock opens a sheet headed by its feature ('Remove objects in 4K with Pro').",
+      "evidence": "Memrise: two benefit framings on one locked mode differed 28% (#U1, strong)",
+      "duration": "~5 wk",
+      "pin": {"screen": "G1", "x": 0.5, "y": 0.2, "type": "change"}
+    },
+    {
+      "n": 4,
+      "priority": "Medium",
+      "pattern": "Show the meter before the wall",
+      "test": "Put 'x of 10 left this week' under the generate button.",
+      "evidence": "Observed in 17 apps; hypothesis (no public test)",
+      "duration": "~5 wk",
+      "pin": {"screen": "L1", "x": 0.5, "y": 0.8, "type": "add"}
+    }
+  ],
+  "duration_note": "Durations assume 30,000 trigger hits a day and 0.29% view -> paid, for a 10% relative change. Illustrative inputs."
+}

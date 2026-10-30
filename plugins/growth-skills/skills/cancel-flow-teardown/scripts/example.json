@@ -1,0 +1,93 @@
+{
+  "_note": "Illustrative example: an anonymised App Store-billed fitness app. Scores follow references/scoring.md; numbers in 'evidence' come from references/evidence.md.",
+  "kicker": "CANCEL FLOW TEARDOWN",
+  "subtitle": "Health & Fitness · App Store billing · US + UK",
+  "verdict": "Easy to find and hands off to Apple, but the plan-switch screen hides cancel under a big Keep button and every reason gets the same discount.",
+  "previous_total": null,
+  "held_back": 5,
+  "score": {
+    "dimensions": [
+      {
+        "key": "way_in",
+        "label": "Way in",
+        "score": 20,
+        "max": 20
+      },
+      {
+        "key": "exit",
+        "label": "Exit",
+        "score": 21,
+        "max": 35
+      },
+      {
+        "key": "save",
+        "label": "Save",
+        "score": 12,
+        "max": 30
+      },
+      {
+        "key": "around",
+        "label": "Around the flow",
+        "score": 9,
+        "max": 15
+      }
+    ]
+  },
+  "flow": {
+    "screens": 5,
+    "paywall_at": 3,
+    "marker_label": "save",
+    "value_at": 5,
+    "value_label": "exit",
+    "extra": [
+      "A1"
+    ],
+    "extra_label": "after"
+  },
+  "screens": [],
+  "items": [
+    {
+      "n": 1,
+      "priority": "Fix first",
+      "pattern": "Cancel stays visible next to every offer",
+      "test": "Make 'Cancel subscription' a peer button under the offer instead of grey text below the fold.",
+      "evidence": "California ARL: save offers only with a click-to-cancel link shown at the same time (rule)",
+      "duration": "",
+      "pin": {
+        "screen": 3,
+        "x": 0.5,
+        "y": 0.9,
+        "type": "change"
+      }
+    },
+    {
+      "n": 2,
+      "priority": "Medium",
+      "pattern": "Route by reason",
+      "test": "Send 'not using it' to a cheaper tier and 'too expensive' to the annual plan; 'other' goes straight to Apple.",
+      "evidence": "Reason-matched offers, 47% saved (#C6, directional, web). Hypothesis on mobile",
+      "duration": "~6.5 wk",
+      "pin": {
+        "screen": 2,
+        "x": 0.5,
+        "y": 0.5,
+        "type": "change"
+      }
+    },
+    {
+      "n": 3,
+      "priority": "Low",
+      "pattern": "Personal loss reminder",
+      "test": "Replace the generic benefits list with the user's own month: workouts done, programmes saved.",
+      "evidence": "Observed (several fitness apps); no public test",
+      "duration": "~6.5 wk",
+      "pin": {
+        "screen": 3,
+        "x": 0.5,
+        "y": 0.3,
+        "type": "change"
+      }
+    }
+  ],
+  "duration_note": "Durations assume 400 cancel-flow entries a day and a 15% save rate, for a 10% relative change. Illustrative inputs."
+}

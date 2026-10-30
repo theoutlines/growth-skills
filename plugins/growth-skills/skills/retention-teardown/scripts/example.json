@@ -1,0 +1,67 @@
+{
+  "_note": "Illustrative example: an anonymised App Store-billed meditation app with a 7-day trial. Scores follow references/scoring.md; evidence comes from references/evidence.md.",
+  "kicker": "RETENTION TEARDOWN",
+  "subtitle": "Health & Fitness · iOS · 7-day trial · daily habit",
+  "verdict": "A missed day wipes the streak with a guilt line, the notification ask fires at launch, and the trial date never appears in the app.",
+  "previous_total": null,
+  "held_back": 3,
+  "score": {
+    "dimensions": [
+      {"key": "welcome", "label": "Welcome", "score": 10, "max": 20},
+      {"key": "notifications", "label": "Notifications", "score": 10, "max": 20},
+      {"key": "habit", "label": "Habit", "score": 10, "max": 25},
+      {"key": "value", "label": "Value", "score": 9, "max": 20},
+      {"key": "return", "label": "Return & asks", "score": 10, "max": 15}
+    ]
+  },
+  "total": 49,
+  "flow": {
+    "order": ["W1", "N1", "H1", "H2", "V1", "R1"],
+    "paywall_at": "V1",
+    "marker_label": "renewal",
+    "value_at": "H1",
+    "value_label": "first value",
+    "extra": ["R1"],
+    "extra_label": "later"
+  },
+  "screens": [],
+  "items": [
+    {
+      "n": 1,
+      "priority": "Fix first",
+      "pattern": "Design the broken streak",
+      "test": "Replace 'You gave up on yourself' with a neutral 'Missed yesterday? Repair your streak' and one free repair.",
+      "evidence": "Repairable broken streak kept 85.20% vs 68.66% (#R39, strong, lab); FTC confirmshaming",
+      "duration": "~2 wk",
+      "pin": {"screen": "H2", "x": 0.5, "y": 0.4, "type": "change"}
+    },
+    {
+      "n": 2,
+      "priority": "High",
+      "pattern": "Make the streak easy to keep",
+      "test": "One short session keeps the streak; the 20-minute daily goal stays separate.",
+      "evidence": "Duolingo: D14 retention +3.3% (#R25, strong)",
+      "duration": "~2 wk",
+      "pin": {"screen": "H1", "x": 0.5, "y": 0.2, "type": "change"}
+    },
+    {
+      "n": 3,
+      "priority": "Medium",
+      "pattern": "Ask for notifications in context",
+      "test": "Move the ask after the first session, tied to 'remind me at 8:00'.",
+      "evidence": "Calm reminder after the first session (#R17, directional); Apple guidance A13",
+      "duration": "~2 wk",
+      "pin": {"screen": "N1", "x": 0.5, "y": 0.6, "type": "change"}
+    },
+    {
+      "n": 4,
+      "priority": "Medium",
+      "pattern": "Trial-ending notice with what they used",
+      "test": "Two days before the charge, a card with sessions done, the date, $69.99 and where to cancel.",
+      "evidence": "Hypothesis (no in-app test); Blinkist reminder #R48 strong, bundled; flips in #R50",
+      "duration": "~3.4 wk",
+      "pin": {"screen": "V1", "x": 0.5, "y": 0.5, "type": "add"}
+    }
+  ],
+  "duration_note": "Durations assume 800 trial starts a day: week-1 activity 45% for rows 1-3, trial -> paid 32% for row 4, a 10% relative change. Illustrative inputs."
+}
