@@ -10,7 +10,7 @@
       "name": "growth-skills",
       "source": "./plugins/growth-skills",
       "description": "Growth skills for mobile subscription apps, for product designers: teardowns for the web funnel, onboarding, the onboarding-paywall seam, upsells, the first weeks before renewal and the cancel flow, plus everything in Subscription Skills: 2026 benchmarks (RevenueCat, Adapty, FunnelFox), pricing, Adapty's paywall teardown and A/B test assistant, a store-rules check, a growth map, a funnel check and a test readout. One install, a router picks the skill.",
-      "version": "1.3.0",
+      "version": "1.3.1",
       "category": "design"
     }
   ]

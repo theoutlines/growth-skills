@@ -45,6 +45,9 @@ write them into files you create or into examples unless the user asks.
   bill). Dates without a year: assume the current year and say so. If there was no plan, say
   the result is read against a 10% bar and that deciding the metric after
   seeing the data is a trap.
+- **The goal**: find a win (default), or prove B is not worse than A by more
+  than a margin (e.g. 5%) when the change ships anyway. Read the test against
+  the goal and metric picked before it, never switch after seeing the data.
 
 Count people, not views, when the test split people. Use the same window for
 both versions. Revenue = each payer's first payment at list price, unless the
@@ -78,6 +81,11 @@ A shift toward weekly plans looks worse on first payments than it is.
      unevenly and ask whoever set up the experiment to find where one group
      loses people; then rerun with the same plan. No engineering detail.
    - Too early: wait until the decision date; say how many days.
+   - Not worse (goal "not worse"): the low end of the range stays above
+     −margin → ship B. Maybe worse: the range reaches below −margin → don't
+     ship as is; say how much worse it could be.
+   - Decided on paid or trial starts: read that metric; money per person is
+     a guardrail. A win on trials with money down is a win with a cost.
 
 ## Output format
 

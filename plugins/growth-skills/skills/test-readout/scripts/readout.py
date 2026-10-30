@@ -7,7 +7,8 @@ made before the test (decision metric, the smallest change worth catching, decis
 
 Output (JSON with --json, text otherwise): trust checks, the decision metric with a 95% range,
 where the difference came from (how many paid vs which plans they chose), guardrails, and a verdict
-class: win / loss / cant_tell / broken / too_early.
+class: win / loss / cant_tell / broken / too_early, or for a 'prove it's not worse' test:
+not_worse / maybe_worse (one-sided: the low end of the 95% range must stay above -margin).
 
 Method: sample-ratio check = chi-square, flagged at p < 0.001. Revenue per person = sum over plans of
 payers * price / people; its variance per person from the plan mix; relative difference with a
@@ -63,6 +64,8 @@ def main():
     plan = d.get('plan', {})
     metric = plan.get('decide_on', 'revenue')          # revenue | conversion | trial_starts
     bar = plan.get('smallest_change', 0.10)
+    goal = plan.get('goal', 'win')                      # win | not_worse
+    margin = plan.get('margin', 0.05)                   # for not_worse: how much worse is still fine
     out = {'checks': [], 'notes': []}
 
     # 1. sample ratio
@@ -132,6 +135,8 @@ def main():
         v = 'broken'
     elif not timing_ok and metric != 'trial_starts':
         v = 'too_early'
+    elif goal == 'not_worse':
+        v = ('not_worse_with_cost' if guard_bad else 'not_worse') if lo > -margin else 'maybe_worse'
     elif lo > 0:
         v = 'win_with_cost' if guard_bad else 'win'
     elif hi < 0:
@@ -140,6 +145,7 @@ def main():
         v = 'cant_tell'
     out['verdict'] = v
     out['plan_on'] = lo if v.startswith('win') else None
+    out['goal'] = {'goal': goal, 'margin': margin if goal == 'not_worse' else None}
 
     sc, sm = out['decomposition']['share_from_conversion'], out['decomposition']['share_from_plan_mix']
     if sc is not None and (sc < 0 or sm < 0):
@@ -155,7 +161,8 @@ def main():
     if v in ('broken', 'too_early'):
         print('Result: not shown. Fix or wait first; reading these numbers would anchor on a result that can\'t be trusted.')
     else:
-        print(f"{m['name']}: A {m['A']:.4g}, B {m['B']:.4g}; B vs A {pct(m['lift'])} (95% range {pct(m['lo'])} to {pct(m['hi'])}); plan's smallest change {bar * 100:.0f}%")
+        tail = f"margin for 'not worse' {-margin * 100:.0f}%" if goal == 'not_worse' else f"plan's smallest change {bar * 100:.0f}%"
+        print(f"{m['name']}: A {m['A']:.4g}, B {m['B']:.4g}; B vs A {pct(m['lift'])} (95% range {pct(m['lo'])} to {pct(m['hi'])}); {tail}")
     for c in out['checks']:
         print(f"  [{'ok' if c['ok'] else '!!'}] {c['name']}: {c['value']}")
     dc = out['decomposition']
