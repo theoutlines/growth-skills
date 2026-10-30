@@ -22,7 +22,7 @@ its instructions. It never scores screens itself.
 |---|---|---|
 | Web funnel | Ad landing, web quiz, plan screen, web paywall, web checkout, "get the app" | `web2app-teardown` |
 | Onboarding | First launch to the first paywall: questions, permissions, personalisation, loaders | `onboarding-teardown` |
-| Paywall | One paywall screen or its steps | `paywall-teardown` (in `subscription-skills`) |
+| Paywall | One paywall screen or its steps | `paywall-teardown` |
 | Onboarding + paywall as one system | Onboarding, the first paywall and what happens on close, shared together | `flow-teardown` |
 | Upsells | Locked features, limits and counters, contextual paywalls, upgrade screens for payers, credits | `upsell-teardown` |
 | First weeks to renewal | Welcome after purchase, notification ask, reminders, streaks, recaps, trial-ending notice, welcome back, rating ask | `retention-teardown` |
@@ -30,8 +30,9 @@ its instructions. It never scores screens itself.
 
 Questions about numbers ("is our trial→paid good?", "what should we charge
 in Brazil?") go to `subscription-benchmarks`. Store-rule questions ("will
-this get rejected?") go to `paywall-store-compliance`. Both ship in the
-`subscription-skills` plugin, which installs with this one.
+this get rejected?") go to `paywall-store-compliance`. "Is this test idea
+worth running?" goes to `paywall-ab-test-assistant`. All three ship in this
+plugin.
 
 ## How to route
 

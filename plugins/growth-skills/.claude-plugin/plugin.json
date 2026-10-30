@@ -1,8 +1,8 @@
 {
   "name": "growth-skills",
   "displayName": "Growth Skills",
-  "version": "1.0.2",
-  "description": "Growth teardowns for mobile subscription apps, for product designers: web funnel, onboarding, the onboarding-paywall seam, upsells, the first weeks before renewal and the cancel flow. Each scores what can be changed on screen out of 100 (never rewarding pressure), flags store and dark-pattern issues, and ranks tests by published evidence. A router picks the right one. Works with Subscription Skills for benchmarks, paywall teardown and store rules.",
+  "version": "1.1.0",
+  "description": "Growth skills for mobile subscription apps, for product designers: teardowns for the web funnel, onboarding, the onboarding-paywall seam, upsells, the first weeks before renewal and the cancel flow, plus everything in Subscription Skills: 2026 benchmarks (RevenueCat, Adapty, FunnelFox), pricing, Adapty's paywall teardown and A/B test assistant, and a store-rules check. One install, a router picks the skill.",
   "author": {
     "name": "Ivan Polushin",
     "url": "https://github.com/theoutlines"
@@ -18,12 +18,11 @@
     "web2app",
     "ux",
     "teardown",
-    "subscriptions"
+    "subscriptions",
+    "benchmarks",
+    "pricing"
   ],
-  "license": "MIT",
-  "dependencies": [
-    "subscription-skills"
-  ],
+  "license": "MIT AND CC-BY-4.0",
   "supportUrl": "https://github.com/theoutlines/growth-skills/issues",
   "privacyPolicyUrl": "https://github.com/theoutlines/growth-skills/blob/main/PRIVACY.md"
 }

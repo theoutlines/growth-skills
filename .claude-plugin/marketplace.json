@@ -1,6 +1,6 @@
 {
   "name": "theoutlines-growth-skills",
-  "description": "Claude skills for growth work on mobile subscription apps: screen teardowns across the user journey, plus subscription benchmarks and paywall tools.",
+  "description": "Claude skills for growth work on mobile subscription apps: screen teardowns across the user journey plus subscription benchmarks and paywall tools, in one plugin.",
   "owner": {
     "name": "Ivan Polushin",
     "url": "https://github.com/theoutlines"
@@ -9,19 +9,9 @@
     {
       "name": "growth-skills",
       "source": "./plugins/growth-skills",
-      "description": "Growth teardowns for mobile subscription apps, for product designers: web funnel, onboarding, the onboarding-paywall seam, upsells, the first weeks before renewal and the cancel flow. Each scores what can be changed on screen out of 100 (never rewarding pressure), flags store and dark-pattern issues, and ranks tests by published evidence. A router picks the right one. Works with Subscription Skills for benchmarks, paywall teardown and store rules.",
-      "version": "1.0.2",
+      "description": "Growth skills for mobile subscription apps, for product designers: teardowns for the web funnel, onboarding, the onboarding-paywall seam, upsells, the first weeks before renewal and the cancel flow, plus everything in Subscription Skills: 2026 benchmarks (RevenueCat, Adapty, FunnelFox), pricing, Adapty's paywall teardown and A/B test assistant, and a store-rules check. One install, a router picks the skill.",
+      "version": "1.1.0",
       "category": "design"
-    },
-    {
-      "name": "subscription-skills",
-      "source": {
-        "source": "git-subdir",
-        "url": "https://github.com/theoutlines/subscription-skills.git",
-        "path": "plugins/subscription-skills"
-      },
-      "description": "Subscription-app monetization toolkit: 2026 benchmark reports (RevenueCat, Adapty, FunnelFox), localized pricing, a benchmark router, an App Store / Google Play paywall compliance review, and Adapty's paywall teardown and A/B test assistant.",
-      "category": "productivity"
     }
   ]
 }

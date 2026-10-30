@@ -20,7 +20,20 @@ Skills follow the user's journey. Not sure which one you need? Start with `growt
 | First weeks to renewal | `retention-teardown` | Welcome after purchase, notification ask, reminders, streaks, recaps, trial-ending notice, welcome back, rating ask |
 | Cancel flow | `cancel-flow-teardown` | Manage subscription, reason survey, save offers, confirmation, resubscribe |
 
-**Installed with it:** [Subscription Skills](https://github.com/theoutlines/subscription-skills), for the paywall itself and the numbers: 2026 benchmark reports (RevenueCat, Adapty, FunnelFox), the Pricing Index, Adapty's paywall teardown and A/B test assistant, and an App Store / Google Play paywall review.
+**Included:** everything in [Subscription Skills](https://github.com/theoutlines/subscription-skills), for the paywall itself and the numbers:
+
+| Skill | What it answers |
+|---|---|
+| `subscription-benchmarks` | Routes a numbers question to the right report and keeps denominators apart |
+| `state-of-subscription-apps-2026` | RevenueCat: download→trial, trial→paid, LTV, retention, renewals, refunds |
+| `state-of-in-app-subscriptions-2026` | Adapty: LTV curves, retention by plan, prices by region, placement, AI apps |
+| `state-of-web2app-2026` | FunnelFox: web funnels, web pricing, upsells, web vs app LTV |
+| `subscription-pricing-index` | Adapty Pricing Index: weekly, monthly and annual prices in 64 countries |
+| `paywall-teardown` | Scores a paywall screenshot out of 100. By Adapty, MIT |
+| `paywall-ab-test-assistant` | Grades a test idea against Adapty's A/B test library. By Adapty, MIT |
+| `paywall-store-compliance` | Will this paywall, trial or cancel flow pass App Review and Play policy? |
+
+Only need the paywall part? Install [Subscription Skills](https://github.com/theoutlines/subscription-skills) on its own instead.
 
 Every teardown:
 - scores only what a designer changes on a screen, out of 100, and never rewards pressure (fake timers, guilt copy, hidden prices, blocked exits score lower);
@@ -37,9 +50,11 @@ Every teardown:
 /plugin install growth-skills@theoutlines-growth-skills
 ```
 
-Subscription Skills installs with it. If you already installed Subscription Skills from its own marketplace, uninstall that copy first so the skills don't load twice.
+Growth Skills already includes Subscription Skills. If you installed Subscription Skills before, remove it so the skills don't load twice.
 
-**Claude app (web, desktop; paid plans):** Customize → Plugins → Add → Add marketplace → `theoutlines/growth-skills`, then add Growth Skills.
+**Claude app (web, desktop; paid plans):**
+1. Customize → Plugins → Add → Add marketplace → `theoutlines/growth-skills`.
+2. Discover → search "Growth Skills" → Add.
 
 **Other agents:** `npx skills add theoutlines/growth-skills`.
 
@@ -65,8 +80,8 @@ Subscription Skills installs with it. If you already installed Subscription Skil
 
 Found a mistake? Open an issue.
 
-License: MIT, see [LICENSE](LICENSE) and [NOTICE](NOTICE.md).
+License: teardowns and router MIT; the included Subscription Skills text CC BY 4.0 and Adapty's two skills MIT. See [LICENSE](LICENSE), [LICENSES](LICENSES/) and [NOTICE](NOTICE.md).
 
 ## Maintainers
 
-Skills are edited here, in `plugins/growth-skills/skills/`. Project rules are in `CLAUDE.md`. On every release, bump the version in both manifests and attach one zip per skill to the GitHub release.
+Teardowns and the router are edited here, in `plugins/growth-skills/skills/`. The Subscription Skills skills are edited in their own repo and copied in with `scripts/sync-subscription.sh` before each release. Project rules are in `CLAUDE.md`. On every release, bump the version in both manifests and attach one zip per skill to the GitHub release.
