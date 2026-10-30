@@ -1,0 +1,8 @@
+{
+  "prices": {"weekly": 6.99, "annual": 39.99},
+  "plan": {"decide_on": "revenue", "smallest_change": 0.10, "decision_date": "2026-12-10", "share_B": 0.5},
+  "today": "2026-12-11",
+  "A": {"people": 85700, "payers": {"weekly": 1180, "annual": 1177}, "refunds": 68},
+  "B": {"people": 85620, "payers": {"weekly": 1050, "annual": 1380}, "refunds": 72},
+  "weekly_lift": [0.14, 0.12, 0.13, 0.12]
+}

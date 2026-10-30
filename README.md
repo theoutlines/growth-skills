@@ -21,6 +21,7 @@ Skills follow the user's journey. Not sure which one you need? Start with `growt
 | Cancel flow | `cancel-flow-teardown` | Manage subscription, reason survey, save offers, confirmation, resubscribe |
 | The whole journey | `growth-map` | Which growth levers the app uses and which nobody has touched, stage by stage, and where to start |
 | Your own numbers | `funnel-check` | Your funnel against public benchmarks with matching definitions; finds the leakiest step and the teardown for it. Can pull numbers from Amplitude, Mixpanel, RevenueCat or Adapty when connected |
+| A finished test | `test-readout` | Did B really win? Trust checks, the likely range, where the difference came from (how many paid vs which plans), keep / kill / iterate. Pulls the numbers from Amplitude, Mixpanel, RevenueCat or Adapty when connected |
 
 **Included:** everything in [Subscription Skills](https://github.com/theoutlines/subscription-skills), for the paywall itself and the numbers:
 

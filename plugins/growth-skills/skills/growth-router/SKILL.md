@@ -29,6 +29,7 @@ its instructions. It never scores screens itself.
 | Cancel flow | Manage subscription, reason survey, save offers, cancel confirmation, resubscribe | `cancel-flow-teardown` |
 | The whole journey | "What are we not doing?", a growth audit or roadmap, no specific screens | `growth-map` |
 | Own funnel numbers | Install → trial, trial → paid, renewal, cancels; or "pull our numbers" | `funnel-check` |
+| A finished test | "Did B win?", an experiment chart or variant numbers | `test-readout` |
 
 Questions about numbers ("is our trial→paid good?", "what should we charge
 in Brazil?") go to `subscription-benchmarks`. Store-rule questions ("will
