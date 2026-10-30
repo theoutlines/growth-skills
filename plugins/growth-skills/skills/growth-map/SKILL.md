@@ -69,13 +69,15 @@ not, cancel in-app or store), then map.
    the earlier stage. Say which rule you used.
 5. **Pick up to 5 levers to start with** from the Absent and Weak levers.
    Sort by evidence class first:
-   - **A**: an on-target strong test (same change, in an app);
-   - **B**: a strong test that is off-target (other channel, other kind of
-     product, bundled) or a directional test;
+   - **A**: a strong test of the same change in an app (any category);
+   - **B**: a range row for the same change that is directional, bundled,
+     or delivered in another channel (the same content as a notification or
+     email), or rows only on a non-decision metric (opt-in, ratings);
    - **C**: hypothesis (no range row that measures this change).
-   Within a class: the weakest stage first, then the other stages by gap
-   score, then Absent before Weak, then effort (copy or one screen before a
-   new flow). Never recommend pressure (timers, guilt, hidden prices,
+   Within a class: levers with a decision-metric row first, then the
+   weakest stage, then the other stages by gap score, then Absent before
+   Weak, then effort (copy or one screen before a new flow), then the order
+   in `levers.md`. Never recommend pressure (timers, guilt, hidden prices,
    blocked exits) as a lever; never add a streak to an app with no recurring
    task.
 6. **Next teardown.** Name the one teardown that would score the weakest

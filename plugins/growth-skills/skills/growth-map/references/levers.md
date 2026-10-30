@@ -20,13 +20,20 @@ Status rules:
 - A lever that is a property of an element that exists (a forgiving streak,
   a paywall right after value) is **Absent** when the element lacks that
   property entirely, **Weak** when it has part of it.
+- **Wrong moment is Weak.** An element that exists at the wrong time (a
+  notification ask at launch, a rating ask on the 3rd open) is Weak, never
+  Absent.
+- **Partial surfaces are Weak.** A Settings link to the store page with no
+  plan or date in the app is Weak for U6. A cap on free content items is a
+  usage limit for U2.
 - **One observation, one lever.** When one element fits two levers, it
   counts only for the lever that owns it (below); the other lever is judged
   on the rest of its "Looks like" line, or Unknown.
   - The first notification ask belongs to O5. R3 is judged on reminder setup
     after the first session.
-  - The in-app plan, price and renewal date belong to U6. C1 is judged only
-    on whether the way to cancel can be found.
+  - The in-app plan, price and renewal date belong to U6 (a store link
+    alone is Weak there). C1 is judged only on whether the way to cancel
+    can be found.
 - Only rows in `ranges.md` that measure this lever's change count as its
   range. A row about a nearby change (a reminder promised before the trial
   for R7, a notification for an in-app screen) is off-target: say so, or
