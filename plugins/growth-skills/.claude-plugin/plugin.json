@@ -1,7 +1,7 @@
 {
   "name": "growth-skills",
   "displayName": "Growth Skills",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Growth teardowns for mobile subscription apps, for product designers: web funnel, onboarding, the onboarding-paywall seam, upsells, the first weeks before renewal and the cancel flow. Each scores what can be changed on screen out of 100 (never rewarding pressure), flags store and dark-pattern issues, and ranks tests by published evidence. A router picks the right one. Works with Subscription Skills for benchmarks, paywall teardown and store rules.",
   "author": {
     "name": "Ivan Polushin",
