@@ -33,6 +33,11 @@ generic tips, and never invent a number.
 - **Screens in order**: screenshots, frames from a recording, or a Figma frame
   sequence. The order they arrive in is the flow order unless the user says
   otherwise. If the order is unclear, state the order you assumed.
+- **Or Figma frames**: a figma.com link to the frames or a section. When a
+  Figma connector is available, read each frame as an image (its screenshot
+  tool) in the order of the flow, and use layer text for copy. Say which
+  frames you read. A design not shipped yet is scored the same way; call it
+  a pre-hand-off check.
 - **Or a description** of the flow. Score it the same way, award half on checks
   you can't see, and say the score is from a description.
 - **Optional funnel numbers**: install → trial, trial → paid, install → paid,
@@ -64,6 +69,7 @@ Read these before writing the teardown:
   freemium flows. The score comes from its checks, never from impression.
 - `references/evidence.md`: the published tests (#1–#77) and benchmarks.
   Quote numbers exactly as written there.
+- `references/ranges.md` — the range of measured lifts per pattern and metric, built only from `evidence.md`.
 
 Read when needed:
 - `references/funnel-benchmarks.md` when the user gives funnel numbers.
@@ -188,7 +194,7 @@ the screen number: "**Screen 4** — the weight question has no reason line; add
 
 **The table.** Highest impact first. Columns, exactly:
 
-| # | Priority | Screen | Pattern | Test idea (applied to your flow) | Category norm | Evidence | Duration |
+| # | Priority | Screen | Pattern | Test idea (applied to your flow) | Category norm | Evidence | Range seen | Duration |
 
 - **Screen**: the screen number(s) the change touches, or "new, after 6".
 - **Pattern**: the pattern name from the library.
@@ -204,6 +210,11 @@ the screen number: "**Screen 4** — the weight question has no reason line; add
   add the strong one with a few words on how it differs. If the library has
   only Observed evidence, write "Observed in top apps; no public test". Never
   write an expected lift for this app.
+- **Range seen**: from `references/ranges.md`, the lowest to highest lift
+  measured in published tests of this pattern, on the metric the row is
+  judged on, with the number of tests ("+8% to +36% · 3 tests"). One test:
+  its number. None: "no published range". It shows what other apps saw,
+  never a forecast for this app; don't compute new ranges or mix metrics.
 - **Duration**: only when traffic was given, e.g. "~3 wk (trial starts)" or
   "~4 wk (paid)". Otherwise drop the column.
 
@@ -215,6 +226,11 @@ same fields.
 **Missing screens.** If you scored without the paywall, the screen after
 closing it, or (for freemium apps) the limit screens, list them in one line and
 ask for them.
+
+**Your data** (one line; skip it when the user gave their numbers): the
+ranking and durations get sharper on their own funnel (installs or onboarding starts per day, install → trial, trial → paid). If an
+analytics or subscription connector is available in this session (Amplitude,
+Mixpanel, RevenueCat, Adapty or similar), offer to pull those numbers.
 
 **Closing line**, verbatim:
 > *Published results are one app's outcome in its own test, not the lift your flow will get. Patterns and norms come from public teardowns and published case studies; run your own A/B test before shipping.*

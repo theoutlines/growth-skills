@@ -4,7 +4,7 @@ A Claude marketplace and plugin, `growth-skills`: screen teardowns for growth wo
 
 ## Product split (agreed 2026-10-30)
 - `subscription-skills` (theoutlines/subscription-skills) = the paywall and its numbers: benchmark reports (RevenueCat, Adapty, FunnelFox), Pricing Index, benchmark router, store compliance, Adapty's paywall-teardown and A/B test assistant. Self-contained product.
-- `growth-skills` (this repo) = the journey around the paywall: web funnel, onboarding, the onboarding↔paywall seam, upsells, retention to first renewal, cancel flow, plus `growth-router`. It keeps growing (non-subscription directions later: currency, one-time purchases, etc.).
+- `growth-skills` (this repo) = the journey around the paywall: web funnel, onboarding, the onboarding↔paywall seam, upsells, retention to first renewal, cancel flow, plus `growth-router`, `growth-map` (what the app doesn't do at all) and `funnel-check` (own numbers vs benchmarks). It keeps growing (non-subscription directions later: currency, one-time purchases, etc.).
 - One plugin, one install: `growth-skills` includes copies of the 8 Subscription Skills skills. The Claude app doesn't auto-install plugin dependencies (tested 2026-10-30: only growth-skills was added), so dependency + git-subdir was dropped in v1.1.0.
 - Source of truth for those 8 skills stays in theoutlines/subscription-skills. Never edit them here: run `scripts/sync-subscription.sh` before each release (it also copies the CC BY 4.0 licence into `LICENSES/`).
 - Claude app rules learned: a git source `url` must be a full `https://` URL (shorthand is skipped); plugin description ≤500 characters; SKILL.md description ≤1024; the app strips `supportUrl`, `privacyPolicyUrl` and `icon` with a warning (keep them, the directory reads them). Adding a marketplace in the app doesn't add its plugins: the user still adds the plugin from Discover.
@@ -12,7 +12,8 @@ A Claude marketplace and plugin, `growth-skills`: screen teardowns for growth wo
 
 ## Layout
 - `.claude-plugin/marketplace.json` at the root (one entry); plugin at `plugins/growth-skills/` with its own `plugin.json`.
-- Skills (15): our `growth-router`, `web2app-teardown`, `onboarding-teardown`, `flow-teardown`, `upsell-teardown`, `retention-teardown`, `cancel-flow-teardown`, plus the 8 synced from subscription-skills. Each has `SKILL.md`, `references/`, `scripts/` (`render_report.py`, `test_duration.py`, `example.json`), `assets/fonts` (Inter, OFL).
+- Skills (17): our `growth-router`, `growth-map`, `funnel-check`, `web2app-teardown`, `onboarding-teardown`, `flow-teardown`, `upsell-teardown`, `retention-teardown`, `cancel-flow-teardown`, plus the 8 synced from subscription-skills. Each teardown has `SKILL.md`, `references/` (incl. `ranges.md`), `scripts/` (`render_report.py`, `test_duration.py`, `example.json`), `assets/fonts` (Inter, OFL). `growth-map/references/levers.md` maps 42 levers to teardown patterns; `funnel-check/scripts/test_duration.py` is a copy.
+- `ranges.md` per teardown: min–max of measured lifts per pattern and metric, built only from that skill's `evidence.md`; vendor bands, self-selected comparisons and rows whose source doesn't match are left out (listed in each file's Checks). Rebuild a skill's ranges when its evidence changes.
 - Evidence IDs per skill: onboarding #1–#77 and E1–E8 (shared with flow-teardown), upsell #U, cancel #C, web2app #W, retention #R (regulator rows in retention platform-rules use D). Rows copied between libraries keep their original number in a "Same as" note; never renumber.
 - Raw research lives outside the repo: `/home/claude/onboarding-teardown-research/`, `/home/claude/upsell-research/`, `/home/claude/cancel-flow-research/`, `/home/claude/web2app-research/`, `/home/claude/retention-research/`.
 
@@ -26,7 +27,7 @@ A Claude marketplace and plugin, `growth-skills`: screen teardowns for growth wo
 - Test changes with independent subagent runs on the same briefs (scores must reproduce within a few points). Run `claude plugin validate .` before every push. Bump `version` in plugin.json and the marketplace entry on every release; attach one zip per skill to the GitHub release (the owner publishes releases; this session can't).
 
 ## Status (Oct 2026)
-- v1.0.0: six teardowns moved in from their standalone repos (onboarding v0.1.1, flow v0.1.1, upsell v0.2.0, retention v0.1.2, cancel v0.2.0, web2app v0.1.1) plus `growth-router`. v1.1.0: Subscription Skills bundled in (15 skills), dependency removed.
+- v1.0.0: six teardowns moved in from their standalone repos (onboarding v0.1.1, flow v0.1.1, upsell v0.2.0, retention v0.1.2, cancel v0.2.0, web2app v0.1.1) plus `growth-router`. v1.1.0: Subscription Skills bundled in (15 skills), dependency removed. v1.2.0: range seen column, your-data nudge and Figma-frame input in all six teardowns; new `growth-map` and `funnel-check` (17 skills).
 - Standalone teardown repos deleted; release v1.0.0 with per-skill zips published by the owner. Repo About and topics set (changed through the owner's signed-in Chrome; the session proxy can't write repo settings).
 - Not submitted to the Anthropic directory yet. No icon (deliberately).
 
@@ -38,9 +39,7 @@ A Claude marketplace and plugin, `growth-skills`: screen teardowns for growth wo
 ## Next (plan)
 1. Done 2026-10-30: v1.1.0 and the router tested by the owner in the Claude app (flow-teardown on a real flow: format, evidence labels and durations behaved as specified).
 2. Launch post for Growth Skills: write it on Wednesday, Nov 4, 2026 (same weekday as the subscription-skills post). Example must be an anonymised public flow, never the owner's work screens or data.
-3. Growth map skill (audit of all growth levers, what the product doesn't do at all), built from the patterns of the six teardowns; with the two decisions above applied across all teardowns, QA'd.
-4. Analytics bridge: own funnel vs benchmarks via the Amplitude connector, then route to the right teardown.
-5. Teardowns from Figma frames (check designs before hand-off).
+3–5. Done in v1.2.0: growth map, funnel check (analytics bridge), Figma frames as input, both decisions across all teardowns.
 6. Paywall test planner: clickable prototype, then live build on the owner's domain; link "read the result" from the plan screen.
 7. Bundle Adapty's State of Paywalls into subscription-skills once the MIT licence lands.
 8. New growth directions only with enough public evidence (e.g. in-app currency / one-time purchases); hypotheses-only topics are dropped.

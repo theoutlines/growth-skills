@@ -29,6 +29,11 @@ part skills' own libraries) with its test number and strength.
 - **Screens in order**, from the first screen through the paywall and what
   follows a close. For freemium apps, the first session plus the first
   limit-hit screens (number them L1, L2).
+- **Or Figma frames**: a figma.com link to the frames or a section. When a
+  Figma connector is available, read each frame as an image (its screenshot
+  tool) in the order of the flow, and use layer text for copy. Say which
+  frames you read. A design not shipped yet is scored the same way; call it
+  a pre-hand-off check.
 - **Or a description** of the flow; say the score is from a description.
 - **Optional funnel numbers**: install → trial, trial → paid, share reaching
   the paywall, paywall → purchase start, opt-ins.
@@ -84,6 +89,7 @@ elements); otherwise quote the paywall-teardown range labelled "Adapty prior
 - `references/seam-norms.md` — what each bucket does at the seam.
 - `references/evidence.md` — seam tests (numbers shared with the
   onboarding-teardown library) and aggregated priors E1–E7.
+- `references/ranges.md` — the range of measured lifts per pattern and metric, built only from `evidence.md`.
 - `references/lite-checks.md` — fallback checks for onboarding and paywall.
 - `references/funnel-benchmarks.md` — install → trial, trial → paid, opt-ins
   by bucket (same file as in onboarding-teardown).
@@ -150,17 +156,27 @@ the screen, the side it should be on, and the evidence.
 
 **The table.** One list across the flow, highest first:
 
-| # | Priority | Part | Screen | Pattern | Test idea | Evidence | Duration |
+| # | Priority | Part | Screen | Pattern | Test idea | Evidence | Range seen | Duration |
 
 - **Part**: Onboarding, Paywall or Seam.
 - **Pattern**: the pattern name from the part's library or `seam-patterns.md`.
 - **Evidence**: the most on-target published result, with its number and tier.
   Never an expected lift for this app.
+- **Range seen**: from `references/ranges.md`, the lowest to highest lift
+  measured in published tests of this pattern, on the metric the row is
+  judged on, with the number of tests ("+8% to +36% · 3 tests"). One test:
+  its number. None: "no published range". It shows what other apps saw,
+  never a forecast for this app; don't compute new ranges or mix metrics.
 - **Duration**: only with traffic; otherwise drop the column.
 
 **The report card** right after the table.
 
 **Missing screens**: one line, if any.
+
+**Your data** (one line; skip it when the user gave their numbers): the
+ranking and durations get sharper on their own funnel (installs per day, share that reaches the paywall, install → trial, trial → paid). If an
+analytics or subscription connector is available in this session (Amplitude,
+Mixpanel, RevenueCat, Adapty or similar), offer to pull those numbers.
 
 **Closing line**, verbatim:
 > *Published results are one app's outcome in its own test, not the lift your flow will get. Patterns and norms come from public teardowns and published case studies; run your own A/B test before shipping.*

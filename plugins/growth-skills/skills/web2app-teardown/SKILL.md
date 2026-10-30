@@ -43,6 +43,11 @@ who sell web checkout (FunnelFox, Paddle, Stripe) or argue against it
   checkout, upsells, confirmation, the "get the app" screen, the first app
   screen. For a link-out: the in-app paywall with the web option and the
   return to the app.
+- **Or Figma frames**: a figma.com link to the frames or a section. When a
+  Figma connector is available, read each frame as an image (its screenshot
+  tool) in the order of the flow, and use layer text for copy. Say which
+  frames you read. A design not shipped yet is scored the same way; call it
+  a pre-hand-off check.
 - **Or a description**; say the score is from a description.
 - **Mode**: web funnel or link-out. Infer it if not given.
 - **Markets** (US, EU countries, UK, others).
@@ -59,6 +64,7 @@ missing, score what you have and ask.
 - `references/patterns.md` — 22 screen patterns with evidence and traps,
   plus the sign-flip table.
 - `references/evidence.md` — tests #W1–#W53, benchmarks, metric definitions, gaps.
+- `references/ranges.md` — the range of measured lifts per pattern and metric, built only from `evidence.md`.
 - `references/categories.md` — the market table (which payment buttons lead,
   button wording, consent) and what each bucket does on the web.
 - `references/platform-rules.md` — rules behind the flags, and a checklist.
@@ -128,17 +134,27 @@ the market. End with: "Flags, not legal advice."
 
 **The table**, in the order from step 6:
 
-| # | Priority | Screen | Pattern | Change to test | Evidence | Duration |
+| # | Priority | Screen | Pattern | Change to test | Evidence | Range seen | Duration |
 
 - **Change to test**: the concrete screen change, with copy direction.
 - **Evidence**: the most on-target test or benchmark with its number and
   tier; "hypothesis" where none exists. Never an expected lift for this
   funnel.
+- **Range seen**: from `references/ranges.md`, the lowest to highest lift
+  measured in published tests of this pattern, on the metric the row is
+  judged on, with the number of tests ("+8% to +36% · 3 tests"). One test:
+  its number. None: "no published range". It shows what other apps saw,
+  never a forecast for this app; don't compute new ranges or mix metrics.
 - **Duration**: only with traffic; otherwise drop the column.
 
 **The report card** right after the table.
 
 **Not captured**: one line on missing screens.
+
+**Your data** (one line; skip it when the user gave their numbers): the
+ranking and durations get sharper on their own funnel (sessions per day, session → paywall, paywall → purchase). If an
+analytics or subscription connector is available in this session (Amplitude,
+Mixpanel, RevenueCat, Adapty or similar), offer to pull those numbers.
 
 **Closing line**, verbatim:
 > *Published results are one company's outcome in its own setting, not the change your funnel will get. Most web2app numbers come from vendors, and flags are not legal advice. Run your own A/B test before shipping.*

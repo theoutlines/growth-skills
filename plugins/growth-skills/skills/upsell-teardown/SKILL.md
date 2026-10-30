@@ -45,6 +45,11 @@ hypotheses.
   upgrade screens for payers, Premium tab or settings card, credit store,
   trial countdowns. Order inside a group as the user sees it. If you number
   them, number by group (G1 gate, L1 limit, P1 payer, S1 surface).
+- **Or Figma frames**: a figma.com link to the frames or a section. When a
+  Figma connector is available, read each frame as an image (its screenshot
+  tool) in the order of the flow, and use layer text for copy. Say which
+  frames you read. A design not shipped yet is scored the same way; call it
+  a pre-hand-off check.
 - **Or a description**; say the score is from a description.
 - **The model**: free use (freemium, soft paywall, reverse trial, ads tier) or
   hard paywall. If not given, infer it and say so.
@@ -66,6 +71,7 @@ missing, score what you have and ask.
 - `references/patterns.md` — 24 patterns with evidence, examples and traps,
   plus the sign-flip table.
 - `references/evidence.md` — tests #U1–#U50, benchmarks, metric definitions, gaps.
+- `references/ranges.md` — the range of measured lifts per pattern and metric, built only from `evidence.md`.
 - `references/categories.md` — placement share, later-paywall conversion,
   plan mix and consumables by bucket, and what each bucket leans on.
 - `references/platform-rules.md` — Apple (3.1.1, 3.1.2, HIG, subscription
@@ -153,17 +159,27 @@ rule and its source name. End with: "Flags, not legal advice."
 
 **The table**, in the order from step 6:
 
-| # | Priority | Screen | Pattern | Test idea | Evidence | Duration |
+| # | Priority | Screen | Pattern | Test idea | Evidence | Range seen | Duration |
 
 - **Pattern**: the name from `patterns.md`.
 - **Test idea**: the concrete change, including copy direction.
 - **Evidence**: the most on-target test or benchmark with its number and
   tier; "hypothesis" where no test exists. Never an expected lift for this app.
+- **Range seen**: from `references/ranges.md`, the lowest to highest lift
+  measured in published tests of this pattern, on the metric the row is
+  judged on, with the number of tests ("+8% to +36% · 3 tests"). One test:
+  its number. None: "no published range". It shows what other apps saw,
+  never a forecast for this app; don't compute new ranges or mix metrics.
 - **Duration**: only with traffic; otherwise drop the column.
 
 **The report card** right after the table.
 
 **Not captured**: one line on missing screens.
+
+**Your data** (one line; skip it when the user gave their numbers): the
+ranking and durations get sharper on their own funnel (trigger hits or in-app paywall views per day, view → paid, share of monthly payers). If an
+analytics or subscription connector is available in this session (Amplitude,
+Mixpanel, RevenueCat, Adapty or similar), offer to pull those numbers.
 
 **Closing line**, verbatim:
 > *Published results are one company's outcome in its own setting, not the change your upsells will get. Annual switches, family upsells and frequency caps have no public test, and compliance notes are flags, not legal advice. Run your own A/B test before shipping.*

@@ -17,7 +17,7 @@ reason to review onboarding and paywall together.
 | Comparison table | On the paywall, including the onboarding paywall | As a bare teaser screen before the paywall | Adapty library (E4, directional) |
 | Guarantee or refund promise | At the ask, next to the CTA | As its own screen before the paywall: plants doubt ahead of the ask | Adapty library (E5, directional) |
 | Loader / "building your plan" | After real personalisation, leading straight to a plan that shows the answers | With nothing personal after it: removal won +22% trial conversion, +30% ARPU (#15, directional); loader + plan lost ARPU about −50% (E1) | contested |
-| Paywall position | After a few motivation or value screens, at peak intent: Opal 7% → 17% download → trial over many tests (#8, directional) | On screen 1 with nothing shown, or after a long tail where reach collapses (one app: only 40% saw the paywall, anecdotal) | #8, #71, #72 |
+| Paywall position | After a few motivation or value screens, at peak intent: Opal 7% → 17% download → trial over many tests (#8, directional) | After a long tail where reach collapses (one app: only 40% saw the paywall, anecdotal). Earlier is not the losing side by itself: moving the paywall earlier doubled install → trial at FitnessAI (#71) and coincided with 5× revenue at Rootd (#72), both directional; screen 1 with nothing shown at all has no public test | #8, #71, #72 |
 | Discount on store-sheet abandon | 17% of revenue across 18 apps (#75, directional) | App Review scrutiny for "unintended purchases" | #75 |
 
 ## B. Seam patterns

@@ -19,6 +19,8 @@ Skills follow the user's journey. Not sure which one you need? Start with `growt
 | Upsells | `upsell-teardown` | Locked features, limits and counters, contextual paywalls, upgrade screens for payers, AI credits |
 | First weeks to renewal | `retention-teardown` | Welcome after purchase, notification ask, reminders, streaks, recaps, trial-ending notice, welcome back, rating ask |
 | Cancel flow | `cancel-flow-teardown` | Manage subscription, reason survey, save offers, confirmation, resubscribe |
+| The whole journey | `growth-map` | Which growth levers the app uses and which nobody has touched, stage by stage, and where to start |
+| Your own numbers | `funnel-check` | Your funnel against public benchmarks with matching definitions; finds the leakiest step and the teardown for it. Can pull numbers from Amplitude, Mixpanel, RevenueCat or Adapty when connected |
 
 **Included:** everything in [Subscription Skills](https://github.com/theoutlines/subscription-skills), for the paywall itself and the numbers:
 
@@ -39,7 +41,9 @@ Every teardown:
 - scores only what a designer changes on a screen, out of 100, and never rewards pressure (fake timers, guilt copy, hidden prices, blocked exits score lower);
 - flags screens that break Apple or Google rules or match a named dark pattern (flags, not legal advice);
 - ranks tests by evidence: every number links to its source and carries a tier (strong, directional, anecdotal, observed), and ideas with no public test are labelled hypotheses;
-- returns a report card (PNG) and test durations when you give traffic numbers.
+- shows a **range seen** next to each test idea: the lowest and highest lift measured in published tests of that kind of change, with the number of tests (what other apps saw, not a forecast for yours);
+- takes screenshots, a description or Figma frames (via the Figma connector), so a design can be checked before hand-off;
+- returns a report card (PNG) and test durations when you give traffic numbers, and offers to pull your own numbers from an analytics connector.
 
 ## Install
 

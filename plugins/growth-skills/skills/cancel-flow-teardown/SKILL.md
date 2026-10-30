@@ -44,6 +44,11 @@ things outside the screens, so it rarely backs a row here.
 - **Screens in order**, from the subscription entry in settings through the
   last screen (store sheet, confirmation, or what follows). After-cancel
   screens (resubscribe card, win-back offer) can be numbered A1, A2.
+- **Or Figma frames**: a figma.com link to the frames or a section. When a
+  Figma connector is available, read each frame as an image (its screenshot
+  tool) in the order of the flow, and use layer text for copy. Say which
+  frames you read. A design not shipped yet is scored the same way; call it
+  a pre-hand-off check.
 - **Or a description**; say the score is from a description.
 - **The billing surface**: App Store, Google Play or web (any billing the
   app runs itself). If not given, infer
@@ -61,6 +66,7 @@ other branches, the screen after the offer), score what you have and ask.
 - `references/scoring.md` — the 100-point rubric, the hard cap and held-back rules.
 - `references/patterns.md` — 16 patterns with evidence, examples and traps.
 - `references/evidence.md` — cases #C1–#C28, benchmarks, metric definitions, gaps.
+- `references/ranges.md` — the range of measured lifts per pattern and metric, built only from `evidence.md`.
 - `references/categories.md` — cancel reasons, reactivation and month-1
   annual cancels by bucket, and the offer that fits each reason mix.
 - `references/platform-rules.md` — Apple, Google Play, US (FTC, ROSCA,
@@ -138,18 +144,28 @@ End with: "Flags, not legal advice."
 
 **The table**, in the order from step 5:
 
-| # | Priority | Screen | Pattern | Test idea | Evidence | Duration |
+| # | Priority | Screen | Pattern | Test idea | Evidence | Range seen | Duration |
 
 - **Pattern**: the name from `patterns.md`.
 - **Test idea**: the concrete change, including the copy direction.
 - **Evidence**: the most on-target case or benchmark with its number and
   tier; for save offers add "hypothesis on mobile". Never an expected lift
   for this app.
+- **Range seen**: from `references/ranges.md`, the lowest to highest lift
+  measured in published tests of this pattern, on the metric the row is
+  judged on, with the number of tests ("+8% to +36% · 3 tests"). One test:
+  its number. None: "no published range". It shows what other apps saw,
+  never a forecast for this app; don't compute new ranges or mix metrics.
 - **Duration**: only with traffic; otherwise drop the column.
 
 **The report card** right after the table.
 
 **Not captured**: one line on missing screens.
+
+**Your data** (one line; skip it when the user gave their numbers): the
+ranking and durations get sharper on their own funnel (cancel-flow entries per day, save rate, reactivation). If an
+analytics or subscription connector is available in this session (Amplitude,
+Mixpanel, RevenueCat, Adapty or similar), offer to pull those numbers.
 
 **Closing line**, verbatim:
 > *Published results are one company's outcome in its own setting, not the change your flow will get. Save offers have no public controlled test on mobile, and compliance notes are flags, not legal advice. Run your own A/B test before shipping.*

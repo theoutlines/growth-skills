@@ -6,7 +6,7 @@ description: >-
   funnel, onboarding, paywall, the seam between them, upsells, the first
   weeks before renewal, the cancel flow) and hands it to the right teardown
   or benchmark skill, combining two when the screens span both. Use this
-  WHENEVER someone shares app screens or a flow and asks what to fix, test or
+  WHENEVER someone shares app screens, Figma frames or a flow and asks what to fix, test or
   improve without naming a skill, asks where to start on growth, or sends a
   mix of screens from different parts of the app.
 ---
@@ -27,6 +27,8 @@ its instructions. It never scores screens itself.
 | Upsells | Locked features, limits and counters, contextual paywalls, upgrade screens for payers, credits | `upsell-teardown` |
 | First weeks to renewal | Welcome after purchase, notification ask, reminders, streaks, recaps, trial-ending notice, welcome back, rating ask | `retention-teardown` |
 | Cancel flow | Manage subscription, reason survey, save offers, cancel confirmation, resubscribe | `cancel-flow-teardown` |
+| The whole journey | "What are we not doing?", a growth audit or roadmap, no specific screens | `growth-map` |
+| Own funnel numbers | Install → trial, trial → paid, renewal, cancels; or "pull our numbers" | `funnel-check` |
 
 Questions about numbers ("is our trial→paid good?", "what should we charge
 in Brazil?") go to `subscription-benchmarks`. Store-rule questions ("will
@@ -49,10 +51,11 @@ plugin.
    evidence from its own skill. Never add the scores together.
 5. **Unclear** → ask one question: which part of the app are these screens
    from?
-6. **No screens, only "where do we start?"** → ask for the numbers that
-   point to the leak (install → trial, trial → paid, first renewal, cancel
-   rate), compare them with `subscription-benchmarks`, then suggest the
-   teardown for the weakest step.
+6. **No screens, only "where do we start?"** → with numbers (or an analytics
+   connector), run `funnel-check`; without them, run `growth-map` on a
+   description of the app. Both end by naming the teardown to run next.
+7. **Figma frames** count as screens: route them the same way. A teardown of
+   a design before hand-off is the same teardown.
 
 ## Rules all skills here share
 

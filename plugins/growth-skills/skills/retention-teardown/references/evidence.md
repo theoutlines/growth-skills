@@ -32,7 +32,7 @@ Conventions:
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | R1 | Several (Headway, Flo, Beside) | Article on post-purchase screens | Education / Health & Fitness / Business (inferred) | no | Welcome screen after purchase (observed in Mobbin screenshots) | Author argues for a dedicated "what you now have" screen after purchase; describes Headway's community framing and Flo's lifetime offer after its welcome screen | Early retention (claimed) | Says apps with dedicated screens "see significantly higher early retention", with no figure. Context number the article quotes from SOSA 2026: "55.4% of 3-day trials are cancelled on Day 0" (second-hand; check the SOSA report before reusing) | Pub. 2026-05-05 | https://www.revenuecat.com/blog/growth/post-purchase-screen | Anecdotal (no test; vendor blog) |
 
-See also **R49 / Same as onboarding #1** (Blinkist trial welcome screen with a reminder opt-in), which sits in section G.
+See also **R48 / Same as onboarding #1** (Blinkist trial welcome screen with a reminder opt-in), which sits in section G.
 
 ## B. Notification permission primer and timing
 
