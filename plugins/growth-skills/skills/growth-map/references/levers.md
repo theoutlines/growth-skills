@@ -14,6 +14,24 @@ How to tell the status:
 - **N/A**: the stage or lever doesn't fit the product (see "Applies when").
 - **Unknown**: not shown or described. Ask about it; never guess.
 
+Status rules:
+- A step missing from a sequence the user described in full ("questions →
+  loader → paywall") is **Absent**; a step never mentioned is **Unknown**.
+- A lever that is a property of an element that exists (a forgiving streak,
+  a paywall right after value) is **Absent** when the element lacks that
+  property entirely, **Weak** when it has part of it.
+- **One observation, one lever.** When one element fits two levers, it
+  counts only for the lever that owns it (below); the other lever is judged
+  on the rest of its "Looks like" line, or Unknown.
+  - The first notification ask belongs to O5. R3 is judged on reminder setup
+    after the first session.
+  - The in-app plan, price and renewal date belong to U6. C1 is judged only
+    on whether the way to cancel can be found.
+- Only rows in `ranges.md` that measure this lever's change count as its
+  range. A row about a nearby change (a reminder promised before the trial
+  for R7, a notification for an in-app screen) is off-target: say so, or
+  write "no published range".
+
 ## W. Web funnel (only if the app sells on the web or plans to)
 
 | ID | Lever | Looks like | Applies when | Teardown · pattern |
@@ -48,7 +66,7 @@ How to tell the status:
 | P3 | Trial timeline and kept reminder | Today / reminder / charge on the paywall, and the reminder really sent | Free trial | flow-teardown · S5 |
 | P4 | Pre-paywall or two-step paywall | A "how your trial works" step before plans | Onboarding paywall | flow-teardown · S4 |
 | P5 | A deliberate step after close | Close leads to the product, or one second offer only after the onboarding paywall | Onboarding paywall | flow-teardown · S7, S8 |
-| P6 | Paywall itself | Plans, social proof, CTA, close (run paywall-teardown) | Any paywall | paywall-teardown |
+| P6 | Paywall itself | Plans, social proof, CTA, close (run paywall-teardown). Unknown without a paywall screen. No ranges.md: quote paywall-teardown's expected effect labelled "Adapty prior" | Any paywall | paywall-teardown |
 
 ## U. Monetizing inside the product
 
@@ -67,7 +85,7 @@ How to tell the status:
 |---|---|---|---|---|
 | R1 | Welcome with a first step | What you now have + one first action | Always | retention-teardown · 1 |
 | R2 | Trial status in the app | End date, amount and where to cancel | Free trial | retention-teardown · 2 |
-| R3 | Reminder after the first session | Time picker after first value, notification ask in context | Recurring task | retention-teardown · 4, 7 |
+| R3 | Reminder after the first session | Time picker after the first session | Recurring task | retention-teardown · 4, 7 |
 | R4 | Progress where the user lands | Streak, weekly goal or "x of y" on home | Recurring task | retention-teardown · 10 |
 | R5 | Forgiving streak | Easy to keep; repair, freeze or pause when broken | A streak exists | retention-teardown · 11, 12 |
 | R6 | Recap of the user's value | Weekly or monthly summary in the user's unit | Always | retention-teardown · 17 |
@@ -79,9 +97,9 @@ How to tell the status:
 
 | ID | Lever | Looks like | Applies when | Teardown · pattern |
 |---|---|---|---|---|
-| C1 | Findable cancel | "Manage subscription" with plan, price, renewal date | Always | cancel-flow-teardown · 1, 2 |
+| C1 | Findable cancel | "Manage subscription" or a cancel link that a user finds in two taps from Settings or Profile | Always | cancel-flow-teardown · 1, 2 |
 | C2 | Reason survey routes the offer | Optional reasons; each leads to its own help or offer | Always | cancel-flow-teardown · 3, 4 |
-| C3 | Pause or plan switch | Pause (where billing allows) or a cheaper plan | Always | cancel-flow-teardown · 5, 6 |
-| C4 | Clean exit | Cancel visible next to every offer; one save screen at most | Always | cancel-flow-teardown · 10, 11 |
+| C3 | Pause or plan switch | Pause (where billing allows) or a cheaper plan | The app has a pause or a cheaper plan to offer; otherwise N/A | cancel-flow-teardown · 5, 6 |
+| C4 | Clean exit | Cancel visible next to every offer; one save screen at most (no save screen at all counts as Present) | Always | cancel-flow-teardown · 10, 11 |
 | C5 | Billing-issue banner | In-app banner when a payment fails | Always | cancel-flow-teardown · 13 |
 | C6 | Easy way back | One-tap resubscribe; win-back after lapse | Always | cancel-flow-teardown · 14, 15 |

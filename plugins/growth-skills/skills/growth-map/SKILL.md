@@ -49,6 +49,8 @@ not, cancel in-app or store), then map.
   when each applies, and the teardown pattern that holds its evidence.
 - Each teardown's `references/ranges.md` and `references/evidence.md` — the
   range of measured lifts and the tier for a lever's pattern.
+- `onboarding-teardown/references/categories.md` — category norms (question
+  count, paywall position) for O7 and P1.
 - `subscription-benchmarks` — stage benchmarks when the user gives numbers.
 
 ## Process (internal — do NOT show these steps)
@@ -56,30 +58,38 @@ not, cancel in-app or store), then map.
 1. **Fit.** Set what applies: web funnel yes/no, trial yes/no, free use
    yes/no, recurring task yes/no. Levers that don't apply are N/A.
 2. **Mark every lever** with one status: Present, Weak, Absent, N/A or
-   Unknown. Only what was shown or described counts; anything else is
-   Unknown. Never mark Absent from silence.
-3. **Stage coverage.** Per stage: present / applicable levers. Unknowns are
-   listed, not counted as absent.
+   Unknown, using the status rules in `levers.md` (sequence rule, property
+   rule, one observation one lever). Never mark Absent from silence.
+3. **Stage coverage.** Per stage: Present / applicable levers (Unknown stays
+   in the denominator; N/A doesn't). Weak and Unknown are counted on the
+   coverage line.
 4. **Weakest stage.** With numbers: the stage furthest below its benchmark
    (compare like for like, per the router's denominators). Without numbers:
-   the stage with the largest share of absent levers. Say which rule you
-   used.
-5. **Pick up to 5 levers to start with**, from Absent first, then Weak:
-   - rank by: weakest stage first, then the strongest evidence tier for the
-     lever's pattern, then effort (copy or one screen before a new flow);
-   - a lever whose pattern has a strong in-app test ranks above a hypothesis;
-   - never recommend pressure (timers, guilt, hidden prices, blocked exits)
-     as a lever; never add a streak to an app with no recurring task.
+   the highest gap score = (Absent + half of Weak) / applicable levers. Ties:
+   the earlier stage. Say which rule you used.
+5. **Pick up to 5 levers to start with** from the Absent and Weak levers.
+   Sort by evidence class first:
+   - **A**: an on-target strong test (same change, in an app);
+   - **B**: a strong test that is off-target (other channel, other kind of
+     product, bundled) or a directional test;
+   - **C**: hypothesis (no range row that measures this change).
+   Within a class: the weakest stage first, then the other stages by gap
+   score, then Absent before Weak, then effort (copy or one screen before a
+   new flow). Never recommend pressure (timers, guilt, hidden prices,
+   blocked exits) as a lever; never add a streak to an app with no recurring
+   task.
 6. **Next teardown.** Name the one teardown that would score the weakest
    stage, and what to share with it.
 
 ## Output format
 
+Reply in the user's language.
+
 **Line 1 — read.** The app's model in a few words and the one-sentence
 finding ("Strong at the paywall, nothing after the purchase").
 
 **Line 2 — coverage.**
-**Coverage** · Web 0/0 (N/A) · Onboarding 4/7 · Paywall 3/6 · Upsells 2/6 · Renewal 2/9 · Cancel 3/6 · 7 unknown
+**Coverage** · Web N/A · Onboarding 4/7 · Paywall 3/6 · Upsells 2/6 · Renewal 2/9 · Cancel 3/6 · 6 weak · 7 unknown
 
 **The map**, one table per stage that applies (skip N/A stages in one line):
 
@@ -91,16 +101,23 @@ Status as words (Present, Weak, Absent, Unknown), not symbols.
 
 | # | Stage | Lever | What to add or change | Range seen | Evidence | Teardown |
 
-- **Range seen**: from that teardown's `ranges.md`, e.g. "+8% to +36% ·
-  3 tests". "No published range" when there is none. What other apps saw,
-  never a forecast.
-- **Evidence**: the strongest test behind it with its tier, or "hypothesis".
+- **Range seen**: from that teardown's `ranges.md`, with the metric:
+  "D14 retention +3.3% · 1 test", "Trial starts +8% to +36% · 3 tests". Use
+  the stage's decision metric (trial starts or conversion for onboarding
+  and paywall, conversion for upsells, retention or trial → paid for
+  renewal, churn or save rate for cancel); at most two metrics, never
+  merged. If results point opposite ways, show both and write "sign flips".
+  "No published range" when no row measures this change. What other apps
+  saw, never a forecast.
+- **Evidence**: the test behind it with its tier and, if B, why it's
+  off-target; or "hypothesis".
 
 **Unknowns**: one line listing levers to check, grouped by stage.
 
 **Next step**: the teardown to run and what screens to share.
 
-**Your data** (one line; skip it when the user gave numbers): the map ranks
+**Your data** (one line; skip it when the user gave numbers or the app
+isn't theirs): the map ranks
 stages by missing levers; with their own funnel numbers it ranks by where
 money actually leaks. If an analytics or subscription connector is available
 in this session (Amplitude, Mixpanel, RevenueCat, Adapty or similar), offer
