@@ -5,7 +5,7 @@ A Claude marketplace and plugin, `growth-skills`: screen teardowns for growth wo
 ## Product split (agreed 2026-10-30)
 - `subscription-skills` (theoutlines/subscription-skills) = the paywall and its numbers: benchmark reports (RevenueCat, Adapty, FunnelFox), Pricing Index, benchmark router, store compliance, Adapty's paywall-teardown and A/B test assistant. Self-contained product.
 - `growth-skills` (this repo) = the journey around the paywall: web funnel, onboarding, the onboarding↔paywall seam, upsells, retention to first renewal, cancel flow, plus `growth-router`. It keeps growing (non-subscription directions later: currency, one-time purchases, etc.).
-- This marketplace lists both plugins. `growth-skills` declares `subscription-skills` as a dependency (one install gets both). `subscription-skills` is referenced by `git-subdir` from its own repo, never copied: edit it there.
+- This marketplace lists both plugins. `growth-skills` declares `subscription-skills` as a dependency (one install gets both). `subscription-skills` is referenced by `git-subdir` from its own repo, never copied: edit it there. The source `url` must be a full `https://github.com/....git` URL: the Claude app skips a plugin whose git source uses the `owner/repo` shorthand. The app also strips `supportUrl`, `privacyPolicyUrl` and `icon` from plugin.json with a warning; keep them, the Anthropic directory reads them. Limits in the app: plugin description ≤500 characters, SKILL.md description ≤1024.
 - Standalone skill repos are retired. Skills are edited only here, in `plugins/growth-skills/skills/`.
 
 ## Layout
@@ -24,7 +24,7 @@ A Claude marketplace and plugin, `growth-skills`: screen teardowns for growth wo
 - Test changes with independent subagent runs on the same briefs (scores must reproduce within a few points). Run `claude plugin validate .` before every push. Bump `version` in plugin.json and the marketplace entry on every release; attach one zip per skill to the GitHub release (the owner publishes releases; this session can't).
 
 ## Status (Oct 2026)
-- v1.0.0: six teardowns moved in from their standalone repos (onboarding v0.1.1, flow v0.1.1, upsell v0.2.0, retention v0.1.2, cancel v0.2.0, web2app v0.1.1) plus `growth-router`. Install tested: growth-skills installs with subscription-skills as a dependency.
+- v1.0.0: six teardowns moved in from their standalone repos (onboarding v0.1.1, flow v0.1.1, upsell v0.2.0, retention v0.1.2, cancel v0.2.0, web2app v0.1.1) plus `growth-router`. Install tested in Claude Code and the Claude app (v1.0.2): growth-skills installs with subscription-skills as a dependency.
 - Standalone teardown repos deleted; release v1.0.0 with per-skill zips published by the owner. Repo About and topics set (changed through the owner's signed-in Chrome; the session proxy can't write repo settings).
 - Not submitted to the Anthropic directory yet. No icon (deliberately).
 
