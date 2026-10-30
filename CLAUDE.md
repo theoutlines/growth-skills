@@ -25,4 +25,12 @@ A Claude marketplace and plugin, `growth-skills`: screen teardowns for growth wo
 
 ## Status (Oct 2026)
 - v1.0.0: six teardowns moved in from their standalone repos (onboarding v0.1.1, flow v0.1.1, upsell v0.2.0, retention v0.1.2, cancel v0.2.0, web2app v0.1.1) plus `growth-router`. Install tested: growth-skills installs with subscription-skills as a dependency.
+- Standalone teardown repos deleted; release v1.0.0 with per-skill zips published by the owner. Repo About and topics set (changed through the owner's signed-in Chrome; the session proxy can't write repo settings).
 - Not submitted to the Anthropic directory yet. No icon (deliberately).
+
+## Next (plan)
+1. Test the router and the dependency in the Claude app (Customize → Plugins → Add marketplace).
+2. Launch post for Growth Skills.
+3. Paywall test planner: clickable prototype, then live build on the owner's domain; link "read the result" from the plan screen.
+4. Bundle Adapty's State of Paywalls into subscription-skills once the MIT licence lands.
+5. New growth directions only with enough public evidence (e.g. in-app currency / one-time purchases); hypotheses-only topics are dropped.
