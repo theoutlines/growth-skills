@@ -31,7 +31,12 @@ write them into files you create unless the user asks.
 - **The app's numbers** for a recent, complete period (a 30-day install
   cohort is best): installs, trial starts, first payments, first renewals;
   optionally paywall views, web sessions and purchases, cancels.
-- **Category** (RevenueCat SOSA bucket; "AI app" is a tag), **main markets**,
+- **Category** = the bucket of the app's primary store category (RevenueCat
+  SOSA buckets; "AI app" is a tag). When the app is a tool sitting in a
+  consumption category (music creation in Music, photo editing in Photo &
+  Video), keep the store bucket and show the nearest other bucket's median
+  as a cross-check. Never pick the bucket that flatters the app.
+- **Main markets**,
   **store mix**, **trial length**, **plan mix** (weekly / monthly / annual).
 - **Or a connector.** If an analytics or subscription connector is available
   in this session, offer to pull the numbers instead of asking. Use the
@@ -39,6 +44,15 @@ write them into files you create unless the user asks.
   first open, trial start, first payment, renewal), for one 30-day cohort,
   split by platform when possible. Show the user which events you used and
   ask them to confirm before comparing: event names differ between apps.
+- **Check the base before comparing.** Analytics "new user" events
+  (Amplitude `[Amplitude] New User`, Mixpanel first-seen and similar) count
+  devices and anonymous visitors, not installs, and often inflate the base.
+  Prefer an install or first-open event; otherwise use sign-ups. Sanity
+  checks: new users several times higher than sign-ups, a large share with
+  no platform, or fewer than ~80% of an onboarding paywall's audience
+  reaching it all mean the base is wrong. Say which base you used. A
+  sign-up base skips the install → sign-up drop, so rates read higher than
+  the per-download benchmark: say so in Caveats.
 
 If the numbers can't be matched to a definition below, say so and ask; never
 compare unlike things.
@@ -102,14 +116,24 @@ finding ("Trial starts are fine; trial → paid is in the bottom quartile").
 
 **The funnel:**
 
-| Step | Your rate | Benchmark (median, p25–p75) | Where you are | Source and definition |
+| Step | Your rate | Benchmark: p25 / **median** / p75 | Where you are | Source and definition |
+
+Under the table, one line: "p25 / median / p75 = a quarter of apps are
+below the first number, the typical app is at the median, the best quarter
+is above the third." Paywall-step benchmarks come only from a State of
+Paywalls skill when available (iOS only); otherwise write "no benchmark"
+and name what is missing. Google Play has no paywall-step benchmark.
 
 **Leakiest step:** one paragraph: how far below, what usually drives that
 step (from the report skill, with its source), and what it means in the
 app's own numbers (your arithmetic, say so).
 
 **Next:** the teardown to run, what screens to share with it, and the test
-duration at that step.
+duration at that step, in plain words: "A test here needs N days to see a
+10% change (from X% to Y%). A shorter test only sees bigger changes: in 4
+weeks, Z% or more. Decide the smallest change worth shipping before the
+test, and don't stop it early." Explain why a step is slow when it is
+(little traffic, or the result arrives only after the trial ends).
 
 **Caveats:** one line on anything not like for like (period, store mix,
 missing trial-using filter).

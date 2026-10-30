@@ -27,7 +27,7 @@ A Claude marketplace and plugin, `growth-skills`: screen teardowns for growth wo
 - Test changes with independent subagent runs on the same briefs (scores must reproduce within a few points). Run `claude plugin validate .` before every push. Bump `version` in plugin.json and the marketplace entry on every release; attach one zip per skill to the GitHub release (the owner publishes releases; this session can't).
 
 ## Status (Oct 2026)
-- v1.0.0: six teardowns moved in from their standalone repos (onboarding v0.1.1, flow v0.1.1, upsell v0.2.0, retention v0.1.2, cancel v0.2.0, web2app v0.1.1) plus `growth-router`. v1.1.0: Subscription Skills bundled in (15 skills), dependency removed. v1.2.0: range seen column, your-data nudge and Figma-frame input in all six teardowns; new `growth-map` and `funnel-check` (17 skills).
+- v1.0.0: six teardowns moved in from their standalone repos (onboarding v0.1.1, flow v0.1.1, upsell v0.2.0, retention v0.1.2, cancel v0.2.0, web2app v0.1.1) plus `growth-router`. v1.1.0: Subscription Skills bundled in (15 skills), dependency removed. v1.2.0: range seen column, your-data nudge and Figma-frame input in all six teardowns; new `growth-map` and `funnel-check` (17 skills). v1.2.1: funnel-check guards against analytics "new user" bases, labels p25/median/p75, states the category rule for tools in consumption categories, explains test durations in plain words (lessons from the owner's live run on his own product; no product data in the repo).
 - Standalone teardown repos deleted; release v1.0.0 with per-skill zips published by the owner. Repo About and topics set (changed through the owner's signed-in Chrome; the session proxy can't write repo settings).
 - Not submitted to the Anthropic directory yet. No icon (deliberately).
 
