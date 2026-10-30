@@ -31,8 +31,8 @@ A Claude marketplace and plugin, `growth-skills`: screen teardowns for growth wo
 - Not submitted to the Anthropic directory yet. No icon (deliberately).
 
 ## Next (plan)
-1. Test v1.1.0 and the router in the Claude app.
-2. Launch post for Growth Skills.
+1. Done 2026-10-30: v1.1.0 and the router tested by the owner in the Claude app (flow-teardown on a real flow: format, evidence labels and durations behaved as specified).
+2. Launch post for Growth Skills: write it on Wednesday, Nov 4, 2026 (same weekday as the subscription-skills post). Example must be an anonymised public flow, never the owner's work screens or data.
 3. Paywall test planner: clickable prototype, then live build on the owner's domain; link "read the result" from the plan screen.
 4. Bundle Adapty's State of Paywalls into subscription-skills once the MIT licence lands.
 5. New growth directions only with enough public evidence (e.g. in-app currency / one-time purchases); hypotheses-only topics are dropped.
