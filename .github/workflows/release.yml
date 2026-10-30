@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Zip each skill
+        run: |
+          mkdir -p dist
+          cd plugins/growth-skills/skills
+          for d in */; do
+            s="${d%/}"
+            zip -qr "../../../dist/$s.zip" "$s" -x '*/__pycache__/*' '*.DS_Store'
+          done
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: |
+          notes=".github/release-notes/$TAG.md"
+          if [ -f "$notes" ]; then
+            gh release create "$TAG" dist/*.zip --title "$TAG" --notes-file "$notes"
+          else
+            gh release create "$TAG" dist/*.zip --title "$TAG" --generate-notes
+          fi
