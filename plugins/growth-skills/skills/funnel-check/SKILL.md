@@ -51,22 +51,33 @@ compare unlike things.
 | Trial → paid | Trial starts that convert to paid | RevenueCat SOSA (also Adapty SOIS, never merged) |
 | Install → paid | Installs with a paid subscription within 35 days (D35) | RevenueCat SOSA |
 | First renewal | Subscriptions renewing at their first renewal date, by plan length | RevenueCat SOSA (per cycle); Adapty SOIS is a cumulative stage, a different measure |
-| Paywall view → purchase | Per paywall view | Adapty State of Paywalls, if installed; otherwise say there is no bundled benchmark |
+| Paywall view → trial or purchase | Per paywall view (say whether views or unique viewers) | A State of Paywalls skill if one is available in this session; otherwise no bundled benchmark. Adapty SOIS view → payment (soft vs hard) is per payment only, never compare a trial step with it |
 | Web funnel steps | Per web session or step | FunnelFox State of Web2App |
 
 ## Process (internal — do NOT show these steps)
 
 1. **Get the numbers** (connector or user) and restate each as a rate with
    its denominator. Flag anything that isn't a complete cohort.
-2. **Benchmark each step** for the closest segment (category × region ×
-   plan), with p25, median and p75 where the report gives them. Place the
-   app's number: below p25, p25–median, median–p75, above p75.
+2. **Benchmark each step.** Place the app on the category's quartiles
+   (p25, median, p75: below p25, p25–median, median–p75, above p75). Where a
+   closer cell exists (category × region, store, trial length) show its
+   median next to it; those cells usually have medians only. Store splits
+   are quoted side by side, never weighted by the app's store mix. One
+   cross-check from a second source goes in the Source column, labelled as a
+   different measure.
 3. **Leakiest step** = the step furthest below its category median in
-   relative terms. Ties: the earlier step in the funnel.
+   relative terms, among the steps that route to a teardown (install →
+   trial, paywall view → trial or purchase, trial → paid, first renewal,
+   web steps). Install → paid is an outcome (the steps above multiplied),
+   shown as a summary row and never ranked; say if it covers trial
+   conversions only. Ties: the earlier step. A step not reached yet (first
+   renewal on annual) shows its benchmark and "not reached yet".
 4. **Route** the leakiest step to its teardown:
-   - install → trial: `onboarding-teardown`, or `flow-teardown` when the
-     onboarding paywall is in question;
-   - paywall view → purchase: `paywall-teardown`;
+   - install → trial: `flow-teardown` when paywall reach or the onboarding
+     paywall's own conversion is in question (or unknown);
+     `onboarding-teardown` when people reach the paywall and drop before it
+     is the whole story;
+   - paywall view → trial or purchase: `paywall-teardown`;
    - trial → paid: `retention-teardown` (trial status, trial-ending notice)
      and `flow-teardown` (trial timeline and promise);
    - first renewal: `retention-teardown`;
@@ -76,12 +87,15 @@ compare unlike things.
    For a wider view of what's missing, suggest `growth-map`.
 5. **Test duration** for the leakiest step with the app's own traffic and
    base rate: run `python3 <skill-dir>/scripts/test_duration.py`
-   (people entering the step per day as `--installs`, the step's rate as
+   (the unit the test would split: installs per day for onboarding and
+   flow tests, paywall viewers per day for a paywall-only test, as `--installs`; the step's rate as
    `--baseline`, `--mde 0.10`; add `--metric paid --trial-days N` for paid
    metrics). Say the unit. If it runs past 8 weeks, also give the change
    detectable in 4 weeks (`--weeks 4`).
 
 ## Output format
+
+Reply in the user's language.
 
 **Line 1 — read.** Category, period, store mix, and the one-sentence
 finding ("Trial starts are fine; trial → paid is in the bottom quartile").
