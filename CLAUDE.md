@@ -30,9 +30,17 @@ A Claude marketplace and plugin, `growth-skills`: screen teardowns for growth wo
 - Standalone teardown repos deleted; release v1.0.0 with per-skill zips published by the owner. Repo About and topics set (changed through the owner's signed-in Chrome; the session proxy can't write repo settings).
 - Not submitted to the Anthropic directory yet. No icon (deliberately).
 
+## Decisions (2026-10-30, owner review)
+- **Show a "range seen" next to each test idea**, like Adapty's expected-impact ranges, because it gives a feel for the size of the win. Build it only from measured results in `evidence.md`: the lowest and highest lift seen in published tests of the same kind of change, on the same metric, with the number of tests ("+8% to +36%, 3 tests"). One test → its own number. No test → "no published range". Label it "seen in published tests, not a forecast for your app". It's a range of results, never a merged average.
+- **Nudge toward real data.** Every teardown ends with one line saying the ranking and durations get sharper on the user's own funnel numbers, and, when an analytics connector (Amplitude, Mixpanel, RevenueCat, Adapty) is available, offers to pull them. A reminder, not a gate.
+- Owner's goals for the whole toolset: help him (a growth design lead building a Growth team) collect hypotheses, analyse current data against benchmarks, design variants, check them before hand-off, and learn the full growth toolkit, including where the team does nothing yet.
+
 ## Next (plan)
 1. Done 2026-10-30: v1.1.0 and the router tested by the owner in the Claude app (flow-teardown on a real flow: format, evidence labels and durations behaved as specified).
 2. Launch post for Growth Skills: write it on Wednesday, Nov 4, 2026 (same weekday as the subscription-skills post). Example must be an anonymised public flow, never the owner's work screens or data.
-3. Paywall test planner: clickable prototype, then live build on the owner's domain; link "read the result" from the plan screen.
-4. Bundle Adapty's State of Paywalls into subscription-skills once the MIT licence lands.
-5. New growth directions only with enough public evidence (e.g. in-app currency / one-time purchases); hypotheses-only topics are dropped.
+3. Growth map skill (audit of all growth levers, what the product doesn't do at all), built from the patterns of the six teardowns; with the two decisions above applied across all teardowns, QA'd.
+4. Analytics bridge: own funnel vs benchmarks via the Amplitude connector, then route to the right teardown.
+5. Teardowns from Figma frames (check designs before hand-off).
+6. Paywall test planner: clickable prototype, then live build on the owner's domain; link "read the result" from the plan screen.
+7. Bundle Adapty's State of Paywalls into subscription-skills once the MIT licence lands.
+8. New growth directions only with enough public evidence (e.g. in-app currency / one-time purchases); hypotheses-only topics are dropped.
