@@ -2,21 +2,18 @@
 name: retention-teardown
 description: >-
   Tear down the screens a mobile subscription app shows between the first
-  purchase (or trial start) and the first renewal: the welcome after
-  purchase, the notification primer, reminder setup, first-week guidance,
-  streaks and progress, value recaps, the in-app trial-ending notice, the
-  return screen after a gap, and the rating and widget asks. For product
-  designers: a 100-point score for what can be changed on screen (never
-  rewarding pressure), screen flags from Apple and Google rules, a report
-  card and ranked screen tests grounded in 61 published tests and public
-  benchmarks, each labelled by evidence strength. Use this WHENEVER someone
-  shares welcome-to-Premium, notification permission, reminder, streak,
-  progress, recap, trial-status, welcome-back or rating-prompt screens, asks
-  how to keep new subscribers until the first renewal, reduce early trial
-  cancels with design, or compares two versions. For paywalls prefer
-  paywall-teardown; for onboarding before the purchase prefer
-  onboarding-teardown; for upsells prefer upsell-teardown; for the cancel
-  flow prefer cancel-flow-teardown.
+  purchase (or trial start) and the first renewal: welcome after purchase,
+  notification primer, reminders, first-week guidance, streaks and progress,
+  value recaps, the in-app trial-ending notice, the return screen and the
+  rating and widget asks. For product designers: a 100-point score for what
+  can be changed on screen (never rewarding pressure), Apple and Google
+  screen flags, a report card and ranked tests from 61 published tests and
+  public benchmarks. Use this WHENEVER someone shares welcome-to-Premium,
+  notification, reminder, streak, recap, trial-status, welcome-back or
+  rating-prompt screens, or asks how to keep new subscribers until the first
+  renewal. For paywalls prefer paywall-teardown, onboarding
+  onboarding-teardown, upsells upsell-teardown, cancel flows
+  cancel-flow-teardown.
 ---
 
 # Retention Teardown
