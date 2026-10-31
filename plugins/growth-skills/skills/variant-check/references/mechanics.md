@@ -599,7 +599,23 @@ When B changes several mechanics at once:
 - Mechanics: 13. Calls rest on an Adapty band: 1, 2, 3, 4, 5, 9, 10, 11;
   on single tests only: 6, 7, 13; on a prior: 12. Mechanic 8 is called only
   when the button changes on its own; tied to an offer change it's part of
-  that mechanic.
+  that mechanic. Single tests also call where no band covers the metric: 1
+  (trial starts, #97 + #1), 3 (revenue per 100 installs, #41), 7 (trial
+  starts, #157), 13 (revenue per user, #92).
+- 2026-10-31 deep sweep: paywall rows #90–#165 folded in as single-test
+  context (bands unchanged): 1 (#97, #116, #150), 2 (#94, #95, #104, #105,
+  #110, #122, #123, #124, #126, #127, #142, U53), 3 (#149), 4 (#106), 5
+  (#100), 7 (#157), 8 (#114, #121, #132), 10 (#96, #98, #103, #153, #158,
+  #159, #165), 11 (#90, #91, #93, #107–#109, #111, #117–#120, #125, #128,
+  #137, #141, #146, #163, #167), 12 (#101, #139, #144, #152), 13 (#92,
+  #102, #115, #138, #145, #154–#156). Losses and nulls without a figure are
+  listed in the text and never enter a range.
+- Not mapped (not a change on the paywall screen): onboarding rows #99,
+  #112, #113, #129–#131, #133–#136, #140, #143, #147, #148, #160–#162,
+  #164 (onboarding-mechanics.md covers them); #151 (where the paywall sits in
+  the flow, not a paywall variant); #166 (card required for the trial: a
+  billing setting); U52 (hard paywall: a business model); U62 (upgrade
+  button for payers: upsell-teardown).
 - Every "What the winners had" line carries its source; key traits have a
   test behind them.
 - Rebuild when the Adapty library summary or the onboarding evidence changes.
