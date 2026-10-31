@@ -1,30 +1,30 @@
 area,idea,lost,records,note
-paywall,annual,no,adapty:Paywall_plans,Adapty library band (paywall-ab-test-assistant)
-paywall,explain,no,adapty:Trial,Adapty library band
-paywall,annualTrial,no,adapty:Trial,Adapty library band
-paywall,compare,no,adapty:Showcasing,Adapty library band
-paywall,proof,no,adapty:Social,Adapty library band
-paywall,visuals,no,adapty:Media,Adapty library band
-paywall,cta,no,adapty:Call,Adapty library band
+paywall,annual,no,adapty:Paywall_plans onboarding:43 onboarding:80 onboarding:79 onboarding:42,Adapty library band (paywall-ab-test-assistant)
+paywall,explain,no,adapty:Trial onboarding:1 onboarding:78,Adapty library band
+paywall,annualTrial,no,adapty:Trial onboarding:41,Adapty library band
+paywall,compare,no,adapty:Showcasing onboarding:81,Adapty library band
+paywall,proof,no,adapty:Social onboarding:60,Adapty library band
+paywall,visuals,no,adapty:Media onboarding:82 onboarding:68,Adapty library band
+paywall,cta,no,adapty:Call onboarding:67,Adapty library band
 paywall,close,no,adapty:Close,Adapty library band
-paywall,lifetime,no,adapty:Paywall_plans,Adapty library band
-paywall,price,no,adapty:Paywall_prices,Adapty library band
-paywall,second,no,adapty:Paywall_prices onboarding:E2,Adapty library band; same as onboarding E2
-paywall,copy,no,adapty:Headline,prior + Adapty State of In-App Subscriptions 2026 win rates
+paywall,lifetime,no,adapty:Paywall_plans upsell:U22,Adapty library band
+paywall,price,no,adapty:Paywall_prices onboarding:85 onboarding:84 onboarding:59,Adapty library band
+paywall,second,no,adapty:Paywall_prices onboarding:E2 onboarding:21,Adapty library band; same as onboarding E2
+paywall,copy,no,adapty:Headline onboarding:69 onboarding:58,prior + Adapty State of In-App Subscriptions 2026 win rates
 paywall,secondMain,yes,onboarding:E2,the losing half of E2
-onboarding,goals,no,onboarding:13 onboarding:12 onboarding:E8,
-onboarding,core,no,onboarding:12,
+onboarding,goals,no,onboarding:13 onboarding:12 onboarding:E8 onboarding:4 onboarding:3,
+onboarding,core,no,onboarding:12 onboarding:5 onboarding:77,
 onboarding,outcomes,no,onboarding:2 onboarding:11,
 onboarding,proof,no,onboarding:17 onboarding:2,
-onboarding,timeline,no,onboarding:1,
+onboarding,timeline,no,onboarding:1 onboarding:78,
 onboarding,quickstart,no,onboarding:45,
-onboarding,echo,no,onboarding:27 onboarding:23,
+onboarding,echo,no,onboarding:27 onboarding:23 onboarding:22,
 onboarding,split,no,onboarding:55 onboarding:56 onboarding:18,
 onboarding,reminder,no,onboarding:16,
 onboarding,loader,no,onboarding:15,
 onboarding,promise,no,onboarding:17,
-onboarding,signup,no,adapty:ONBOARDING,Adapty library band (registration friction)
-onboarding,plan,no,onboarding:27 onboarding:13,
+onboarding,signup,no,adapty:ONBOARDING onboarding:5 onboarding:6,Adapty library band (registration friction)
+onboarding,plan,no,onboarding:27 onboarding:13 onboarding:3,
 onboarding,depth,no,onboarding:14,
 onboarding,shorter,yes,onboarding:14 adapty:ONBOARDING,the losing half of #14 and the Adapty band
 onboarding,loaderPlan,yes,onboarding:E1,
