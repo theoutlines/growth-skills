@@ -489,8 +489,9 @@ https://pod.wave.co/podcast/sub-club-by-revenuecat/stop-celebrating-conversion-w
   benefits list, news, web): *outlier* (another category and platform).
 - Paywall conversion +9.5%, ARPU +13% (one test): #139 Dogo, directional
   (one generic paywall → a paywall per user segment, each leading with a
-  different value). Above the prior, but copy per segment is more than a
-  headline swap. https://www.botsi.com/blog/personalize-paywall-messaging
+  different value). *Outlier* for this mechanic: copy per segment is
+  personalisation, not a headline swap; it never sets the call here (see
+  onboarding mechanic O13). https://www.botsi.com/blog/personalize-paywall-messaging
 - Install → trial +72%: #152, directional (a second paywall leading with a
   results statistic, "86% improved their diet"): *outlier* (other metric,
   second paywall).
@@ -577,7 +578,9 @@ When B changes several mechanics at once:
 - Attribution: a win can't be credited to one mechanic. Say so and name the
   one to isolate next.
 - Overlap: mechanic 2's Adapty band already includes trial-on-annual
-  layouts; with 2 + 3 together, cite the band once.
+  layouts; with 2 + 3 together, or 2 + 13 where the new trial sits on the
+  annual plan only, cite mechanic 2's band once and don't call #92 or the
+  other mechanic-13 tests separately (list them as context).
 - Conflicts: comparison table + testimonials together lost (mechanic 4).
 
 ## Screen flags (any variant; not legal advice)
