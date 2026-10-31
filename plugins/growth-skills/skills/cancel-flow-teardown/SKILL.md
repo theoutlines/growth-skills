@@ -28,7 +28,7 @@ the table. Store settings, billing setup, emails and legal review are out of
 scope: don't mention them.
 
 Never invent a number. Every figure you quote comes from the references
-(`evidence.md` test #C1–#C28 or benchmark row, `categories.md`,
+(`evidence.md` test #C1–#C31 or benchmark row, `categories.md`,
 `platform-rules.md`, or counts in `flows.md`), with its strength. Arithmetic
 on the user's own numbers is fine; say it's yours.
 
@@ -65,7 +65,7 @@ other branches, the screen after the offer), score what you have and ask.
 
 - `references/scoring.md` — the 100-point rubric, the hard cap and held-back rules.
 - `references/patterns.md` — 16 patterns with evidence, examples and traps.
-- `references/evidence.md` — cases #C1–#C28, benchmarks, metric definitions, gaps.
+- `references/evidence.md` — cases #C1–#C31, benchmarks, metric definitions, gaps.
 - `references/ranges.md` — the range of measured lifts per pattern and metric, built only from `evidence.md`.
 - `references/categories.md` — cancel reasons, reactivation and month-1
   annual cancels by bucket, and the offer that fits each reason mix.

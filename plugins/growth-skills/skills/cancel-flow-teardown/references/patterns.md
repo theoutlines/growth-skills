@@ -6,7 +6,7 @@ before the store or its own cancel step, the confirmation, the billing-issue
 banner and the way back after cancel.
 
 Each pattern has **When**, **Cross-check**, **How**, **Evidence** (test numbers
-#C1–#C28 and benchmarks in `evidence.md`), **Seen in** (apps from `flows.md`)
+#C1–#C31 and benchmarks in `evidence.md`), **Seen in** (apps from `flows.md`)
 and **Trap**. Tiers: strong, directional, anecdotal, observed.
 
 **Read this first.** None of the strong tests in the library measures an

@@ -12,8 +12,9 @@ the denominator rule below.
 ## Sources
 
 - **#N**: a published test in the onboarding-teardown evidence library
-  (`onboarding-teardown/references/evidence.md`), same numbers. The link is
-  in the line.
+  (`onboarding-teardown/references/evidence.md`, tests #1–#167), same
+  numbers. The link is in the line. Second reports of one test (#143 = #3,
+  #159 = #71) are never counted as another test.
 - **Adapty library**: Adapty's A/B test library as summarised in the
   `paywall-ab-test-assistant` skill (`references/evidence-library.md`,
   sections ONBOARDING and ACROSS THE FLOW). Each band pools many tests.
@@ -72,9 +73,9 @@ tests, market rule). Two more for onboarding:
   the test. For an onboarding test, a paywall mechanic may be suggested for
   the paywall at the end of the flow, with the per view → per install rule.
 - **Losses make a "likely to lose" call.** When the published results for
-  the change B makes are losses (mechanic O7 shortening, mechanic O5 adding a
-  loader before a plan screen), the call is "likely to lose", whatever the
-  bar. Under "find a win", that means rethink; under "prove not worse", it
+  the change B makes are losses (mechanic O7 cutting steps that ask, show a
+  result or set something up; mechanic O5 adding a loader before a plan
+  screen), the call is "likely to lose", whatever the bar. Under "find a win", that means rethink; under "prove not worse", it
   means the test is likely to fail its margin: say so.
 
 ---
@@ -101,7 +102,11 @@ an outcome, that's O2, not O1.
   print under it. (observed)
 
 **Where it flips:** a promise the first session can't keep. App Review 2.3
-expects the promise to match the app: screen flag.
+expects the promise to match the app: screen flag. A web quiz-first funnel
+ported into the app lost on completion, worst on screen 1; a welcome screen
+added before the quiz brought completion back but purchases fell (#112,
+#113 Glam AI, no figures): a welcome screen is judged on paid, not on
+completion.
 
 ## O2. Outcome copy over feature copy
 
@@ -150,8 +155,12 @@ and AI chat apps (observed).
   education app (survey + trial lesson), directional.
   https://adapty.io/blog/how-to-fix-your-onboarding-flow/
 - Also seen: trial conversion (as reported) about +10% (#4 Headspace,
-  multi-select, interview); course starts +7.6 pp (#3 Headspace, strong),
-  with no change in active days.
+  multi-select, interview); course starts +7.6 pp (#3 Headspace, strong;
+  #143 is a second report of the same test), with no change in active days;
+  conversion (as reported) about +10% for a "How did you hear about us?"
+  question (#134, directional, design not stated: an attribution question,
+  not a goal question, so it never makes an O3 call).
+  https://adapty.io/blog/how-to-personalize-onboarding-and-paywalls-in-your-mobile-app/
 **Call:** paid and revenue → Adapty band; trial starts → +8.5% to +25%
 (bundled: "maybe" at most).
 
@@ -164,7 +173,9 @@ and AI chat apps (observed).
 
 **Where it flips:** questions whose answers are never used read as a survey
 and add drop-off (onboarding-teardown pattern 3). Personalisation lifts
-starts more reliably than use (#3): read paid, not only trial starts.
+starts more reliably than use (#3): read paid, not only trial starts. A
+"set a carb goal" step "lost quite badly" (#161 Lose It!, no figure): a
+step that asks the user to commit to a hard number is not a goal question.
 
 ## O4. A plan built from the answers
 
@@ -180,7 +191,8 @@ actually tailor something.
 - Trial starts +8.5% (one test, *bundled*): #13.
 - Revenue per new user +22% (one test, *bundled*; US +35%): #13.
 - Also seen: course starts 31.25% → 62.97% (#3 Headspace "perceived fit",
-  strong, off-target, bundled with a course choice).
+  strong, off-target, bundled with a course choice; #143 reports the same
+  test).
 **Call:** paid → +10% to +17%; trial starts → +8.5%; revenue → +22%. Market
 rule for #13. Every test is directional; #13 is bundled.
 
@@ -252,36 +264,61 @@ Paid: no call.
   (observed)
 
 **Where it flips:** a free result that is better than the paid product sets
-wrong expectations. A carousel of features is not this mechanic.
+wrong expectations. A carousel of features is not this mechanic: showing
+Premium features during onboarding "a lot of times doesn't work" (#162
+Lose It!, no figure).
 
 ## O7. Flow length
 
 **Spot it:** B adds screens that set up the value (A had none or very few),
-or B cuts A's flow down.
+lengthens an existing flow, or cuts A's flow down.
 **Fits when:** adding: A lands people on the paywall or the app with no
-set-up. Cutting: only steps whose answers are never used.
+set-up, or a thin flow that asks little. Cutting: only steps whose answers
+are never used, or long content screens that ask nothing.
 
 **Range seen**
 - Longer onboarding vs none: paid conversion +40% (iOS), revenue per new user
   +20% (one test): #14 unnamed entertainment app, directional.
   https://adapty.io/blog/how-to-fix-your-onboarding-flow/
-- Shortened vs long: conversion −13% (#14, directional); cutting onboarding
-  down lost, conversion and ARPU both around −13% (Adapty library, solid).
-**Call:** adding → paid +40% (iOS figure: market/platform rule), revenue
-+20%. Cutting steps that ask, show value or set something up → "likely to lose".
-Removing only screens that ask nothing, show no product result and set
-nothing up (feature slides: claims about the app, however many) → no
-published range; note under Watch for that cutting lost in published tests.
-A feature slide is not a value step.
+- Existing flow lengthened (doubled to 15 screens, more personal): trial
+  starts +16% (one test, *bundled*): #147 Coconote, directional, founder
+  report.
+  https://www.revenuecat.com/blog/growth/brett-zack-coconote-sub-club-podcast-2026
+- Shortened vs long: paid conversion −13% to +8% (two tests, the sign
+  flips): #14 lost −13% (directional); #140 TomTom won +8% (directional;
+  long-form content onboarding → a simplified carousel; the page labels the
+  control inconsistently), trial starts +2.5% in the same test. Cutting
+  onboarding down lost, conversion and ARPU both around −13% (Adapty
+  library, solid).
+  https://www.purchasely.com/case-studies/increasing-mrr-85-percent-against-free-competitors
+- No figure, both directions: longer onboarding up "double digits" on trial
+  take (#160 Lose It!); short onboarding "seems to be outperforming" (#133,
+  early read).
+**Call:** adding to a flow with none → paid +40% (iOS figure:
+market/platform rule), revenue +20%. Lengthening an existing flow → trial
+starts +16% (bundled, founder report: "maybe" at most); paid and revenue: no
+call. Cutting steps that ask, show a product result or set something up →
+"likely to lose" (Adapty band, #14). Condensing long content screens that
+ask nothing, show no product result and set nothing up into a short
+carousel → paid +8%, trial starts +2.5% (#140, one test, directional:
+"maybe" at most); note under Watch for that cutting other steps lost. A
+feature slide is not a value step.
 
 **What the winners had**
 - **Key** The added steps feed something later: the plan, the paywall, a
-  reminder. (#14; Adapty library: "relevant steps (age, reminders, setup)")
+  reminder. (#14; #147 "more personalised"; Adapty library: "relevant steps
+  (age, reminders, setup)")
+- **Key** When cutting, what goes is content to read, not steps that ask or
+  set up: long-form content became a short carousel. (#140)
 - A progress bar or step count in flows over about 8 screens. (observed)
 
 **Where it flips:** "shorter to reduce friction" is the most common losing
-change. Cutting only steps whose answers go unused is a different change:
-no published range; say so.
+change when the cut steps ask or set something up (#14, Adapty library);
+#140 won by condensing reading, not by removing questions. Not every added
+step helps: a "set a carb goal" step "lost quite badly" (#161, no figure),
+and a web quiz-first funnel ported into the app lost on completion (#112,
+no figure). A short value carousel added right before the paywall is O12
+(#151).
 
 ## O8. Social proof before the ask
 
@@ -295,7 +332,13 @@ itself is paywall mechanic 4.
   promise): #17 travel app, strong.
 - Trial starts about +10%, revenue per new user +20% (one test, *bundled*):
   #2 Five Minute Journal, strong (testimonials moved earlier).
-- Also seen: +3% on an unclear metric (#49 Headspace, in-session messages).
+- Also seen: +3% on an unclear metric (#49 Headspace, in-session messages);
+  install → trial +72% for a second paywall that leads with a results
+  statistic ("86% improved their diet") (#152, directional, design not
+  stated: proof on a paywall, so paywall mechanic 4, never an O8 call); a
+  social-proof video on the plan picker, 2.54% vs 2.43%, called noise (#106
+  Glam AI, null, on the paywall).
+  https://www.revenuecat.com/blog/growth/paywalls-unexpected-uses
 **Call:** paid → +30%; trial starts → +10%; revenue → +20%. All bundled:
 "maybe" at most.
 
@@ -306,7 +349,7 @@ itself is paywall mechanic 4.
 
 **Where it flips:** invented reviews or live counters: screen flag. Stacking
 proof with a comparison table in one change lost on the paywall (Adapty
-library).
+library). Proof as a video inside the plan picker moved nothing (#106).
 
 ## O9. Sign-up later
 
@@ -320,19 +363,29 @@ is the norm: don't suggest it.
 - Paid conversion about +8%, revenue per new user about +17%: Adapty library
   (registration friction reduced), solid → strong; one band, treat each as one
   number.
+- Trial start rate +37% (one test, before/after, *bundled*: a welcome
+  screen, a simpler sign-up and permission prompts spaced out): #135,
+  directional.
+  https://adapty.io/blog/why-users-delete-your-app-in-24-hours/
 - Also seen: DAU about +20% (#5 Duolingo, delayed sign-up) and +8.2% (#6,
   softer wall wording), strong, off-target; creator enrolment +25% (#33
-  TikTok, delayed KYC).
-**Call:** paid → +8%; revenue → +17%. Trial starts: no call.
+  TikTok, delayed KYC); login moved from the start of onboarding to after the
+  paywall "eliminated a 10% drop-off" in onboarding (#148 Coconote, founder
+  report, off-target; relative or points not stated).
+  https://www.revenuecat.com/blog/growth/brett-zack-coconote-sub-club-podcast-2026
+**Call:** paid → +8%; revenue → +17%. Trial starts → +37% (#135, bundled,
+before/after: "maybe" at most).
 
 **What the winners had**
 - **Key** Sign-up after the user has something to save. (#5)
 - **Key** A quiet way past the wall: "Later", not "Discard my progress". (#6)
+- Sign-up made simpler, not only moved. (#135, bundled)
 - Sign-up framed as saving their plan, with Sign in with Apple. (observed;
   Tiimo #73 anecdotal: early sign-up framed this way also won)
 
 **Where it flips:** a purchase with no account must still restore on another
-device; flag the restore path to the team, without designing it.
+device; flag the restore path to the team, without designing it (#148 moved
+login after the paywall).
 
 ## O10. Reminder set-up inside onboarding
 
@@ -383,19 +436,30 @@ before it were added or removed is not O12: record it under the reach check.
 `categories.md`).
 
 **Range seen**
-- Trial starts about +10% (paywall two screens earlier, founder's estimate
-  inside a cumulative programme): #8 Opal, directional.
-  https://subclub.com/episode/lessons-from-121-ab-tests-kenneth-schlenker-opal
+- Paywall earlier, trial starts about +10% to +300% (two tests): #8 Opal,
+  directional (paywall two screens earlier, founder's estimate inside a
+  cumulative programme); #151, strong (A/B/C: paywall right after welcome
+  vs after the home screen, trial opt-in about 2% → 8%, "roughly", sample
+  not given; a bigger move than two screens: from outside the onboarding
+  into it).
+  https://subclub.com/episode/lessons-from-121-ab-tests-kenneth-schlenker-opal ;
+  https://www.revenuecat.com/blog/growth/how-top-apps-approach-paywalls
+- Paywall after a new 3-slide value carousel vs right after welcome: trial
+  opt-in +87.5% (about 8% → 15%, one test): #151 third arm, strong.
 - Install-to-trial doubled, trial-to-paid unchanged (*bundled* with a paywall
-  video): #71 FitnessAI, directional: *outlier*.
+  video): #71 FitnessAI, directional: *outlier* (#159 is a second report:
+  about +80% conversion, paywall views about 40% → 85% of installs).
 - Revenue 5× (#72 Rootd, before/after) and +16% premium conversions (#51,
   which placement won is unverified): *outlier*.
-**Call:** trial starts → +10% (one test, directional). Paid and revenue: no
-call.
+**Call:** paywall earlier → trial starts +10% to +300% (#8, #151); paywall
+moved behind a short value carousel → trial starts +87.5% (#151, one test).
+Paid and revenue: no call.
 
 **What the winners had**
 - **Key** As early as possible, but after the personal report or plan, not on
   screen 1. (#8)
+- **Key** Inside the onboarding, not after the home screen; a short value
+  carousel right before it beat the paywall straight after welcome. (#151)
 - Benchmark for context, not a lift: install-to-paid 1.35% for an onboarding
   paywall with trial vs 0.89% in-app (Adapty State of In-App Subscriptions
   2026).
@@ -416,14 +480,22 @@ everyone.
   (#23 JourneyStamp, *bundled*: context-specific paywalls, metric as
   reported), directional.
   https://superwall.com/case-studies/journeystamp
+- Paywall conversion +9.5% (per paywall view), revenue per user +13% (one
+  test): #139 Dogo, directional, design not stated (one paywall per user
+  segment, each leading with a different value).
+  https://www.botsi.com/blog/personalize-paywall-messaging
 - Also seen: trial-to-paid +20%, MRR +83% (#22 Flirt AI, confounded with
   pricing and product changes); trial starts +183% (#54 Daily Horoscope,
   country segments with different prices): *outlier* (another change).
-**Call:** paid → +10% to +50% (both directional; "maybe" at most because
-neither test isolates the echo).
+**Call:** paid → +10% to +50% (#27, #23; both directional; "maybe" at most
+because neither test isolates the echo); #139's +9.5% is per paywall view:
+context, with the per view → per install rule. Revenue → +13% (#139, one
+test, directional: "maybe" at most).
 
 **What the winners had**
 - **Key** The user's goal is in the paywall headline. (#27)
+- **Key** Each segment's paywall leads with the value that segment picked,
+  not the same benefits reordered. (#139)
 - One personal number or the plan name from the previous screen. (observed)
 
 **Where it flips:** echoing sensitive data (weight, health, money) feels
@@ -437,9 +509,15 @@ intrusive: echo goals, not data.
 
 **Range seen:** paywall mechanic 7 in `mechanics.md` (paid +16% to +27%, two
 tests, strong), measured per paywall view: apply the per view → per install
-rule. Also seen in onboarding: #18 ASL Bloom value + trial-timeline screens,
-+15% trial conversion (as reported), +12% ARPU, *bundled*; #24 Superwall
-aggregate 12.41% vs 9.07%, observational: *outlier*.
+rule. Paywall mechanic 7 also carries #157 Mimo (single-screen →
+multi-screen paywall, trial opt-in +60%, directional). Also seen in
+onboarding: #18 ASL Bloom value + trial-timeline screens, +15% trial
+conversion (as reported), +12% ARPU, *bundled*; #78 Pepper two-step paywall
+with the trial as a day-by-day timeline, LTV +50% (*bundled*, staged
+rollout, no concurrent control); #99 Clear 30, onboarding says before the
+paywall that the app costs money, anchored to a cost the user already pays,
+conversion (as reported) +3% (relative or points not stated, design not
+stated); #24 Superwall aggregate 12.41% vs 9.07%, observational: *outlier*.
 **Call:** as paywall mechanic 7.
 
 **What the winners had:** as paywall mechanic 7 (benefits first, then the
@@ -468,7 +546,13 @@ means paid can rise only through more trials.
   (store rule; observed).
 
 **Where it flips:** more trials with flat trial-to-paid is a win only if
-refunds and cancels don't rise: watch them.
+refunds and cancels don't rise: watch them. The reverse change, a trial the
+user must opt into before continuing, cut trial starts (no figure) while
+"trial conversion" (as reported) rose +10% (#83 Linearity Curve,
+directional, mixed). A trial toggle instead of one button is rejected by
+Apple as of February 2026 (per RevenueCat's redesigns article, #87–#89):
+screen flag. Trial length, a trial added or removed and the trial toggle are
+offer changes: paywall mechanics 1, 3 and 13.
 
 ## O16. A second offer after the paywall closes
 
@@ -518,6 +602,15 @@ abandons the store purchase sheet is an App Review risk (#75).
 - **Decision metric.** Trial starts can rise while paid stays flat (#45,
   #71): if the test decides on trial starts, keep paid, refunds and
   cancels in view.
+- **Permission prompts moved** (not a mechanic here; no call on trial
+  starts, paid or revenue). An ATT prompt moved earlier raised opt-in by
+  +62.5% to +150% (#130, #129, directional, one speaker's talk), while
+  onboarding completion and trial starts didn't change (#130). An explainer
+  before the ATT prompt didn't grow conversions (#136, no figure); ATT at
+  first launch had "the least impact" (#164, no figure). Spacing out
+  back-to-back prompts is part of the bundled #135 (O9). Earlier is not "in
+  context": the pre-prompt flags below still apply.
+  https://adapty.io/blog/how-to-build-app-onboarding-flows-that-convert/
 
 ## Screen flags (any onboarding variant; not legal advice)
 
@@ -535,15 +628,35 @@ abandons the store purchase sheet is an App Review risk (#75).
 ## Checks
 
 - Mechanics: 16 (O1–O16). Calls on an Adapty band: O3 (paid, revenue), O7
-  (losses), O9, O16. On single or few tests: O1, O2, O4, O5, O6, O8, O10,
-  O12, O13, O15. No call on any of the three metrics: O11. O14 uses paywall
-  mechanic 7.
+  (losses when cutting), O9 (paid, revenue), O16. On single or few tests:
+  O1, O2, O4, O5, O6, O7 (adding, lengthening, condensing), O8, O9 (trial
+  starts), O10, O12, O13, O15. No call on any of the three metrics: O11. O14
+  uses paywall mechanic 7.
 - "Maybe" at most (bundled or directional only): O1, O2 (trial starts), O3
-  (trial starts), O4, O5, O6, O8, O10, O12, O13. Can reach "likely": O3 (paid,
-  revenue band), O9, O14 (as paywall mechanic 7), O15, O16.
+  (trial starts), O4, O5, O6, O7 (all but the cutting loss), O8, O9 (trial
+  starts), O10, O13. Can reach "likely": O3 (paid, revenue band), O9 (paid,
+  revenue), O12 (trial starts: #151 is a strong A/B/C test), O14 (as paywall
+  mechanic 7), O15, O16.
+- 2026-10-31 deep sweep (#78–#167) folded in from the rebuilt ranges:
+  O3 (#134 as reported, also seen; #143 = #3), O7 (#140, #147; no figure
+  #133, #160), O8 (#152, #106: on the paywall, context only), O9 (#135,
+  #148), O12 (#151; #159 = #71), O13 (#139), O14 (#78, #99; #157 via
+  paywall mechanic 7), O15 (#83 as a flip). Permission timing (#129, #130,
+  #135, #136, #164) is under Flow checks. Losses and nulls with no figure
+  are named in the text and never make a call: #112, #113 (O1, O7), #161
+  (O3, O7), #162 (O6), #136, #164 (Flow checks).
+- Pattern 24 and 26 rows that change the paywall offer or its trial
+  (timeline, trial added or removed, trial length, toggle, opt-in trial:
+  #87–#89, #92, #97, #102, #115, #116, #138, #145, #149, #150, #154–#156) are
+  paywall mechanics 1, 3 and 13 in `mechanics.md`, not onboarding
+  mechanics; O14 and O15 point there.
+- Not mapped: #131 (a name field whose answer is never used, +13%
+  activation with no stated definition; not a goal question and no
+  mechanic covers it); #166 (card required to start the trial: a billing
+  setting, not a screen change).
 - Left out on purpose: patterns with no published range (why-we-ask
   microcopy, level step, relate-to cards, endowment), real-data linking
   (#34–#36 test the linking step, not a screen B would change in a
   subscription onboarding), progress indicators (#29 is a web form split).
-- Built from `onboarding-teardown/references/ranges.md` and `evidence.md`.
-  Rebuild when either changes.
+- Built from `onboarding-teardown/references/ranges.md` and `evidence.md`
+  (tests #1–#167, rebuilt 2026-10-31). Rebuild when either changes.

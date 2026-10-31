@@ -26,7 +26,7 @@ is scored or put in the table. Fees, payment setup, emails, the cancel path,
 store settings and legal review are out of scope: don't mention them.
 
 Never invent a number. Every figure you quote comes from the references
-(`evidence.md` test #W1–#W53 or benchmark row, `categories.md`,
+(`evidence.md` test #W1–#W63 or benchmark row, `categories.md`,
 `platform-rules.md`, or counts in `flows.md` and `walkthroughs.md`), with its
 strength. Arithmetic on the user's own prices is fine; say it's yours.
 
@@ -63,7 +63,7 @@ missing, score what you have and ask.
 - `references/scoring.md` — the rubric, modes, blockers, priority, held back.
 - `references/patterns.md` — 22 screen patterns with evidence and traps,
   plus the sign-flip table.
-- `references/evidence.md` — tests #W1–#W53, benchmarks, metric definitions, gaps.
+- `references/evidence.md` — tests #W1–#W63, benchmarks, metric definitions, gaps.
 - `references/ranges.md` — the range of measured lifts per pattern and metric, built only from `evidence.md`.
 - `references/categories.md` — the market table (which payment buttons lead,
   button wording, consent) and what each bucket does on the web.

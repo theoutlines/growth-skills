@@ -11,7 +11,7 @@ Search for published A/B tests, case studies and talks about mobile subscription
 - Superwall: https://superwall.com/blog and https://superwall.com/case-studies
 - Botsi: https://www.botsi.com/blog
 - Apphud, Qonversion, FunnelFox, Purchasely blogs; Growth Gems https://growthgems.substack.com/
-- Losses and nulls on purpose: search "A/B test lost", "didn't work", "no significant difference", "what we learned" with paywall / onboarding / subscription app. Published tests lean to wins (277 records: 5 losses, 2 nulls); a found loss is worth more than another win.
+- Losses and nulls on purpose: search "A/B test lost", "didn't work", "no significant difference", "what we learned" with paywall / onboarding / subscription app. Published tests lean to wins (after the 2026-10-31 sweeps, 398 records: 35 losses, 14 nulls, against 269 wins); a found loss is worth more than another win.
 
 Skip: reports already in the base as benchmarks, vendor marketing without a number, anything behind a login, Reddit (blocked), anything about the owner's employer.
 

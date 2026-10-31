@@ -13,7 +13,7 @@ Lifts are relative unless marked pp. "(computed)" means the relative change was 
 | 2. Trial status inside the app | Complaints | −55% | 1 (#R48) | strong | bundled, as above |
 | 3. Starter content instead of empty screens | Retention (1 week) | +10% | 1 (#R20) | directional | off-target (web B2B checklist); design not described |
 | 4. Ask for notifications in context | Push opt-in | +9% to 6% → 74% (+1133%, computed) | 4 (#R5, #R7, #R10, #R48) | strong | #R48 bundled; #R5 under 40% → 66% (more than +65%, computed; small samples); #R7 vendor, pre-purchase onboarding, no baseline; #R10 two segments, +118.35% and +157.05%, vendor, control not described |
-| 4. Ask for notifications in context | Photo access granted | 67% → 89% (+32.8%, computed) | 1 (#R6) | directional | off-target (photos permission, not push); small tests |
+| 4. Ask for notifications in context | Photo access granted | 67% → 89% (+32.8%, computed) | 1 (#R6) | directional | off-target (photos permission, not push); small tests. #R62 Badoo: prompts on the home screen → a separate explainer screen per permission, conversions went down, loss, no figure |
 | 5. Primer copy tied to the user's goal | Push opt-in | no significant effect to +8% | 2 (#R3, #R2) | strong | same copy: +8% German learners (#R2), null for Spanish learners (#R3); the sign does not travel between markets |
 | 6. An honest primer, per platform | — | no published range | — | — | only platform rules and guidance |
 | 7. Reminder setup after the first session | Retention | about 3x for prompted users | 1 (#R17) | directional | vendor; holdout implied, no baseline numbers |
@@ -27,7 +27,7 @@ Lifts are relative unless marked pp. "(computed)" means the relative change was 
 | 10. Progress where the user lands | Engagement (lab) | log shown vs no log: intact 92.47% vs 64.94% (+42.4%, computed); broken 45.21% vs 60.90% (−25.8%, computed) | 1 (#R38) | strong | off-target (lab study); one test, two conditions; the sign flips after a break |
 | 10. Progress where the user lands | Users kept saving at 8 months | +12% | 1 (#R47) | strong | off-target (finance app); second-hand write-up |
 | 11. Make the streak easy to keep | Retention (D14) | +3.3% | 1 (#R25) | strong | fewer users hit their daily goal (no figure) |
-| 11. Make the streak easy to keep | DAU | +1% | 1 (#R25) | strong | — |
+| 11. Make the streak easy to keep | DAU | +1% | 1 (#R25) | strong | #R63 Duolingo moves counter (limited answers before the lesson restarts): retention and DAU "completely neutral", null, no figure |
 | 11. Make the streak easy to keep | Learners on a streak | +10.5% in 20 days (+19% for new learners) | 1 (#R25) | strong | — |
 | 11. Make the streak easy to keep | Learners on a 7+ day streak a year later | +40% | 1 (#R25) | strong | — |
 | 12. Design the broken streak | Engagement (lab) | −25.8% to +24.1% (computed) | 2 (#R38, #R39) | strong | off-target (lab studies). #R38: broken log shown vs no log, 45.21% vs 60.90%. #R39: repairable vs unrepairable broken streak, 85.20% vs 68.66% |
@@ -61,7 +61,9 @@ Lifts are relative unless marked pp. "(computed)" means the relative change was 
 ## Checks
 
 - Patterns: 22. With a range: 15 (2, 3, 4, 5, 7, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21). Without: 7 (1, 6, 8, 9, 16, 20, 22).
+- Records covered: #R1–#R63 (deep sweep 2026-10-31 added #R62 and #R63; neither has a figure, so neither enters a range).
 - Rows excluded on purpose:
+  - Loss or null with no figure (noted in Caveats so the file shows what didn't work): #R62 Badoo per-permission explainer screens (loss; pattern 4, the sign goes against "explain first"), #R63 Duolingo moves counter (null; nearest pattern 11, a lesson mechanic rather than the streak itself).
   - Anecdotal or observed: #R1, #R13, #R24, #R42, #R45, #R54, #R57, #R58, #R60, #R61.
   - Benchmarks or correlations in Part 1: #R14, #R15 (vendor benchmarks), #R16 (opted-in vs opted-out correlation), #R36 (Friend Streak users vs others), #R52 (observational baseline), #R4 (50% figure is an analysis; follow-up tests unreported).
   - Saw vs didn't see, not called an A/B: #R21 (Step walkthrough), #R46 (Blinkist Year in Blinks recipients, no holdout), #R59 (Gratitude widget users).

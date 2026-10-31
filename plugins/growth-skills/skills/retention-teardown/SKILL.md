@@ -34,7 +34,7 @@ Paywalls, upsells and the cancel flow have their own skills; mention them in
 one line if they show up here.
 
 Never invent a number. Every figure you quote comes from the references
-(`evidence.md` test #R1–#R61 or benchmark row B1–B64, `categories.md`,
+(`evidence.md` test #R1–#R63 or benchmark row B1–B64, `categories.md`,
 `platform-rules.md`, or counts in `flows.md`), with its strength. Arithmetic
 on the user's own numbers is fine; say it's yours.
 
@@ -76,7 +76,7 @@ ask.
 - `references/scoring.md` — the rubric, offer and habit rules, blockers, held back.
 - `references/patterns.md` — 22 screen patterns with evidence and traps,
   plus the sign-flip table.
-- `references/evidence.md` — tests #R1–#R61, benchmarks B1–B64, metric definitions, gaps.
+- `references/evidence.md` — tests #R1–#R63, benchmarks B1–B64, metric definitions, gaps.
 - `references/ranges.md` — the range of measured lifts per pattern and metric, built only from `evidence.md`.
 - `references/categories.md` — trial → paid, first renewal and "not enough
   usage" by bucket, and which screens matter most in each.

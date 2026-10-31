@@ -1,6 +1,6 @@
 # Retention screens evidence: published tests, benchmarks and gaps
 
-Collected 2026-10-30. Every number was read on the page it comes from. Part 1 is published tests and case studies (#R1–#R61). Part 2 is benchmarks from public reports (B1–B64). Never merge two rows into one number, and keep metric definitions apart (end of Part 2).
+Collected 2026-10-30. Every number was read on the page it comes from. Part 1 is published tests and case studies (#R1–#R63). Part 2 is benchmarks from public reports (B1–B64). Never merge two rows into one number, and keep metric definitions apart (end of Part 2).
 
 # Part 1. Published tests and case studies
 
@@ -53,6 +53,7 @@ See also **R48 / Same as onboarding #1** (Blinkist trial welcome screen with a r
 | R14 | Cross-category (OneSignal benchmarks) | Benchmark | Several | no | Push opt-in rate by category | None (benchmark) | Push opt-in rate, iOS / Android | Health & fitness 33.5% / 43.2%; Education 37.1% / 39.7%; Productivity 44.8% / 53.6%; Utilities 51.6% / 51.5%; Lifestyle 34% / 38.8%; Entertainment 27% / 40.3%. Page also says in-app messages before the native prompt "significantly" raise opt-in (no figure) | 2024 report (page undated) | https://onesignal.com/mobile-app-benchmarks-2024 | Directional (vendor aggregate) |
 | R15 | Cross-category (Airship benchmarks) | Benchmark | Several | no | Push opt-in rate; onboarding opt-in campaigns | None (benchmark) | Push opt-in rate | Median iOS 48.85%, Android 53.3%; Education iOS 90th percentile 88.7%; apps running onboarding campaigns see opt-in "as high as 40% above their category average" | Page modified 2026-06-05 | https://www.airship.com/mobile-app-push-notification-benchmarks-for-2026/ | Directional (vendor aggregate; the 40% is a ceiling, not an average) |
 | R16 | Cross-category (Airship) | Benchmark | Several | no | Push opt-in status vs retention | None (correlation) | Retention of opted-in vs opted-out users | iOS users opted in to push "are retained at nearly 2x the rate" of those who aren't | Pub. 2021-05-22 | https://www.airship.com/blog/7-mobile-engagement-statistics-that-show-how-push-notifications-boost-roi/ | Directional (vendor; correlational, self-selected) |
+| R62 | Badoo | Dating | Social & Lifestyle | no | Permission screens | Permission prompts on the home screen → a separate explainer screen for each permission | Conversion | Conversions went down (no figures) | Pub. 2022-10 | https://adapty.io/blog/subhub-podcast-16-vivid-money/ | Anecdotal (no figures) |
 
 ## C. Reminder and habit setup
 
@@ -99,6 +100,7 @@ The streak wager (R28) is also a commitment screen; it sits in section E.
 | R43 | 8fit | Workouts and meal plans | Health & Fitness | no | Streak campaign across push, email and in-app messages | Personalised messages to keep workout streaks alive, split by whether the user kept the streak | Weekly class views; users completing classes; free-to-paid | Weekly class views +40%; users completing classes +17%; free-to-paid conversion 13% | Not dated | https://braze.com/customers/8fit-case-study | Directional (vendor; bundled channels; no control stated) |
 | R44 | Lumosity (Braze) | Brain training | Education | no | Premium progress report unlocked after a 3-day streak | **Same as upsell #U47.** New Year campaign: temporary premium access, a progress report unlocked after a 3-day streak, then a sale (email + in-app) | Streak completion; engagement; purchase likelihood | Streak completion +350%; free-user engagement +170% vs the prior year's single email; sale recipients 11% more likely to buy than non-recipients | Not dated | https://braze.com/customers/lumos-labs-case-study | Directional (bundled; no randomised control described) |
 | R45 | Headspace | Meditation | Health & Fitness | no | Streak display setting | Users can hide their streaks | n/a | No figures | Pub. 2024-10-18 | https://builtformars.com/ux-bites/hiding-your-headspace-streaks | Observed |
+| R63 | Duolingo | Language learning | Education | no | Lesson mechanic | Moves counter from a match-3 game: limited chances to answer before the lesson restarts | Retention; DAU | "Completely neutral" (no figures) | Pub. 2023-02-28 | https://www.lennysnewsletter.com/p/how-duolingo-reignited-user-growth | Anecdotal (no figures) |
 
 ## F. Value recaps (weekly progress, "you've done X", year in review)
 
