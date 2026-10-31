@@ -34,7 +34,7 @@ COLS = {
     'Source URL': 'sources', 'URL': 'sources', 'Evidence': 'tier_text', 'Tier': 'tier_text',
 }
 FIELDS = ['id', 'library', 'kind', 'section', 'columns', 'app', 'category', 'bucket', 'ai', 'surface', 'change', 'metric', 'result',
-          'date', 'sources', 'tier_text', 'tier', 'outcome', 'bundled', 'same_as', 'mechanics', 'checked']
+          'date', 'sources', 'tier_text', 'tier', 'outcome', 'bundled', 'same_as', 'split', 'mechanics', 'checked']
 
 
 def cells(line):
@@ -100,7 +100,7 @@ def cmd_import():
             r['kind'] = 'aggregate' if re.fullmatch(r'E\d+', r['id']) else 'test'
             r['tier'] = tier_of(r.get('tier_text', ''))
             keep = old.get((lib, r['id']), {})
-            for k in ('outcome', 'bundled', 'same_as', 'mechanics', 'checked'):
+            for k in ('outcome', 'bundled', 'same_as', 'split', 'mechanics', 'checked'):
                 r[k] = keep.get(k, '')
             rows.append(r)
     save(rows)
@@ -188,6 +188,18 @@ def cmd_check():
             bad.append(f'{r["library"]} {r["id"]}: outcome must be win, loss, null, mixed or none')
         if r['kind'] == 'test' and not r['outcome']:
             bad.append(f'{r["library"]} {r["id"]}: outcome missing (win, loss, null, mixed, none)')
+    for r in base:
+        for ref in filter(None, r.get('same_as', '').split()):
+            if tuple(ref.split(':')) not in ids:
+                bad.append(f'{r["library"]} {r["id"]}: same_as {ref} is not in the base')
+        if r.get('split') and not re.match(r'(market|platform|segment): ', r['split']):
+            bad.append(f'{r["library"]} {r["id"]}: split must start with market:, platform: or segment:')
+    splits = {(r['library'], r['id']) for r in base if r.get('split')}
+    if os.path.exists(PLANNER):
+        for p in csv.DictReader(open(PLANNER)):
+            cited = [tuple(x.split(':')) for x in p['records'].split() if not x.startswith('adapty:')]
+            if any(c in splits for c in cited) and not p.get('split_choice'):
+                bad.append(f'planner idea {p["area"]}/{p["idea"]} cites a record split by market or platform: say which figure it uses (split_choice)')
     for lib, files in CITE.items():
         for rel, rx in files:
             text = open(os.path.join(SK, rel)).read()

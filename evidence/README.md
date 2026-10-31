@@ -16,6 +16,8 @@ One record per published test, the single source of truth for every growth skill
 - `tier`: strong, directional, anecdotal, observed (or aggregate for E rows).
 - `outcome`: win, loss, null, mixed (one metric up, another down, or one arm won and another lost) or none (no lift to read: no numbers, not a test, a share of revenue). **Losses and nulls are recorded, never dropped.**
 - `bundled`: yes when the change came with other changes, so the number can't be credited to one mechanic.
+- `same_as`: `library:id` when the row is a copy or a second report of the same experiment (C18 = C17, U6 = #46). Second reports stay separate records; their numbers are never merged.
+- `split`: `market:`, `platform:` or `segment:` and the figures, when one test reports different numbers by market or platform (#13 global vs US, #43 by country, #14 iOS only). Anything that shows one number from such a record says which figure it uses (`split_choice` in `planner-ideas.csv`; the check enforces it).
 - `mechanics`: the patterns (library:number) whose ranges cite this record.
 - `checked`: the date the source page was last opened and the number read.
 
