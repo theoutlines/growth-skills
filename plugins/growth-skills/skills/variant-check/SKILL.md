@@ -101,7 +101,7 @@ with what their winning versions had. Say this once, plainly.
    versions that had the key traits. One issue, one cap: a missing key
    trait that is also a screen flag caps once and is listed once. A cap on
    "unlikely" leaves it "unlikely".
-   The variant as a whole is as visible as its strongest called mechanic,
+   The variant as a whole is as visible as its strongest called mechanic (between equal calls, the higher low end),
    never the sum. Bundled mechanics: say attribution will be unclear and
    name the one to isolate next.
 5. Check "Where it flips" for each mechanic against B's placement, platform

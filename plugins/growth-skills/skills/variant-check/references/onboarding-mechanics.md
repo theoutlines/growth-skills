@@ -68,9 +68,10 @@ tests, market rule). Two more for onboarding:
 - **No call anywhere → rethink.** If no change in B has a call on the test's
   metric, the verdict is "rethink": there is no published reason to expect a
   visible change. Say "no call", never "won't work".
-- **Rethink tie-break**, after the order in SKILL.md: a stronger call, then a
-  stronger tier (band or strong over directional), then the same library as
-  the test. For an onboarding test, a paywall mechanic may be suggested for
+- **Rethink tie-break**: use the order in SKILL.md step 8 exactly (call on
+  the test's metric, screen-only over offer, fixes a flag A has, stronger
+  tier, adds no new screens, same library); between equal calls, the higher
+  low end wins. For an onboarding test, a paywall mechanic may be suggested for
   the paywall at the end of the flow, with the per view → per install rule.
 - **Losses make a "likely to lose" call.** When the published results for
   the change B makes are losses (mechanic O7 cutting steps that ask, show a
@@ -302,7 +303,9 @@ call. Cutting steps that ask, show a product result or set something up →
 ask nothing, show no product result and set nothing up into a short
 carousel → paid +8%, trial starts +2.5% (#140, one test, directional:
 "maybe" at most); note under Watch for that cutting other steps lost. A
-feature slide is not a value step.
+feature slide is not a value step. Dropping one or two slides from a
+carousel that is already short is not condensing: no published range, so
+no call.
 
 **What the winners had**
 - **Key** The added steps feed something later: the plan, the paywall, a
