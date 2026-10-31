@@ -79,6 +79,9 @@ charge), a reminder before the end, the day of the first charge.
   Blinkist, directional (timeline + reminder opt-in as one change, so
   bundled).
   https://uxplanet.org/how-solving-our-biggest-customer-complaint-at-blinkist-led-to-a-23-increase-in-conversion-b60ad514134b
+- LTV +50% (one test): #78 Pepper, directional (two-step paywall with the
+  trial as a timeline; staged rollout, no concurrent control).
+  https://superwall.com/case-studies/pepper
 **Call:** revenue per user → Adapty band; trial starts → #1.
 
 **What the winners had**
@@ -113,6 +116,12 @@ per-month equivalent; other plans muted or behind "View all plans".
 - Click-through +13.5%: #64 Unacademy, strong (monthly price highlighted
   instead of the full course price; web).
   https://abtest.design/tests/highlighting-monthly-pricing
+- ARPU about +20%, conversion to paid over +50% (one test, bundled: weekly
+  plan added + annual flagged as the top choice): #80 Rash ID, strong.
+  https://superwall.com/case-studies/rash-id
+- Proceeds per user +80%, trial conversion +22% (one test): #79 Preu AI,
+  strong (an annual plan added as an anchor next to a monthly-only paywall;
+  an offer change, the team's decision). https://superwall.com/case-studies/preu-ai
 **Call:** revenue per user → Adapty band (per user). #43 is per impression
 and splits by market: use it only when the change is just the per-month
 display, with the market rule.
@@ -191,7 +200,11 @@ together lost (Adapty library). Test proof on its own.
 - Revenue per user about +15% as an in-app paywall (iOS up, Android flat):
   Adapty library band, strong. Larger onboarding-paywall figures exist but are
   directional (small samples): *outlier*.
-**Call:** revenue per user → +15% (treat as one number).
+- Conversion "+1%" (relative or points not stated), paid activation +5% (one
+  test): #81 Symmetry, directional (feature list → Free vs Pro table, headline
+  and button unchanged). https://superwall.com/case-studies/symmetry
+**Call:** revenue per user → +15% (treat as one number). #81 is a reminder
+that a table alone can land far below the band.
 
 **What the winners had**
 - **Key** On the paywall itself, not as a teaser screen before it. (Adapty
@@ -288,6 +301,9 @@ A missing ✕ is a store and trust problem, never a strength.
   band, strong (strongest on intro and onboarding screens).
 - Conversion +13% (one test): #68 Neos Kosmos, directional (news, web).
   https://abtest.design/tests/paywall-visuals
+- Conversion over +50%, estimated ARPU +64% (one test): #82 Unchaind, strong
+  (text paywall → visual app-preview paywall): *outlier* (no baseline, above
+  the band). https://superwall.com/case-studies/unchaind
 **Call:** the Adapty band on the test's metric.
 
 **What the winners had**
@@ -307,7 +323,12 @@ below the fold.
   directional (geo split).
 - Conversion −5% after a +30% price (one test): #59 travel app, strong.
   https://adapty.io/case-studies/travel-app/
-**Call:** revenue per user → Adapty band, top markets only.
+- Yearly price +50%: conversions −19%, proceeds per user +25% (one test):
+  #85 BuyBye, strong. https://superwall.com/case-studies/buybye
+- Annual price lowered $59.99 → $44.99: ARPU +10% (one test): #84 SellRaze,
+  strong. https://superwall.com/case-studies/sellraze
+**Call:** revenue per user → Adapty band, top markets only. #84 shows a
+price cut can win too: the direction isn't settled by the band.
 
 **What the winners had:** rises limited to top-paying markets. The
 designer's part is how the price reads (mechanics 2, 13).
@@ -364,7 +385,11 @@ check covers how it reads.
   Moonly, mechanic 3)
 
 **Where it flips:** removing a trial won where trial-to-paid was very low,
-and the same change lost on another platform (Adapty library).
+and the same change lost on another platform (Adapty library). Making the
+trial opt-in (the user picks it) raised trial conversion +10% but lowered
+trial starts (#83 Linearity Curve, directional). A trial toggle on the
+paywall: Apple rejects it as of February 2026 (per RevenueCat's paywall
+redesigns article, #87–#89): screen flag on iOS.
 
 ---
 
@@ -387,6 +412,9 @@ When B changes several mechanics at once:
 - Trial terms and the price after the trial sit next to the button at
   normal contrast, not in grey small print or below the fold.
 - No claim the app can't support; no countdown without a real offer.
+- iOS: no free-trial toggle on the paywall (Apple rejects it as of February
+  2026, per RevenueCat's paywall redesigns article; check the current App
+  Review guidelines).
 - A change that makes these worse (price moved away, ✕ hidden) is a fix
   with priority over everything else.
 

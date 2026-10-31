@@ -128,10 +128,12 @@ One tier per row.
 | Tier | All rows | New rows | "Same as onboarding" rows |
 |---|---|---|---|
 | Strong | 7 (U1, U8, U13, U22, U23, U32, U45) | 7 | 0 |
-| Directional | 38 | 33 | 5 (U5, U6, U7, U44, U50) |
+| Directional | 39 | 34 | 5 (U5, U6, U7, U44, U50) |
 | Anecdotal | 5 (U4, U17, U21, U46, U49) | 2 (U4, U49) | 3 (U17, U21, U46) |
 | Observed | 0 | 0 | 0 |
-| **Total** | **50** | **42** | **8** |
+| **Total** | **51** | **43** | **8** |
+
+U51 added 2026-10-31 by the first evidence sweep (`evidence/inbox/2026-10-31.md`).
 
 Of the 7 strong rows, only 3 are subscription apps (U1 Memrise, U22 Dark Noise, U32 Mojo); one is a freemium SaaS (U45), and three are a mobile game, Pandora and a publisher's website (U8, U13, U23).
 

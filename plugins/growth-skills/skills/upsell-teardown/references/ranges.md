@@ -64,4 +64,5 @@ How to read: the lowest and highest measured lift in published tests of this kin
   - #U47 Lumosity: the 11% compares recipients with non-recipients (assignment not stated); engagement figures compare with the prior year's single email.
   - #U48 Dropbox: "10–40%" is a secondhand range from one person's experience, not a measured test.
   - #U50 Outseta: model switch (card-required trial vs freemium, web SaaS), not a screen pattern here.
+  - #U51 crypto tracker (added 2026-10-31): a bundled redesign of a promotional sale paywall for free users, method not stated; no single pattern here.
   - Adapty A/B library bands cited in patterns 1, 2, 17, 20, 22 (daily-limit +50–60%, relevant-action trigger, paywall tab, lifetime +10–15%, mixed cross-placement): Part 2 rows, not used.

@@ -82,6 +82,7 @@ How to read: the lowest and highest measured lift in published tests of this kin
 | 24. Trial timeline and reminder promise | Complaints | −55% | 1 (#1) | strong | — |
 | 24. Trial timeline and reminder promise | Push opt-in | +1133% (computed; 6% → 74%) | 1 (#1) | strong | — |
 | 24. Trial timeline and reminder promise | Sales | +14% | 1 (#65) | strong | off-target: reminder email, not a screen |
+| 24. Trial timeline and reminder promise | LTV | +50% | 1 (#78) | directional | bundled (two-step paywall + timeline); staged rollout, no concurrent control |
 | 25. Paywall echoes the onboarding | Trial starts | +183% | 1 (#54) | strong | segments by country, not by answers; pricing changed too |
 | 25. Paywall echoes the onboarding | Trial-to-paid | +20% | 1 (#22) | directional | confounded with pricing/product changes |
 | 25. Paywall echoes the onboarding | Conversion (as reported) | "+10%+" to +50% | 2 (#27, #23) | directional | #27 number has no source; #23 context-specific paywalls, bundled |
@@ -93,6 +94,9 @@ How to read: the lowest and highest measured lift in published tests of this kin
 | 26. Trial structure on the first paywall | Conversion to subscription | +39% to +40.5% | 2 (#41, #52) | strong | denominators differ (#41 per paywall view); #52 +40.5% (computed; weekly 1.63% → weekly + trial 2.29%) |
 | 26. Trial structure on the first paywall | Revenue / ARPPU | +5% to +47% | 2 (#41, #48) | strong | #41 revenue per 100 installs +47%, ARPPU +5%; #48 revenue +8%, referral guest pass (30-day vs 14-day trial) |
 | 26. Trial structure on the first paywall | Sign-ups | +7% | 1 (#48) | directional | referral guest pass |
+| 26. Trial structure on the first paywall | Trial conversion (as reported), opt-in trial vs default | +10% | 1 (#83) | directional | trial starts fell in the same test (no figure): mixed |
+| 26. Trial structure on the first paywall | Install-to-trial (short paywall with a trial toggle) | +31% to +72% | 2 (#88, #89) | directional | both bundled redesigns; Apple rejects trial toggles as of February 2026 (per the source) |
+| 26. Trial structure on the first paywall | ARPU / revenue (short paywall with a trial toggle) | +17.02% to +64% | 2 (#87, #88) | directional | both bundled redesigns; #88 is revenue, #87 ARPU; trial-toggle caveat as above |
 | 27. Second chance after the first paywall | Onboarding conversion; trial conversion | +10%; +10% | 1 (#21) | directional | bundled (early paywall with trial off + second paywall + delayed close) |
 | 27. Second chance after the first paywall | Premium conversion (aggregate) | about +25% to +30% | E2 | aggregate | discount right after the onboarding paywall |
 | 27. Second chance after the first paywall | ARPU (aggregate) | roughly −50% | E2 | aggregate | same offer after the main in-app paywall: the sign flips with position |
@@ -113,7 +117,7 @@ How to read: the lowest and highest measured lift in published tests of this kin
   - #75 transaction-abandon paywalls (pattern 27 trap): cohort comparison and a share of revenue, not a lift.
   - #18 and #56 also contain a trial-timeline or reminder step; they are counted under pattern 23 only, not 24, because the timeline is one part of a multi-step change.
   - Benchmarks (section C) and section D risk signals.
-- Rows with numbers that fit no pattern, left out: #30 Mural checklist, #31 conversational tone, #38 YNAB product tour (web, pre-install), #39 Houzz paid-traffic landing, #42–#43, #53, #59, #64 (plan and price presentation), #50 VEED prices upfront vs benefits-only, #62 TIPSTOP trial message + discount badge, #67 Going trial CTA copy, #68–#69 Neos Kosmos paywall visual and copy, #70 Cal AI cumulative programme, #76 Square Invoices form.
+- Rows with numbers that fit no pattern, left out: #30 Mural checklist, #31 conversational tone, #38 YNAB product tour (web, pre-install), #39 Houzz paid-traffic landing, #42–#43, #53, #59, #64 (plan and price presentation), #50 VEED prices upfront vs benefits-only, #62 TIPSTOP trial message + discount badge, #67 Going trial CTA copy, #68–#69 Neos Kosmos paywall visual and copy, #70 Cal AI cumulative programme, #76 Square Invoices form. Added 2026-10-31 and also left out (paywall plan, price, comparison and visual changes; they belong to the paywall mechanics in variant-check): #79 Preu AI, #80 Rash ID, #81 Symmetry, #82 Unchaind, #84 SellRaze, #85 BuyBye, #86 Prosto.
 - Rows added beyond what `patterns.md` cites, as the same kind of change: #19 (pattern 2), #13 (pattern 3), #77 (pattern 9), #36 (pattern 13), #74 (pattern 15), #23 (patterns 23 and 25), #27 (pattern 25), #48 (pattern 26), #21 (pattern 28).
 
 - Left out after review: #32 (cited source does not match) and #66 (business-model switch, not an A/B test).

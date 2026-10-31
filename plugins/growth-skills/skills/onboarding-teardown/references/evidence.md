@@ -117,6 +117,8 @@ Collected 2026-10-29. Every number was read on the page it comes from. Where abt
 
 Added 2026-10-29 after a second research pass: #70–#77 (2 strong, 5 directional, 1 anecdotal).
 
+Added 2026-10-31 by the first evidence sweep (`evidence/inbox/2026-10-31.md`): #78–#89 (6 strong, 6 directional; 2 mixed: #83, #85).
+
 ## C. Benchmarks used in category notes
 
 | Benchmark | Value | Source | Strength |
