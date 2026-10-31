@@ -5,6 +5,7 @@ One record per published test, the single source of truth for every growth skill
 | File | What it holds |
 |---|---|
 | `tests.csv` | 277 records: published tests and aggregated priors from the onboarding, flow, upsell, cancel, web2app and retention libraries |
+| `SWEEP.md`, `inbox/` | The weekly sweep: what a scheduled run does and what it found each week (a pull request the owner merges) |
 | `planner-ideas.csv` | Which records stand behind each idea in the planner (`adapty:<section>` = a band from Adapty's A/B library) |
 
 ## Fields

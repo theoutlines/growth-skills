@@ -112,6 +112,25 @@ def row_text(r):
     return '| ' + ' | '.join(r.get(COLS[h], '') for h in head) + ' |'
 
 
+def last_row(lines, section, columns):
+    """Index of the last row of the first table under `## section` whose header is `columns`."""
+    sec, head, last = '', None, None
+    for i, line in enumerate(lines):
+        if line.startswith('## '):
+            if last is not None:
+                return last
+            sec = line[3:].strip()
+        c = cells(line) if line.startswith('|') else None
+        if c and c[0] in ('#', 'ID'):
+            head = ' | '.join(c)
+            continue
+        if sec == section and head == columns and c and not set(line) <= set('|- '):
+            last = i
+        elif last is not None and not line.startswith('|'):
+            return last
+    return last
+
+
 def cmd_build(write=True):
     base = load()
     by = {(r['library'], r['id']): r for r in base}
@@ -134,7 +153,12 @@ def cmd_build(write=True):
                 lines[i] = new
         for r in base:
             if r['library'] == lib and r['id'] not in seen:
-                drift.append(f'{folder}: base record {r["id"]} has no row in evidence.md (add it to a table)')
+                at = last_row(lines, r['section'], r['columns'])
+                if at is None:
+                    drift.append(f'{folder}: base record {r["id"]} has no table for section "{r["section"]}" with these columns')
+                    continue
+                drift.append(f'{folder}: {r["id"]} added to "{r["section"]}"')
+                lines.insert(at + 1, row_text(r))
         if write:
             open(path, 'w').write('\n'.join(lines))
     return drift
