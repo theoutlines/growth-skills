@@ -38,9 +38,11 @@ One section per mechanic a paywall variant can change. Each gives:
 
 ## Metrics and denominators (keep apart)
 
-- **Revenue per user**: say the denominator: per paywall view, per install,
-  per 100 installs, per user in the test (ARPU). Two revenue numbers with
-  different denominators are two metrics.
+- **Revenue per user**: say the denominator. In a paywall test people are
+  split when they see the paywall, so "per user in the test" (Adapty's ARPU)
+  and "per paywall view / impression" both match the planner's "money per
+  paywall view". Per install or per 100 installs is a different metric unless
+  the test split people at install. Adapty bands are per user in the test.
 - **Paid conversion**: view → purchase or subscription.
 - **Trial starts**, **trial-to-paid**.
 
@@ -53,9 +55,15 @@ One section per mechanic a paywall variant can change. Each gives:
   number ≥ bar → likely visible (one test); below → unlikely.
 - **Outliers stay out.** Ranges marked *outlier* are listed for context and
   never used for the call.
-- **Markets and platforms split**: if the range splits by market or platform
-  and the test mixes them, the call uses the market with most of the
-  traffic; if unknown, the lowest figure. Suggest reading markets apart.
+- **Bands before single tests**: when a mechanic has an Adapty band on the
+  test's metric, the band makes the call; single tests on the same metric
+  are context. A single test makes the call only when it is the only range
+  on the metric, or when B changes exactly what that test changed.
+- **Markets and platforms split** (single tests): if the figure splits by
+  market or platform and the test mixes them, use the market with most of
+  the traffic; if unknown, the lowest figure. Suggest reading markets apart.
+- **Print the call range** in the table; other-metric ranges go in one short
+  "also seen" line; outliers are left out of the report.
 
 ---
 
@@ -68,7 +76,8 @@ charge), a reminder before the end, the day of the first charge.
 **Range seen**
 - Revenue per user +12% to +36%: Adapty library band, strong.
 - Trial starts +23% (one test), complaints −55%, in-trial cancels −4%: #1
-  Blinkist, strong; timeline + reminder opt-in as one change.
+  Blinkist, directional (timeline + reminder opt-in as one change, so
+  bundled).
   https://uxplanet.org/how-solving-our-biggest-customer-complaint-at-blinkist-led-to-a-23-increase-in-conversion-b60ad514134b
 **Call:** revenue per user → Adapty band; trial starts → #1.
 
@@ -128,8 +137,9 @@ compliance, A1).
 
 ## 3. Trial on the annual plan only
 
-**Spot it:** the trial appears only when annual is selected; short plans
-start paid. A already had a trial on more plans, or none.
+**Spot it:** A had a trial on more plans; B keeps it only on annual. (If A
+had no trial at all, it's mechanic 13, with "on annual only" as one of its
+traits.)
 **Fits when:** an annual plan and a shorter plan; deciding which plans get a
 trial is the team's offer decision, the check covers how it reads.
 
@@ -322,13 +332,15 @@ designer's part is how the price reads (mechanics 2, 13).
 **Call:** the prior on the test's metric.
 
 **What the winners had**
-- Outcomes instead of features, in the user's words. (#58; #2 Five Minute
-  Journal, onboarding)
+- Outcomes instead of features, in the user's words. (#2 Five Minute
+  Journal, onboarding rebuild, directional:
+  https://www.revenuecat.com/blog/growth/five-minute-journal-onboarding-redesign-arpu/ ;
+  observed on paywalls)
 - Headline wins often come from a plan-mix shift: check what moved (Adapty
   library).
 
-**Where it flips:** claims the app can't back ("in under 15 minutes") are a
-trust and review risk: screen flag. Copy-only variants usually land below
+**Where it flips:** specific promises the app can't back (a time, a
+percentage, a result) are a trust and review risk: screen flag. Copy-only variants usually land below
 what a normal test can see.
 
 ## 13. A trial where there was none
@@ -347,7 +359,9 @@ check covers how it reads.
 
 **What the winners had**
 - **Key** The trial and what follows it stated next to the button ("3 days
-  free, then $49.99/year"). (observed; store rule)
+  free, then $49.99/year"). (store rule; observed)
+- When the trial is on the annual plan only, it's named on that card. (#41
+  Moonly, mechanic 3)
 
 **Where it flips:** removing a trial won where trial-to-paid was very low,
 and the same change lost on another platform (Adapty library).
@@ -378,8 +392,10 @@ When B changes several mechanics at once:
 
 ## Checks
 
-- Mechanics: 13. Calls rest on an Adapty band: 1, 2, 3, 4, 5, 8, 9, 10, 11;
-  on single tests only: 6, 7, 13; on a prior: 12.
+- Mechanics: 13. Calls rest on an Adapty band: 1, 2, 3, 4, 5, 9, 10, 11;
+  on single tests only: 6, 7, 13; on a prior: 12. Mechanic 8 is called only
+  when the button changes on its own; tied to an offer change it's part of
+  that mechanic.
 - Every "What the winners had" line carries its source; key traits have a
   test behind them.
 - Rebuild when the Adapty library summary or the onboarding evidence changes.

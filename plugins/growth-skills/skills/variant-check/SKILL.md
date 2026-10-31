@@ -38,8 +38,9 @@ with what their winning versions had. Say this once, plainly.
   screenshots, or a description. If only B is given, ask for A: the check is
   about the difference.
 - **The plan** (ask once if missing, then use defaults and say so):
-  - what decides the test: revenue per user (default for a paywall), paid
-    conversion, or trial starts;
+  - what decides the test: revenue per user (default for a paywall; read it
+    as money per paywall view, i.e. per user in the test, unless the plan
+    says per install), paid conversion, or trial starts;
   - the smallest change the test can see ("your test catches +X% and up").
     From the planner (planner.theoutlines.xyz) or their own calculator. If
     unknown, use 10% and say so;
@@ -70,9 +71,12 @@ with what their winning versions had. Say this once, plainly.
    - high end < bar → "unlikely to show". Copy-only variants land here
      almost always.
    - no range on the test's metric → "no call (measured on <metric>)".
-   **Execution caps the call:** if B misses a key trait, lower the call one
-   step ("likely" → "maybe", "maybe" → "unlikely") and say "as built"; give
-   the uncapped call as "if built like the winners". The ranges describe
+   **Execution caps the call:** if B misses a key trait, or has it only
+   partly, lower the call one step ("likely" → "maybe", "maybe" →
+   "unlikely") and say "as built"; give the uncapped call as "if built like
+   the winners". A capped single-test call ("likely") becomes "maybe". A
+   mechanic with no key traits is never capped, so both cells match.
+   "Can't tell" doesn't cap: ask about it instead. The ranges describe
    versions that had the key traits.
    The variant as a whole is as visible as its strongest called mechanic,
    never the sum. Bundled mechanics: say attribution will be unclear and
@@ -82,15 +86,25 @@ with what their winning versions had. Say this once, plainly.
 6. Screen flags from `references/mechanics.md` (not legal advice): ✕
    present; billed amount the most prominent price; trial terms and the
    price after the trial next to the button at normal contrast; no claim the
-   app can't back. Mark "can't tell" when the screen doesn't show it. For a
+   app can't back; a savings badge whose arithmetic is right and whose
+   anchor plan is visible. When a description leaves one out (often the ✕),
+   ask once rather than guess; until it's answered the verdict can't be
+   "ready to test". A flag A also has: say "fix in both A and B
+   before launch", so the fix doesn't become a second change in B. For a
    full store check, point to paywall-store-compliance.
+   If the test decides on trial starts, add under Watch for: a variant can
+   win trial starts by making the price harder to see; keep trial-to-paid
+   and refunds in view.
 7. **Part 3, pretest.** From `references/pretest.md`: the four standard
    questions plus one per mechanic B uses, with what counts as a pass.
 8. Decide: **ready to test**, **ready after fixes** (list them, screen
    flags first, then missing key traits, at most five), or **rethink** (B
    can't be seen by this test even if built like the winners: suggest one
    stronger mechanic whose "Fits when" matches this paywall, so a win stays
-   attributable; if it's an offer change, say the team decides it).
+   attributable. Pick by, in order: its call on this test's metric, a
+   screen-only change over an offer change (offer changes: the team
+   decides), and whether it also fixes a flag A has. Name one alternative.
+   Screen flags still go under "Fix before launch").
 
 ## Output format
 
@@ -110,7 +124,8 @@ A: <a few words> → B: <a few words>
 - <Mechanic>: ✓ <trait> · ✗ <trait> (source) · ~ <trait> (observed)
 ...
 
-**Fix before launch**   (only if any)
+**Fix before launch**   (only if any; also under "rethink", with the
+suggested stronger mechanic as the first line)
 1. <the change, on screen, in one line> — why (source)
 ...
 
