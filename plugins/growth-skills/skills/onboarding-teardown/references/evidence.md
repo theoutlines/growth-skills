@@ -131,8 +131,8 @@ E-IDs are shared with the flow-teardown library (E3–E5 live there: trial expla
 | ID | Item | Figure | Source | Strength |
 |---|---|---|---|---|
 | E8 | Goal personalisation in onboarding (Adapty A/B library, many tests) | CR commonly +8–17%, ARPU +13–35% | paywall-ab-test-assistant evidence library (Adapty, MIT) | Aggregated prior, not one test |
-| E1 | Loading screen plus personalised-plan screen (Adapty library, one flow) | ARPU around −50% | same | Directional |
-| E2 | Second-chance discount right after the onboarding paywall (Adapty library) | Premium conversion about +25–30%; the same offer after the main in-app paywall cut ARPU by roughly half | same | Directional |
+| E1 | Loading screen plus personalised-plan screen (Adapty A/B library, one flow) | ARPU around −50% | paywall-ab-test-assistant evidence library (Adapty, MIT) | Directional |
+| E2 | Second-chance discount right after the onboarding paywall vs after the main in-app paywall (Adapty library) | Premium conversion about +25–30% after the onboarding paywall; ARPU down by roughly half after the main paywall | paywall-ab-test-assistant evidence library (Adapty, MIT) | Directional |
 | E7 | Paywall copy mirroring the user's last action (Superwall coaching sessions) | Conversion +10–15% | https://superwall.com/blog/the-paywall-growth-lever-framework-how-to-build-smarter-experiments-faster | Anecdotal (no app named) |
 | E6 | "Reverse trial" after paywall dismissal (temporary premium, no card) | Freemium conversion 0.4% → 4.5% | RevenueCat SOSA 2026 expert notes (Steve P. Young), https://www.revenuecat.com/state-of-subscription-apps/ | Anecdotal |
 

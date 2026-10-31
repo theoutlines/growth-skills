@@ -54,13 +54,13 @@ E-IDs are shared with the onboarding-teardown library.
 | ID | Item | Figure | Source | Strength |
 |---|---|---|---|---|
 | E1 | Loading screen plus personalised-plan screen (Adapty A/B library, one flow) | ARPU around −50% | paywall-ab-test-assistant evidence library (Adapty, MIT) | Directional |
-| E2 | Second-chance discount right after the onboarding paywall vs after the main in-app paywall (Adapty library) | Premium conversion about +25–30% after the onboarding paywall; ARPU down by roughly half after the main paywall | same | Directional |
+| E2 | Second-chance discount right after the onboarding paywall vs after the main in-app paywall (Adapty library) | Premium conversion about +25–30% after the onboarding paywall; ARPU down by roughly half after the main paywall | paywall-ab-test-assistant evidence library (Adapty, MIT) | Directional |
 | E3 | "How your trial works" explainer next to the paywall vs earlier in the flow (Adapty library) | Wins on ARPU next to the paywall; earlier it adds drop-off before the paywall is seen (no figure) | same | Directional, no figure |
 | E4 | Comparison table on the paywall vs a comparison teaser screen before it (Adapty library) | Wins as the paywall, including the onboarding paywall; the teaser before it lost (no figure) | same | Directional, no figure |
 | E5 | Guarantee screens before the paywall (Adapty library) | Tend to lose (no figure) | same | Directional, no figure |
 | E6 | "Reverse trial" after paywall dismissal (temporary premium, no card) | Freemium conversion 0.4% → 4.5% | RevenueCat SOSA 2026 expert notes (Steve P. Young), https://www.revenuecat.com/state-of-subscription-apps/ | Anecdotal |
 | E8 | Goal personalisation in onboarding (Adapty A/B library, many tests) | CR commonly +8–17%, ARPU +13–35% | paywall-ab-test-assistant evidence library (Adapty, MIT) | Aggregated prior, not one test |
-| E7 | Paywall copy mirroring the user's last action (Superwall coaching sessions) | Conversion +10–15%; in one long-onboarding app only 40% of new users ever saw the paywall | https://superwall.com/blog/the-paywall-growth-lever-framework-how-to-build-smarter-experiments-faster | Anecdotal |
+| E7 | Paywall copy mirroring the user's last action (Superwall coaching sessions) | Conversion +10–15% | https://superwall.com/blog/the-paywall-growth-lever-framework-how-to-build-smarter-experiments-faster | Anecdotal (no app named) |
 
 ## Benchmarks used at the seam
 

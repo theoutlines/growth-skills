@@ -1,0 +1,11 @@
+name: Evidence check
+on:
+  push:
+    paths: ['evidence/**', 'plugins/growth-skills/skills/**/references/**', 'scripts/evidence.py']
+  pull_request:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/evidence.py check

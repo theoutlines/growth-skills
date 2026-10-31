@@ -1,0 +1,30 @@
+area,idea,lost,records,note
+paywall,annual,no,adapty:Paywall_plans,Adapty library band (paywall-ab-test-assistant)
+paywall,explain,no,adapty:Trial,Adapty library band
+paywall,annualTrial,no,adapty:Trial,Adapty library band
+paywall,compare,no,adapty:Showcasing,Adapty library band
+paywall,proof,no,adapty:Social,Adapty library band
+paywall,visuals,no,adapty:Media,Adapty library band
+paywall,cta,no,adapty:Call,Adapty library band
+paywall,close,no,adapty:Close,Adapty library band
+paywall,lifetime,no,adapty:Paywall_plans,Adapty library band
+paywall,price,no,adapty:Paywall_prices,Adapty library band
+paywall,second,no,adapty:Paywall_prices onboarding:E2,Adapty library band; same as onboarding E2
+paywall,copy,no,adapty:Headline,prior + Adapty State of In-App Subscriptions 2026 win rates
+paywall,secondMain,yes,onboarding:E2,the losing half of E2
+onboarding,goals,no,onboarding:13 onboarding:12 onboarding:E8,
+onboarding,core,no,onboarding:12,
+onboarding,outcomes,no,onboarding:2 onboarding:11,
+onboarding,proof,no,onboarding:17 onboarding:2,
+onboarding,timeline,no,onboarding:1,
+onboarding,quickstart,no,onboarding:45,
+onboarding,echo,no,onboarding:27 onboarding:23,
+onboarding,split,no,onboarding:55 onboarding:56 onboarding:18,
+onboarding,reminder,no,onboarding:16,
+onboarding,loader,no,onboarding:15,
+onboarding,promise,no,onboarding:17,
+onboarding,signup,no,adapty:ONBOARDING,Adapty library band (registration friction)
+onboarding,plan,no,onboarding:27 onboarding:13,
+onboarding,depth,no,onboarding:14,
+onboarding,shorter,yes,onboarding:14 adapty:ONBOARDING,the losing half of #14 and the Adapty band
+onboarding,loaderPlan,yes,onboarding:E1,
