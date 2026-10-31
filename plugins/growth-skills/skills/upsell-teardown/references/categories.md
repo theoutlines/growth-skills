@@ -3,7 +3,7 @@
 Collected 2026-10-30. Buckets are the RevenueCat SOSA buckets (primary App Store category), the same taxonomy as the onboarding, flow and cancel-flow skills. "AI app" is a tag, not a bucket. Finance apps have no SOSA bucket: use Utilities and say so.
 
 Two sources use different category sets, and the tables keep them apart:
-- **Adapty State of Paywalls 2026** (SOP, https://adapty.io/state-of-paywalls-2026/) uses App Store categories. Its "Lifestyle" is the nearest match to Social & Lifestyle, "Entertainment" to Media & Entertainment, and "Graphics & Design" sits next to Photo & Video. Units: per paywall view, App Store only, Oct 2025–Sep 2026.
+- **Adapty State of Paywalls 2026** (SOP, https://adapty.io/state-of-paywalls/) uses App Store categories. Its "Lifestyle" is the nearest match to Social & Lifestyle, "Entertainment" to Media & Entertainment, and "Graphics & Design" sits next to Photo & Video. Units: per paywall view, App Store only, Oct 2025–Sep 2026.
 - **RevenueCat SOSA 2026** (https://www.revenuecat.com/state-of-subscription-apps/) uses the eight buckets. Units: per subscription sold or per app, calendar 2025.
 
 Rows and figures come from Part 2 of `evidence.md`. App examples come from `flows.md` (observed, no performance data). The "what to lean on" lines are hypotheses tied to these numbers, not tested norms.

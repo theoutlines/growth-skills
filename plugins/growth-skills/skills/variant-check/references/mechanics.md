@@ -144,7 +144,7 @@ per-month equivalent; other plans muted or behind "View all plans".
   https://superwall.com/blog/how-stardust-increased-ios-app-revenue-by-4x-in-six-weeks
 - Conversion 3.14% → 3.77% (one test): #105 Glam AI, strong (onboarding
   paywall: the $59.99 year moved to the top with "Most Popular", the $119.99
-  Business plan below it). https://adapty.io/blog/glam-ai-paywall-tests/
+  Business plan below it). https://web.archive.org/web/20260909143308/https://adapty.io/blog/glam-ai-paywall-tests/
 - Yearly conversion 0.43% → 0.55%, net revenue per user $0.261 → $0.292,
   weekly flat (one test): #104 Glam AI, strong (a $119.99 "Yearly Business"
   plan added as a decoy next to the $59.99 year; an offer change). Same link.
@@ -230,7 +230,7 @@ kids).
   https://abtest.design/tests/user-reviews-on-paywall
 - Conversion 2.54% vs 2.43%, called noise (one test, **null**): #106 Glam
   AI, directional (a social-proof video added to a new plan picker).
-  https://adapty.io/blog/glam-ai-paywall-tests/
+  https://web.archive.org/web/20260909143308/https://adapty.io/blog/glam-ai-paywall-tests/
 **Call:** paid conversion → Adapty band. Revenue per user: no call.
 
 **What the winners had**
@@ -377,7 +377,7 @@ A missing ✕ is a store and trust problem, never a strength.
 - View → payment 1% → 1.25%, but net revenue per user below control on all
   traffic and in the US (no figures); control kept (one test, **mixed**):
   #103 Glam AI, strong (static images → video hero, plans and prices
-  unchanged). https://adapty.io/blog/glam-ai-paywall-tests/
+  unchanged). https://web.archive.org/web/20260909143308/https://adapty.io/blog/glam-ai-paywall-tests/
 - Conversion +67%, proceeds per user +12.5% for the video arm, against
   +55.7% and +9% for the same earlier winners without video, both vs control
   (one test, bundled): #96 Stardust, strong (video background instead of a
@@ -435,7 +435,7 @@ https://adobe.design/ideas/growth-design-and-the-art-of-failing-successfully
   https://superwall.com/case-studies/propgpt
 - $59.99/yr + $8.99/wk → $79.99/yr + $11.99/wk for owners of $800+ iPhones:
   conversion 2.55% → 2.09%, ARPU flat (one test, **loss**): #107 Glam AI,
-  strong. https://adapty.io/blog/glam-ai-paywall-tests/
+  strong. https://web.archive.org/web/20260909143308/https://adapty.io/blog/glam-ai-paywall-tests/
 - Annual $9.99 → $14.99: won at 99% probability to be best, conversion did
   not move (no lift figure): #117 AppDevLabs, strong. Annual $19.99 → $14.99
   (a cut): more subscribers and higher total revenue (no lift figure): #118,
