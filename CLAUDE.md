@@ -44,3 +44,5 @@ A Claude marketplace and plugin, `growth-skills`: screen teardowns for growth wo
 6. Paywall test planner: clickable prototype, then live build on the owner's domain; link "read the result" from the plan screen.
 7. Bundle Adapty's State of Paywalls into subscription-skills once the MIT licence lands.
 8. New growth directions only with enough public evidence (e.g. in-app currency / one-time purchases); hypotheses-only topics are dropped.
+9. Knowledge base (agreed 2026-10-31): one evidence base as the single source of truth. Step 1 done 2026-10-31 in `evidence/` (stays in this repo; no separate repo). Losses and nulls are required fields, not exceptions.
+10. Next: a weekly scheduled sweep of known sources (Adapty, RevenueCat, Superwall, Botsi, Sub Club; also talks and "what didn't work" posts, to find losses and nulls) drafts candidates into an inbox; a record enters only after the page is opened, the number checked and the owner approves. Later: a monthly dated log of what top apps show (observed tier); a private history of a team's own tests that never enters the public base.
