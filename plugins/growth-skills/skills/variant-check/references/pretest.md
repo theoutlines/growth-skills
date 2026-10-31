@@ -36,6 +36,42 @@ Add per mechanic in the variant:
 | 12 Copy | "In your own words, what's the main promise here?" | the new headline's idea |
 | 13 Trial added | "Is there a free period? How long, and what then?" | the trial length and the price after it |
 
+## Onboarding variants
+
+Show the flow as a clickable prototype (Maze) or screen by screen, then ask.
+The four paywall questions above still apply to the paywall at the end.
+
+Always ask (every onboarding):
+1. "What does this app do for you?" (after screen 1) Pass: the product's job
+   in their words.
+2. "Why did the app ask you these questions?" (after the questions) Pass:
+   names something the answers change. "No idea" means the answers look
+   unused.
+3. "What happens next if you tap the button?" (on the screen before the
+   paywall) Pass: they expect an offer or a price. Surprise at the paywall
+   costs trust.
+
+Add per mechanic in the variant (numbers from `onboarding-mechanics.md`):
+
+| Mechanic | Question | Pass |
+|---|---|---|
+| O1 Value promise | "In one sentence, what will you get?" (after screen 1) | the promise, in their words |
+| O2 Outcome copy | "What would change for you if you used this?" | a result, not a feature name |
+| O3 Goal questions | "Did your answers change anything? What?" | points to a screen that used them |
+| O4 Plan from answers | "Is this plan made for you? How can you tell?" | cites their goal or an answer |
+| O5 Loader removed | (no clarity question; check nobody asks "where's my plan?") | — |
+| O6 Core action first | "What did you just make or do?" | describes the result |
+| O7 Flow length | first click on the slowest screen; "Was any step pointless?" | names none, or names one to cut |
+| O8 Social proof | "Do other people use this? How do you know?" | cites a review or rating |
+| O9 Sign-up later | "Do you need an account to try it?" | no, or "later, to save my plan" |
+| O10 Reminder set-up | "When will the app remind you?" | the time they picked |
+| O11 Commitment | "What did you commit to? Is that doable?" | the goal, and yes |
+| O12 Paywall position | "Before you saw the price, what had you already got?" | names a plan, result or report |
+| O13 Paywall echo | "Is this offer for you, or for everyone?" | for them, because of their goal |
+| O14 Value step | as paywall mechanic 7 | as paywall mechanic 7 |
+| O15 One-tap trial | "Which plan did you just pick, and what does it cost after the trial?" | the plan and the price after the trial |
+| O16 Second offer | "What's different about this offer from the last screen?" | names the discount or plan |
+
 How to read it:
 - Look at wrong answers, not averages. If a few people misread what they'll
   pay today, fix it before launch: that misread also hurts trust and store

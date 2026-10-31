@@ -1,27 +1,33 @@
 ---
 name: variant-check
 description: >-
-  Check a paywall test variant before it gets live traffic. Takes version A
-  (control) and version B (and C) as Figma frames, screenshots or a
-  description, plus the test plan (what decides it and the smallest change
-  the test can see, e.g. from planner.theoutlines.xyz). Says which paywall
-  mechanics B changes, whether published tests of those mechanics moved
-  numbers enough for this test to see it, what the winning versions had that
-  B lacks, and writes a short clarity pretest (Lyssna, Maze) to run first.
-  Use this WHENEVER someone shares a paywall variant before launch and asks
-  "is this bold enough", "will the test show anything", "check my variant",
-  "what's missing before we test this", or compares a new paywall design
-  with the current one. For a teardown of one paywall prefer
-  paywall-teardown; for reading a finished test prefer test-readout.
+  Check a paywall or onboarding test variant before it gets live traffic.
+  Takes version A (control) and version B (and C) as Figma frames,
+  screenshots, a prototype or a description, plus the test plan (what decides
+  it and the smallest change the test can see, e.g. from
+  planner.theoutlines.xyz). Says which paywall or onboarding mechanics B
+  changes, whether published tests of those mechanics moved numbers enough
+  for this test to see it, what the winning versions had that B lacks, and
+  writes a short clarity pretest (Lyssna, Maze) to run first. Use this
+  WHENEVER someone shares a paywall or onboarding variant before launch and
+  asks "is this bold enough", "will the test show anything", "check my
+  variant", "what's missing before we test this", or compares a new paywall
+  or onboarding design with the current one. For a teardown of one paywall
+  prefer paywall-teardown, of one onboarding prefer onboarding-teardown; for
+  reading a finished test prefer test-readout.
 ---
 
 # Variant check
 
-Most paywall tests end "can't tell": the variant changed too little for the
-traffic, or it used a strong mechanic weakly. Both are visible before launch.
-This skill looks at A and B the way a growth design lead would before
-signing off: is B bold enough for this test, and does it have what the
+Most paywall and onboarding tests end "can't tell": the variant changed too
+little for the traffic, or it used a strong mechanic weakly. Both are visible
+before launch. This skill looks at A and B the way a growth design lead would
+before signing off: is B bold enough for this test, and does it have what the
 versions that won in published tests had.
+
+Two libraries: `references/mechanics.md` (13 paywall mechanics) and
+`references/onboarding-mechanics.md` (16 onboarding mechanics, from the first
+screen to what happens after the first paywall closes).
 
 For product designers: what changes on the screen is checked and suggested.
 Plans, trials and prices are the team's offer decisions: the check says
@@ -33,14 +39,21 @@ with what their winning versions had. Say this once, plainly.
 
 ## Input
 
+- **What is tested**: a paywall or an onboarding flow. Say which if it isn't
+  obvious; a flow of several screens ending in a paywall is onboarding.
 - **Versions**: A (control) and B, optionally C. Figma frames (use the Figma
   connector to get screenshots of the frames when a link is given),
-  screenshots, or a description. If only B is given, ask for A: the check is
-  about the difference.
+  screenshots, a prototype link, or a description. For onboarding, the whole
+  flow of each version in order, up to the first paywall and what follows
+  its close; if only the changed screens are given, ask what comes before
+  and after them. If only B is given, ask for A: the check is about the
+  difference.
 - **The plan** (ask once if missing, then use defaults and say so):
   - what decides the test: revenue per user (default for a paywall; read it
     as money per paywall view, i.e. per user in the test, unless the plan
-    says per install), paid conversion, or trial starts;
+    says per install), paid conversion, or trial starts (default for
+    onboarding; every onboarding metric is per new user, since the split
+    happens at first open);
   - the smallest change the test can see ("your test catches +X% and up").
     From the planner (planner.theoutlines.xyz) or their own calculator. If
     unknown, use 10% and say so;
@@ -51,11 +64,15 @@ with what their winning versions had. Say this once, plainly.
 
 ## Process (internal — do NOT show these steps)
 
-1. Read `references/mechanics.md`. Describe A and B in a few words each
-   (what is on screen, top to bottom). Describe, never copy text from
-   screenshots at length.
-2. List what B changes vs A, element by element. Map each change to a
-   mechanic (1–13). A change that fits no mechanic: name it, say there's no
+1. Read `references/mechanics.md`; for onboarding also
+   `references/onboarding-mechanics.md` (its extra call rules and the per
+   view → per install rule apply). Describe A and B in a few words each
+   (paywall: what is on screen, top to bottom; onboarding: the screens in
+   order, numbered). Describe, never copy text from screenshots at length.
+2. List what B changes vs A, element by element (onboarding: screen by
+   screen, including screens added, removed or moved). Map each change to a
+   mechanic: onboarding O1–O16; a change to the paywall screen itself, paywall
+   1–13. A change that fits no mechanic: name it, say there's no
    published range, and check it against the screen flags (a change that
    makes the screen less clear is a fix, not a neutral change).
 3. **Part 2 first, execution.** For each mechanic B uses, go through "What
@@ -71,6 +88,9 @@ with what their winning versions had. Say this once, plainly.
    - high end < bar → "unlikely to show". Copy-only variants land here
      almost always.
    - no range on the test's metric → "no call (measured on <metric>)".
+   - onboarding only: every test behind the call is bundled → "maybe" at
+     most; the published results for this change are losses → "likely to
+     lose" (see `onboarding-mechanics.md`).
    **Execution caps the call:** if B misses a key trait, or has it only
    partly, lower the call one step ("likely" → "maybe", "maybe" →
    "unlikely") and say "as built"; give the uncapped call as "if built like
@@ -83,7 +103,11 @@ with what their winning versions had. Say this once, plainly.
    name the one to isolate next.
 5. Check "Where it flips" for each mechanic against B's placement, platform
    and markets. Flag clashes (e.g. comparison + testimonials added together).
-6. Screen flags from `references/mechanics.md` (not legal advice): ✕
+   Onboarding: run the flow checks in `onboarding-mechanics.md` (reach, sign
+   flips across the seam, trial starts vs paid).
+6. Screen flags from `references/mechanics.md` (not legal advice; for
+   onboarding also the onboarding flags: permission pre-prompts, sourced
+   health numbers, real proof, honest progress and loaders): ✕
    present; billed amount the most prominent price; trial terms and the
    price after the trial next to the button at normal contrast; no claim the
    app can't back; a savings badge whose arithmetic is right and whose
@@ -95,15 +119,19 @@ with what their winning versions had. Say this once, plainly.
    If the test decides on trial starts, add under Watch for: a variant can
    win trial starts by making the price harder to see; keep trial-to-paid
    and refunds in view.
-7. **Part 3, pretest.** From `references/pretest.md`: the four standard
-   questions plus one per mechanic B uses, with what counts as a pass.
+7. **Part 3, pretest.** From `references/pretest.md`: the standard
+   questions (paywall: four; onboarding: three, plus the paywall four for the
+   paywall at the end) plus one per mechanic B uses, with what counts as a
+   pass.
 8. Decide: **ready to test**, **ready after fixes** (list them, screen
    flags first, then missing key traits, at most five), or **rethink** (B
    can't be seen by this test even if built like the winners: suggest one
    stronger mechanic whose "Fits when" matches this paywall, so a win stays
    attributable. Pick by, in order: its call on this test's metric, a
    screen-only change over an offer change (offer changes: the team
-   decides), and whether it also fixes a flag A has. Name one alternative.
+   decides), and whether it also fixes a flag A has. For onboarding prefer a
+   mechanic B's flow can carry without new screens over one that adds them.
+   Name one alternative.
    Screen flags still go under "Fix before launch").
 
 ## Output format
@@ -112,13 +140,14 @@ Answer in the user's language. Short, scannable, no step numbers.
 
 ```
 **Variant check: <one-line verdict: ready / ready after fixes / rethink>**
-A: <a few words> → B: <a few words>
+A: <a few words> → B: <a few words>   (onboarding: screen counts, e.g.
+"9 screens, paywall 9th → 12 screens, plan screen before the paywall")
 <one sentence: what B changes and whether this test can see it as built>
 
 **What B changes**
 | Change | Mechanic | Range seen (metric, tier, source) | This test (bar +X%) |
 |---|---|---|---|
-| ... | ... | ... | as built: likely / maybe / unlikely / no call · if built like the winners: ... |
+| ... | ... | ... | as built: likely / maybe / unlikely / no call / likely to lose · if built like the winners: ... |
 
 **What the winning versions had**
 - <Mechanic>: ✓ <trait> · ✗ <trait> (source) · ~ <trait> (observed)
