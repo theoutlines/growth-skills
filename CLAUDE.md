@@ -39,7 +39,7 @@ A Claude marketplace and plugin, `growth-skills`: screen teardowns for growth wo
 
 ## Next (plan)
 1. Done 2026-10-30: v1.1.0 and the router tested by the owner in the Claude app (flow-teardown on a real flow: format, evidence labels and durations behaved as specified).
-2. Launch post for Growth Skills: write it on Wednesday, Nov 4, 2026 (same weekday as the subscription-skills post). Example must be an anonymised public flow, never the owner's work screens or data.
+2. Posts (owner, 2026-10-31): Wednesday Nov 4, 2026 — the Growth Test Planner launch post (product first); about a week later — a separate post about the skills (Growth Skills, variant-check). Examples only from anonymised public flows, never the owner's work screens or data.
 3–5. Done in v1.2.0: growth map, funnel check (analytics bridge), Figma frames as input, both decisions across all teardowns.
 6. Paywall test planner: clickable prototype, then live build on the owner's domain; link "read the result" from the plan screen.
 7. Bundle Adapty's State of Paywalls into subscription-skills once the MIT licence lands.
