@@ -23,7 +23,7 @@ onboarding,split,no,onboarding:55 onboarding:56 onboarding:18 onboarding:151 onb
 onboarding,reminder,no,onboarding:16,,
 onboarding,loader,no,onboarding:15,,
 onboarding,promise,no,onboarding:17,,
-onboarding,signup,no,adapty:ONBOARDING onboarding:5 onboarding:6 onboarding:148,Adapty library band (registration friction),
+onboarding,signup,no,adapty:ONBOARDING onboarding:5 onboarding:6 onboarding:148 onboarding:135,Adapty library band (registration friction),
 onboarding,plan,no,onboarding:27 onboarding:13 onboarding:3,,#13 global (the lower figure); US +27% in the idea card
 onboarding,depth,no,onboarding:14 onboarding:147 onboarding:140,,#14 iOS only; said in the idea card
 onboarding,shorter,yes,onboarding:14 adapty:ONBOARDING onboarding:140,the losing half of #14 and the Adapty band,#14 all platforms (no split on the loss)
