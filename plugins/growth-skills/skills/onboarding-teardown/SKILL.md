@@ -67,7 +67,7 @@ Read these before writing the teardown:
   evidence and trap. Recommendations are lookups against this library.
 - `references/scoring.md`: the 100-point rubric, including dimension 5b for
   freemium flows. The score comes from its checks, never from impression.
-- `references/evidence.md`: the published tests (#1–#77) and benchmarks.
+- `references/evidence.md`: the published tests (#1–#167) and benchmarks.
   Quote numbers exactly as written there.
 - `references/ranges.md` — the range of measured lifts per pattern and metric, built only from `evidence.md`.
 

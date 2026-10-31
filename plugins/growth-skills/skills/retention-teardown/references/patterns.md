@@ -7,7 +7,7 @@ progress, value recaps and the trial-ending notice, the return screen after
 a gap, and the rating and widget asks.
 
 Each pattern has **When**, **Cross-check**, **How**, **Evidence** (tests
-#R1–#R61 and benchmark rows B1–B64 in `evidence.md`, rules in
+#R1–#R63 and benchmark rows B1–B64 in `evidence.md`, rules in
 `platform-rules.md`), **Seen in** (apps from `flows.md`) and **Trap**.
 Tiers: strong, directional, anecdotal, observed.
 

@@ -29,7 +29,7 @@ the table. Billing setup, credit policy, campaigns and legal review are out of
 scope: don't mention them.
 
 Never invent a number. Every figure you quote comes from the references
-(`evidence.md` test #U1–#U50 or benchmark row, `categories.md`,
+(`evidence.md` test #U1–#U66 or benchmark row, `categories.md`,
 `platform-rules.md`, or counts in `flows.md`), with its strength. Arithmetic
 on the user's own numbers is fine; say it's yours.
 
@@ -70,7 +70,7 @@ missing, score what you have and ask.
 - `references/scoring.md` — the 100-point rubric, model rule, blockers, held back.
 - `references/patterns.md` — 24 patterns with evidence, examples and traps,
   plus the sign-flip table.
-- `references/evidence.md` — tests #U1–#U50, benchmarks, metric definitions, gaps.
+- `references/evidence.md` — tests #U1–#U66, benchmarks, metric definitions, gaps.
 - `references/ranges.md` — the range of measured lifts per pattern and metric, built only from `evidence.md`.
 - `references/categories.md` — placement share, later-paywall conversion,
   plan mix and consumables by bucket, and what each bucket leans on.

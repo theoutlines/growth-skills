@@ -5,7 +5,7 @@ subscription before install (landing, quiz, paywall, checkout, upsells,
 getting into the app) and the in-app link-out to a web checkout.
 
 Each pattern has **When**, **Cross-check**, **How**, **Evidence** (tests
-#W1–#W53 and benchmark rows in `evidence.md`), **Seen in** (`flows.md`) and **Trap**. Tiers: strong, directional, anecdotal,
+#W1–#W63 and benchmark rows in `evidence.md`), **Seen in** (`flows.md`) and **Trap**. Tiers: strong, directional, anecdotal,
 observed.
 
 **Read this first.**

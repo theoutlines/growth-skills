@@ -28,6 +28,7 @@ Numbers are **relative** lifts unless marked **absolute** (a rate) or **pp** (pe
 | C5 | Wavve | Podcast clip tool (SaaS with app) | Business / Productivity (nearest fit) | no | web-billed | Cancel survey; "need a break" answers get a pause; 50% coupon; missing-feature / technical answers routed to live chat | Deflection; offer mix; churn | 2,590 entered the flow; 39% deflection; 848 accepted an offer (32%): 637 two-month pause, 116 one-month pause, 94 took 50% coupon. Monthly churn was 10–14%; "15%" churn reduction after the pause incentive | Pub. 2020-10-22 | https://churnkey.co/blog/how-wavve-cut-churn-by-2-over-two-months-with-better-cancellation-flows/ | Directional (vendor before/after). Pause was 89% of accepted offers |
 | C6 | Unnamed meditation app (web2wave forum) | Meditation | Health & Fitness | unknown | web-billed | One-question survey with reason-matched offer: "too expensive" → 50% off 3 months; "don't use it enough" → 2-month pause; "missing features" → lighter plan | Saved cancellations; monthly churn | 47% of cancellations saved; monthly churn about 13% → just under 7% (absolute) | Undated forum post | https://community.web2wave.com/t/we-halved-our-churn-rate-with-custom-win-back-offers-at-cancellation/1243 | Directional (unverified forum post, unnamed app). Replies claim pause saved 39% (productivity app) and 60% of 3-month pausers reactivated (language app); same caveat |
 | C7 | Amazon Prime ("Iliad" flow) | Shopping membership | n/a | no | web-billed | Four-page, six-click, fifteen-option cancel flow with "remind me later", "keep my benefits", discounted pricing pages | Prime cancellations | 14% drop in cancellations in 2017 as fewer members reached the final page | Article 2025-09-24 (BI leak 2023; FTC complaint) | https://www.fastcompany.com/91409096/amazon-iliad-flow-prime-lawsuit | Directional (leaked internal figure). This flow is the basis of the FTC case settled for $2.5B (see `platform-rules.md`): a "win" that became a legal liability |
+| C29 | Coconote | AI note-taker | Productivity | yes | Save offer | Save offer at cancel: discount → 7-day trial extension | Share of cancelling users retained | 25% retained with the trial extension; discount figure not given | Pub. 2026-03 | https://www.revenuecat.com/blog/growth/brett-zack-coconote-sub-club-podcast-2026 | Directional (founder report) |
 
 ## B. Store-level retention surfaces (Apple, Google)
 
@@ -65,6 +66,8 @@ Not added as rows (secondary only): RevenueCat's 2026-04-02 post cites "Google's
 | C20 | Calm | Meditation | Health & Fitness | no | push/email | Re-engagement message to dormant paying subscribers ("zombie users") vs holdout | Cancellation | Recipients cancelled at a "substantially higher" rate than holdout; a small subset re-activated. No figures published | Post 2026-01-07 | https://lifecycle-leaders.hightouch.com/p/the-one-audience-you-actually-shouldn-t-re-engage | Anecdotal (holdout test, numbers not published) |
 | C21 | Unscripted | Photography business tool | Photo & Video | no | in-app (Superwall) | Reactivation paywall for previously unsubscribed active users: extra 7-day trial, name-personalised copy, renewal timeline, several plans | Trial starts; trial conversion; proceeds per user | Trial starts "over 240%"; trial conversion "over 30%"; proceeds per user from reactivated cohort "nearly doubled" | Pub. 2025-12-03 | https://superwall.com/case-studies/unscripted | Directional (compared with new users on the standard paywall, not randomized) |
 | C22 | Netflix | Video streaming | Media & Entertainment | no | web-billed | Asks members with no viewing for 12 months (or 2+ years) to confirm, cancels if no reply; rejoin within 10 months keeps profiles | Share affected | "Less than half of 1%" of 182M+ members; no outcome reported | 2020-05-21 | https://techcrunch.com/2020/05/21/netflix-to-start-cancelling-inactive-accounts/ | Anecdotal (no outcome numbers). Ties to #C18 "inert subscribers" and the DFA/UK reminder rules |
+| C30 | Mojo | Video and story editor | Photo & Video | no | Exit and win-back offers | Exit discounts and win-back discounts | Not stated | "Didn't perform as strongly for us" (no figures) | Pub. 2024-12 | https://www.revenuecat.com/blog/growth/guide-to-mobile-paywalls-subscription-apps | Anecdotal (no figures) |
+| C31 | Unnamed (Sara Grana, Sub Club) | Not stated | Not stated | unknown | Win-back offer | Win-back offer after auto-renew is turned off | Net revenue | Users refunded, then took the offer: "net negative" (no figures) | Not stated | https://pod.wave.co/podcast/sub-club-by-revenuecat/stop-celebrating-conversion-wins-before-checking-renewals-sara-grana-yousician | Anecdotal (podcast, no figures) |
 
 ## F. Reason-based routing and goodbye design (no numbers)
 
@@ -84,7 +87,7 @@ Not added as rows (secondary only): RevenueCat's 2026-04-02 post cites "Google's
 
 ## Count
 
-28 entries (#C1–#C28).
+31 entries (#C1–#C31).
 
 - **Strong: 6** — #C14, #C15, #C16, #C17, #C18, #C19
 - **Directional: 14** — #C1–#C13, #C21
