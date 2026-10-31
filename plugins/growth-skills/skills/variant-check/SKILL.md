@@ -98,7 +98,9 @@ with what their winning versions had. Say this once, plainly.
    the winners". A capped single-test call ("likely") becomes "maybe". A
    mechanic with no key traits is never capped, so both cells match.
    "Can't tell" doesn't cap: ask about it instead. The ranges describe
-   versions that had the key traits.
+   versions that had the key traits. One issue, one cap: a missing key
+   trait that is also a screen flag caps once and is listed once. A cap on
+   "unlikely" leaves it "unlikely".
    The variant as a whole is as visible as its strongest called mechanic,
    never the sum. Bundled mechanics: say attribution will be unclear and
    name the one to isolate next.
@@ -112,7 +114,8 @@ with what their winning versions had. Say this once, plainly.
    present; billed amount the most prominent price; trial terms and the
    price after the trial next to the button at normal contrast; no claim the
    app can't back; a savings badge whose arithmetic is right and whose
-   anchor plan is visible. When a description leaves one out (often the ✕),
+   anchor plan is visible; a per-month or per-week breakdown rounded up,
+   never down. When a description leaves one out (often the ✕),
    ask once rather than guess; until it's answered the verdict can't be
    "ready to test". A flag A also has: say "fix in both A and B
    before launch", so the fix doesn't become a second change in B. For a
@@ -130,9 +133,14 @@ with what their winning versions had. Say this once, plainly.
    stronger mechanic whose "Fits when" matches this paywall, so a win stays
    attributable. Pick by, in order: its call on this test's metric, a
    screen-only change over an offer change (offer changes: the team
-   decides), and whether it also fixes a flag A has. For onboarding prefer a
-   mechanic B's flow can carry without new screens over one that adds them.
-   Name one alternative.
+   decides), whether it also fixes a flag A has, a stronger tier (band or
+   strong over directional), a mechanic that adds no new screens, and the
+   same library as the test (an onboarding test may take a paywall mechanic
+   for its paywall). Never suggest a pressure tactic. Name one alternative.
+   A variant whose best call is "maybe" can still be "ready to test": say in
+   the verdict line that the test may end "can't tell" unless B lands near
+   the top of the range. For onboarding, what follows the paywall close is
+   taken as the same in A and B unless the brief says otherwise.
    Screen flags still go under "Fix before launch").
 
 ## Output format

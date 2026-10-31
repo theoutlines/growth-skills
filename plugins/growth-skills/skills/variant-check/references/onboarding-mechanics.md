@@ -57,8 +57,13 @@ tests, market rule). Two more for onboarding:
   (no stated method), the call is at most "maybe", even if the number clears
   the bar. Execution can still cap it one step lower. Name the mechanic to
   isolate. Only Adapty bands and strong unbundled tests can make "likely".
-- **One issue, one cap.** A missing key trait that is also a screen flag caps
-  the call once and is listed once under "Fix before launch".
+- **A losing change inside a bundle** doesn't make the whole variant
+  "rethink": list it first under "Fix before launch" (remove it, or rebuild
+  it as the winning version, e.g. a loader followed by a real plan). The
+  verdict is "rethink" only when the losing change is the only called change.
+- **A question added next to an existing one** (a level question beside a
+  goal question) is O3 and uses O3's ranges; say the ranges come from flows
+  that went from no questions to some.
 - **No call anywhere → rethink.** If no change in B has a call on the test's
   metric, the verdict is "rethink": there is no published reason to expect a
   visible change. Say "no call", never "won't work".
@@ -185,10 +190,12 @@ rule for #13. Every test is directional; #13 is bundled.
 - 2–4 personal numbers or items, editable where possible, and a short "why
   this plan" line. (observed)
 
-**Real personalisation** (used here and in O5): the plan shows at least one
-item that differs by answer beyond repeating the goal's words: a schedule,
-a level, a content list, a number. A headline that only echoes the goal is
-O13, not a plan.
+**Real personalisation** (used here and in O5): the plan's content changes
+with the answers (a different schedule, content list, length or number for
+different answers), not only the answers printed back. When the screen shows
+the answers and content that might or might not change with them, mark it
+"can't tell" and ask; until then, call O4 with the loader as a watch item.
+A headline that only echoes the goal is O13, not a plan.
 
 **Where it flips:** a loader plus a personalised-plan screen lost about half
 of revenue per user in another flow (Adapty library). A plan screen that
@@ -262,9 +269,10 @@ set-up. Cutting: only steps whose answers are never used.
   down lost, conversion and ARPU both around −13% (Adapty library, solid).
 **Call:** adding → paid +40% (iOS figure: market/platform rule), revenue
 +20%. Cutting steps that ask, show value or set something up → "likely to lose".
-Removing only a screen that asks nothing, shows no product result and sets
-nothing up (one feature slide) → no published range; note under Watch for
-that cutting lost in published tests.
+Removing only screens that ask nothing, show no product result and set
+nothing up (feature slides: claims about the app, however many) → no
+published range; note under Watch for that cutting lost in published tests.
+A feature slide is not a value step.
 
 **What the winners had**
 - **Key** The added steps feed something later: the plan, the paywall, a
