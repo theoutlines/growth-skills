@@ -52,10 +52,20 @@ Everything in `mechanics.md` "Rules for the call" applies (call range on the
 test's metric, one test = one number, outliers out, bands before single
 tests, market rule). Two more for onboarding:
 
-- **Bundled only → "maybe" at most.** When every test behind a call changed
-  several things at once (marked *bundled*), the call is at most "maybe",
-  even if the number clears the bar. Execution can still cap it one step
-  lower. Name the mechanic to isolate.
+- **Bundled or directional only → "maybe" at most.** When every test behind
+  a call changed several things at once (marked *bundled*) or is directional
+  (no stated method), the call is at most "maybe", even if the number clears
+  the bar. Execution can still cap it one step lower. Name the mechanic to
+  isolate. Only Adapty bands and strong unbundled tests can make "likely".
+- **One issue, one cap.** A missing key trait that is also a screen flag caps
+  the call once and is listed once under "Fix before launch".
+- **No call anywhere → rethink.** If no change in B has a call on the test's
+  metric, the verdict is "rethink": there is no published reason to expect a
+  visible change. Say "no call", never "won't work".
+- **Rethink tie-break**, after the order in SKILL.md: a stronger call, then a
+  stronger tier (band or strong over directional), then the same library as
+  the test. For an onboarding test, a paywall mechanic may be suggested for
+  the paywall at the end of the flow, with the per view → per install rule.
 - **Losses make a "likely to lose" call.** When the published results for
   the change B makes are losses (mechanic O7 shortening, mechanic O5 adding a
   loader before a plan screen), the call is "likely to lose", whatever the
@@ -66,9 +76,12 @@ tests, market rule). Two more for onboarding:
 
 ## O1. Value promise on screen 1
 
-**Spot it:** A opens on a logo, a generic welcome or a sign-in sheet; B's
-first screen says what the user gets, with a product visual and one button.
-**Fits when:** screen 1 has no outcome statement.
+**Spot it:** A opens on a logo, a generic welcome or a sign-in sheet with no
+statement at all; B's first screen says what the user gets, with a product
+visual and one button.
+**Fits when:** screen 1 has no statement of what the user gets. If A's screen
+1 already states something (a feature line, a tagline) and B rewords it into
+an outcome, that's O2, not O1.
 
 **Range seen**
 - Paid conversion +30% (one test, *bundled*: shorter copy + value promise up
@@ -87,8 +100,9 @@ expects the promise to match the app: screen flag.
 
 ## O2. Outcome copy over feature copy
 
-**Spot it:** B rewrites screens from what the app has ("AI-powered", "500
-recipes") to what changes for the user ("Fall asleep in 10 minutes").
+**Spot it:** B rewrites screens, including screen 1's headline, from what
+the app has ("AI-powered", "500 recipes") to what changes for the user
+("Fall asleep in 10 minutes").
 **Fits when:** most screens name features.
 
 **Range seen**
@@ -115,9 +129,11 @@ the screens show. A copy-only B usually lands below the bar.
 
 ## O3. Goal questions that change what follows
 
-**Spot it:** B adds one or more questions about the user's goal or reason
-(A asks none, or only profile data), or turns a single-select into
-multi-select.
+**Spot it:** B adds one or more questions about the user's goal, reason or
+level (A asks none, or only profile data), or turns a single-select into
+multi-select. If A already asks the goal question and B only starts using
+the answer, that change is O4 or O13 (the answers are now used), not O3; a
+question B adds next to it (a level question) is O3.
 **Fits when:** the app serves several goals or levels; rare in VPN, password
 and AI chat apps (observed).
 
@@ -168,6 +184,11 @@ rule for #13. Every test is directional; #13 is bundled.
   differ by answer. (#3, #13, #27)
 - 2–4 personal numbers or items, editable where possible, and a short "why
   this plan" line. (observed)
+
+**Real personalisation** (used here and in O5): the plan shows at least one
+item that differs by answer beyond repeating the goal's words: a schedule,
+a level, a content list, a number. A headline that only echoes the goal is
+O13, not a plan.
 
 **Where it flips:** a loader plus a personalised-plan screen lost about half
 of revenue per user in another flow (Adapty library). A plan screen that
@@ -240,7 +261,10 @@ set-up. Cutting: only steps whose answers are never used.
 - Shortened vs long: conversion −13% (#14, directional); cutting onboarding
   down lost, conversion and ARPU both around −13% (Adapty library, solid).
 **Call:** adding → paid +40% (iOS figure: market/platform rule), revenue
-+20%. Cutting the flow as a whole → "likely to lose".
++20%. Cutting steps that ask, show value or set something up → "likely to lose".
+Removing only a screen that asks nothing, shows no product result and sets
+nothing up (one feature slide) → no published range; note under Watch for
+that cutting lost in published tests.
 
 **What the winners had**
 - **Key** The added steps feed something later: the plan, the paywall, a
@@ -343,7 +367,10 @@ opens).
 
 ## O12. Paywall position
 
-**Spot it:** B moves the first paywall earlier or later in the flow.
+**Spot it:** B moves the first paywall at least two screens earlier or later
+relative to the value steps (before vs after the plan, the first result or
+the questions). A paywall that shifts by one position only because screens
+before it were added or removed is not O12: record it under the reach check.
 **Fits when:** compare with the bucket norm (onboarding-teardown
 `categories.md`).
 
@@ -503,8 +530,9 @@ abandons the store purchase sheet is an App Review risk (#75).
   (losses), O9, O16. On single or few tests: O1, O2, O4, O5, O6, O8, O10,
   O12, O13, O15. No call on any of the three metrics: O11. O14 uses paywall
   mechanic 7.
-- Bundled-only calls ("maybe" at most): O1, O2 (trial starts), O3 (trial
-  starts), O6, O8, O13.
+- "Maybe" at most (bundled or directional only): O1, O2 (trial starts), O3
+  (trial starts), O4, O5, O6, O8, O10, O12, O13. Can reach "likely": O3 (paid,
+  revenue band), O9, O14 (as paywall mechanic 7), O15, O16.
 - Left out on purpose: patterns with no published range (why-we-ask
   microcopy, level step, relate-to cards, endowment), real-data linking
   (#34–#36 test the linking step, not a screen B would change in a

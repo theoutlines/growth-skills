@@ -88,9 +88,10 @@ with what their winning versions had. Say this once, plainly.
    - high end < bar → "unlikely to show". Copy-only variants land here
      almost always.
    - no range on the test's metric → "no call (measured on <metric>)".
-   - onboarding only: every test behind the call is bundled → "maybe" at
-     most; the published results for this change are losses → "likely to
-     lose" (see `onboarding-mechanics.md`).
+   - onboarding only: every test behind the call is bundled or directional
+     → "maybe" at most; the published results for this change are losses →
+     "likely to lose"; no change in B has a call → "rethink"; tie-breaks
+     (see `onboarding-mechanics.md`, Rules for the call).
    **Execution caps the call:** if B misses a key trait, or has it only
    partly, lower the call one step ("likely" → "maybe", "maybe" →
    "unlikely") and say "as built"; give the uncapped call as "if built like

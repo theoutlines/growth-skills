@@ -44,9 +44,9 @@ The four paywall questions above still apply to the paywall at the end.
 Always ask (every onboarding):
 1. "What does this app do for you?" (after screen 1) Pass: the product's job
    in their words.
-2. "Why did the app ask you these questions?" (after the questions) Pass:
-   names something the answers change. "No idea" means the answers look
-   unused.
+2. "Why did the app ask you these questions?" (after the questions; skip if
+   the flow asks none) Pass: names something the answers change. "No idea"
+   means the answers look unused.
 3. "What happens next if you tap the button?" (on the screen before the
    paywall) Pass: they expect an offer or a price. Surprise at the paywall
    costs trust.
@@ -60,6 +60,7 @@ Add per mechanic in the variant (numbers from `onboarding-mechanics.md`):
 | O3 Goal questions | "Did your answers change anything? What?" | points to a screen that used them |
 | O4 Plan from answers | "Is this plan made for you? How can you tell?" | cites their goal or an answer |
 | O5 Loader removed | (no clarity question; check nobody asks "where's my plan?") | — |
+| O5 Loader added | "What was the app doing while you waited?" | names their answers or plan; "loading" or "nothing" means it reads as delay |
 | O6 Core action first | "What did you just make or do?" | describes the result |
 | O7 Flow length | first click on the slowest screen; "Was any step pointless?" | names none, or names one to cut |
 | O8 Social proof | "Do other people use this? How do you know?" | cites a review or rating |
