@@ -106,6 +106,7 @@ Ryn VPN (U12, rewarded ads as a third access tier) and Duolingo Max (U24) also b
 | U42 | Blinkist (Braze) | Book summaries | Education | no | In-app notifications + Canvas | "Daily Pick" free content; engaged users routed to a flow showing premium-only content | Subscription purchases | +64% (no baseline or control) | Not dated | https://www.braze.com/customers/blinkist-case-study | Directional |
 | U43 | Adapty State of Paywalls 2026 (cross-app) | Cross-category | All | mixed | App Store | Second-chance paywall shown right after the first is closed (not a test) | Conversion vs main paywall | 4% of apps use it; converts at 0.88x the main paywall (same app); beats the main paywall in 45% of apps; typical discount 38%, about 1 in 4 at 50%+ | Pub. 2026-10-16 | https://adapty.io/state-of-paywalls-2026/ | Directional (vendor aggregate) |
 | U44 | Adapty library | n/a | n/a | unknown | In-app | **Same as onboarding E2.** Second-chance discount: after the onboarding paywall about +25–30% premium conversion; the same offer after the main in-app paywall cut ARPU by about half | Premium conversion; ARPU | See onboarding E2 | — | paywall-ab-test-assistant library (Adapty, MIT) | Directional |
+| U51 | Unnamed crypto portfolio tracker | Crypto portfolio tracker | Utilities | unknown | Promotional paywall shown to freemium users | Promotional paywall redesigned: price chart visual, bold gradients, a "SALE" callout and a "Back to $15.99/month" marker | Paywall view → subscription | 2.7% → 3.24% ("over a 20% improvement") | Pub. 2025-03-27, upd. 2026-03-11 | https://www.revenuecat.com/blog/growth/paywall-redesigns-case-studies | Directional (method not stated; bundled redesign) |
 
 ## H. Reverse trials and free → paid nudges
 
@@ -127,10 +128,12 @@ One tier per row.
 | Tier | All rows | New rows | "Same as onboarding" rows |
 |---|---|---|---|
 | Strong | 7 (U1, U8, U13, U22, U23, U32, U45) | 7 | 0 |
-| Directional | 38 | 33 | 5 (U5, U6, U7, U44, U50) |
+| Directional | 39 | 34 | 5 (U5, U6, U7, U44, U50) |
 | Anecdotal | 5 (U4, U17, U21, U46, U49) | 2 (U4, U49) | 3 (U17, U21, U46) |
 | Observed | 0 | 0 | 0 |
-| **Total** | **50** | **42** | **8** |
+| **Total** | **51** | **43** | **8** |
+
+U51 added 2026-10-31 by the first evidence sweep (`evidence/inbox/2026-10-31.md`).
 
 Of the 7 strong rows, only 3 are subscription apps (U1 Memrise, U22 Dark Noise, U32 Mojo); one is a freemium SaaS (U45), and three are a mobile game, Pandora and a publisher's website (U8, U13, U23).
 
